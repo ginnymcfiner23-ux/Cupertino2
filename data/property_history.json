@@ -1,11 +1,604 @@
 {
-  "note": "Owner-provided values. None could be checked against an official assessor record in this session (no parcel identifier is published). Rows are flagged 'user-provided — unverified'. Official lookup: Santa Clara County Assessor (Property A) and SF Assessor-Recorder (Property B). Only the rows retained in session records are included; the full multi-year tables must be re-supplied (flagged).",
-  "rows": [
-    {"property":"A","city":"Cupertino, CA","year":2025,"metric":"Assessed value (AV)","value":539743,"unit":"USD","status":"user-provided — unverified","sources":["SCC-ASSESSOR"],"notes":""},
-    {"property":"A","city":"Cupertino, CA","year":2025,"metric":"Property tax (total billed)","value":7207,"unit":"USD","status":"user-provided — unverified","sources":["SCC-ASSESSOR"],"notes":""},
-    {"property":"A","city":"Cupertino, CA","year":2026,"metric":"Assessed value (AV)","value":550537,"unit":"USD","status":"user-provided — unverified","sources":["SCC-ASSESSOR","BOE-LTA-2009-036"],"notes":"Change from 2025 is +2.00%, consistent with the 2% Prop 13 cap (computed check, not an official figure)."},
-    {"property":"A","city":"Cupertino, CA","year":2026,"metric":"Property tax (total billed)","value":null,"unit":"USD","status":"blank — not provided","sources":["SCC-ASSESSOR"],"notes":"Left blank; not supplied."},
-    {"property":"B","city":"San Francisco, CA","year":2025,"metric":"Assessed value (AV)","value":114248,"unit":"USD","status":"user-provided — unverified","sources":["SF-ASSESSOR"],"notes":""},
-    {"property":"B","city":"San Francisco, CA","year":2025,"metric":"Property tax (total billed)","value":2439,"unit":"USD","status":"user-provided — unverified","sources":["SF-TREASURER-SECURED"],"notes":"Implies ~2.13% of AV, above the official FY2026-27 secured rate (1.18162182%); the difference (~$1,089) is treated as non-ad-valorem charges (flagged)."}
-  ]
+ "note": "Owner-provided values, exactly as supplied in the request (values and YoY %); anonymized to city. None checked against an official assessor record (no parcel identifier is published). Rows are flagged 'user-provided — unverified'. Per-year implied tax÷AV ratios are computed for review. Official lookup: Santa Clara County Assessor (Property A) and SF Assessor-Recorder (Property B).",
+ "rows": [
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2014,
+   "metric": "Property tax (total billed)",
+   "value": 5965,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner did not report a YoY change for this year. Implied tax÷AV = 1.35% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2014,
+   "metric": "Assessed value (AV)",
+   "value": 440305,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +0.5%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2015,
+   "metric": "Property tax (total billed)",
+   "value": 6130,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2.8%. Implied tax÷AV = 1.36% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2015,
+   "metric": "Assessed value (AV)",
+   "value": 449101,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2016,
+   "metric": "Property tax (total billed)",
+   "value": 6414,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +4.6%. Implied tax÷AV = 1.41% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2016,
+   "metric": "Assessed value (AV)",
+   "value": 455949,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +1.5%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2017,
+   "metric": "Property tax (total billed)",
+   "value": 6383,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: −0.5%. Implied tax÷AV = 1.37% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2017,
+   "metric": "Assessed value (AV)",
+   "value": 465067,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2018,
+   "metric": "Property tax (total billed)",
+   "value": 6383,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner did not report a YoY change for this year. Tax equals 2017 as supplied although AV rose 2% (irregularity, as given). Implied tax÷AV = 1.35% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2018,
+   "metric": "Assessed value (AV)",
+   "value": 474368,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2019,
+   "metric": "Property tax (total billed)",
+   "value": 6565,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2.8%. Implied tax÷AV = 1.36% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2019,
+   "metric": "Assessed value (AV)",
+   "value": 483854,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2020,
+   "metric": "Property tax (total billed)",
+   "value": 6565,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner did not report a YoY change for this year. Tax equals 2019 as supplied although AV rose 2% (irregularity, as given). Implied tax÷AV = 1.33% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2020,
+   "metric": "Assessed value (AV)",
+   "value": 493530,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2021,
+   "metric": "Property tax (total billed)",
+   "value": 6662,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +1.5%. Implied tax÷AV = 1.34% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2021,
+   "metric": "Assessed value (AV)",
+   "value": 498642,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +1%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2022,
+   "metric": "Property tax (total billed)",
+   "value": 6755,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +1.4%. Implied tax÷AV = 1.33% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2022,
+   "metric": "Assessed value (AV)",
+   "value": 508614,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2023,
+   "metric": "Property tax (total billed)",
+   "value": 6917,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2.4%. Implied tax÷AV = 1.33% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2023,
+   "metric": "Assessed value (AV)",
+   "value": 518786,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2024,
+   "metric": "Property tax (total billed)",
+   "value": 7003,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +1.2%. Implied tax÷AV = 1.32% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2024,
+   "metric": "Assessed value (AV)",
+   "value": 529161,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2025,
+   "metric": "Property tax (total billed)",
+   "value": 7207,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2.9%. Implied tax÷AV = 1.34% (computed)."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2025,
+   "metric": "Assessed value (AV)",
+   "value": 539743,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2026,
+   "metric": "Property tax (total billed)",
+   "value": null,
+   "unit": "USD",
+   "status": "blank — not provided",
+   "sources": [
+    "SCC-ASSESSOR"
+   ],
+   "notes": "Left blank; not supplied by the owner."
+  },
+  {
+   "property": "A",
+   "city": "Cupertino, CA",
+   "year": 2026,
+   "metric": "Assessed value (AV)",
+   "value": 550537,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SCC-ASSESSOR",
+    "BOE-LTA-2009-036"
+   ],
+   "notes": "Owner-reported YoY: +2%, consistent with the 2% Prop 13 cap (computed check, not an official figure)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2016,
+   "metric": "Property tax (total billed)",
+   "value": 1675,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: +1.6%. Implied tax÷AV = 1.73% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2016,
+   "metric": "Assessed value (AV)",
+   "value": 96557,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +1.5%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2017,
+   "metric": "Property tax (total billed)",
+   "value": 1740,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: +3.9%. Implied tax÷AV = 1.77% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2017,
+   "metric": "Assessed value (AV)",
+   "value": 98488,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2018,
+   "metric": "Property tax (total billed)",
+   "value": 2061,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: +18.4%. Implied tax÷AV = 2.05% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2018,
+   "metric": "Assessed value (AV)",
+   "value": 100456,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2019,
+   "metric": "Property tax (total billed)",
+   "value": 2134,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: +3.5%. Implied tax÷AV = 2.08% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2019,
+   "metric": "Assessed value (AV)",
+   "value": 102465,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2020,
+   "metric": "Property tax (total billed)",
+   "value": 2197,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: +3%. Implied tax÷AV = 2.10% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2020,
+   "metric": "Assessed value (AV)",
+   "value": 104513,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2021,
+   "metric": "Property tax (total billed)",
+   "value": 2066,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: −5.9%. Implied tax÷AV = 1.96% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2021,
+   "metric": "Assessed value (AV)",
+   "value": 105595,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +1%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2022,
+   "metric": "Property tax (total billed)",
+   "value": 2107,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: +2%. Implied tax÷AV = 1.96% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2022,
+   "metric": "Assessed value (AV)",
+   "value": 107662,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2023,
+   "metric": "Property tax (total billed)",
+   "value": 2179,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: +3.4%. Implied tax÷AV = 1.98% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2023,
+   "metric": "Assessed value (AV)",
+   "value": 109814,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2024,
+   "metric": "Property tax (total billed)",
+   "value": 2315,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Owner-reported YoY: +6.2%. Implied tax÷AV = 2.07% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2024,
+   "metric": "Assessed value (AV)",
+   "value": 112008,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2025,
+   "metric": "Property tax (total billed)",
+   "value": 2439,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Implies ~2.13% of AV, above the official FY2026-27 secured rate (1.18162182%); the difference (~$1,089) is treated as non-ad-valorem charges (flagged). Owner-reported YoY: +5.3%. Implied tax÷AV = 2.13% (computed)."
+  },
+  {
+   "property": "B",
+   "city": "San Francisco, CA",
+   "year": 2025,
+   "metric": "Assessed value (AV)",
+   "value": 114248,
+   "unit": "USD",
+   "status": "user-provided — unverified",
+   "sources": [
+    "SF-ASSESSOR"
+   ],
+   "notes": "Owner-reported YoY: +2%."
+  }
+ ]
 }

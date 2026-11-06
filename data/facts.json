@@ -1,362 +1,431 @@
 {
-  "note": "Every row published on the site comes from this file. status: verified = confirmed on an official page or statute during this session; partially verified = applicability confirmed but a figure is not confirmed on the fetched page (flagged); user-provided = supplied by the owner, not confirmable from an official record (flagged); secondary = only from non-official sources (flagged, not used as a value).",
-  "rows": [
-    {
-      "id": "F-EST-2026",
-      "category": "federal",
-      "label": "Federal estate & gift basic exclusion amount, 2026 deaths",
-      "value": "$15,000,000 per person",
-      "status": "verified",
-      "sources": [
-        "IRS-2026-INFLATION",
-        "IRS-ESTATE-TAX"
-      ],
-      "notes": "Also the Form 706 filing threshold for 2026 deaths. Portability to surviving spouse via timely return."
-    },
-    {
-      "id": "F-EST-2025",
-      "category": "federal",
-      "label": "Federal estate filing threshold, 2025 deaths",
-      "value": "$13,990,000",
-      "status": "verified",
-      "sources": [
-        "IRS-ESTATE-TAX"
-      ],
-      "notes": "Shows the step-up in the exclusion after 2025."
-    },
-    {
-      "id": "F-GIFT-ANNUAL",
-      "category": "federal",
-      "label": "Annual gift tax exclusion, 2026",
-      "value": "$19,000 per recipient",
-      "status": "verified",
-      "sources": [
-        "IRS-2026-INFLATION"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "F-EST-RATE",
-      "category": "federal",
-      "label": "Top federal estate tax rate above the exclusion",
-      "value": "Not confirmed",
-      "status": "secondary",
-      "sources": [
-        "IRS-ESTATE-TAX"
-      ],
-      "notes": "Commonly cited as 40%; not stated on the IRS pages reviewed. Left blank in calculations that depend on it; flagged."
-    },
-    {
-      "id": "F-LTCG-SINGLE-2026",
-      "category": "federal",
-      "label": "2026 long-term capital gain brackets, single: 0% up to $49,450; 15% to $545,500; 20% above",
-      "value": "0% / 15% / 20%",
-      "status": "verified",
-      "sources": [
-        "IRS-REV-PROC-2025-32"
-      ],
-      "notes": "Married filing jointly: 0% to $98,900; 15% to $613,700. Estates/trusts: 0% to $3,300; 15% to $16,250."
-    },
-    {
-      "id": "F-STEPUP",
-      "category": "federal",
-      "label": "Basis of inherited property = fair market value at date of death (step-up)",
-      "value": "Yes (FMV at death)",
-      "status": "partially verified",
-      "sources": [
-        "IRS-PUB-551"
-      ],
-      "notes": "Pub 551 'Basis of Assets' covers basis of property acquired from a decedent; the specific inherited-property text was not read this session (verify on the linked page). Sale soon after death generally produces little or no gain."
-    },
-    {
-      "id": "F-NIIT",
-      "category": "federal",
-      "label": "Net investment income tax thresholds (3.8%)",
-      "value": "Not confirmed on an official page this session",
-      "status": "secondary",
-      "sources": [
-        "IRS-PUB-551"
-      ],
-      "notes": "Statutory thresholds ($200,000 single / $250,000 joint) not confirmed on an official page this session. Flagged. Link is the verification page."
-    },
-    {
-      "id": "F-DEPR-27.5",
-      "category": "federal",
-      "label": "Residential rental property depreciation period (GDS)",
-      "value": "27.5 years, straight-line",
-      "status": "verified",
-      "sources": [
-        "IRS-PUB-527"
-      ],
-      "notes": "Used only in the tax discussion; rental income tax not modeled in projections."
-    },
-    {
-      "id": "F-PROP13-CAP",
-      "category": "state",
-      "label": "Assessed value increase cap for property without change in ownership",
-      "value": "Limited to inflation, not more than 2% per year",
-      "status": "verified",
-      "sources": [
-        "BOE-LTA-2009-036"
-      ],
-      "notes": "Factored base year value; decreases allowed."
-    },
-    {
-      "id": "F-P19-CAP",
-      "category": "state",
-      "label": "Prop 19 excluded amount (value cap) for transfers Feb 16, 2025 \u2013 Feb 15, 2027",
-      "value": "$1,044,586 above factored base year value",
-      "status": "verified",
-      "sources": [
-        "BOE-LTA-2025-009",
-        "BOE-LTA-2026-026"
-      ],
-      "notes": "Next adjustment February 2027. Projection assumes future adjustments follow inflation (flagged assumption)."
-    },
-    {
-      "id": "F-P19-NTV",
-      "category": "state",
-      "label": "Prop 19 New Taxable Value formula (family home, 100% transferred)",
-      "value": "Factored base year value + (full cash value \u2212 excluded amount), i.e., full cash value \u2212 $1,044,586 when value exceeds the cap",
-      "status": "verified",
-      "sources": [
-        "BOE-LTA-2026-026"
-      ],
-      "notes": "Excluded amount = factored base year value + $1M cap; excess is added to the base."
-    },
-    {
-      "id": "F-P19-DEATH",
-      "category": "state",
-      "label": "Prop 19 applies to transfers by reason of death, including distributions from a trust",
-      "value": "Yes",
-      "status": "verified",
-      "sources": [
-        "BOE-LTA-2026-026"
-      ],
-      "notes": "'Transfer' includes transfers occurring due to death, whether within or outside a trust."
-    },
-    {
-      "id": "F-P19-RESIDENCE",
-      "category": "state",
-      "label": "Prop 19 family-home exclusion conditions",
-      "value": "Heir must make the home their principal residence and claim the homeowners' exemption (see BOE for filing windows)",
-      "status": "verified",
-      "sources": [
-        "BOE-LTA-2026-026",
-        "BOE-PROP19-PAGE"
-      ],
-      "notes": "Family home = dwelling eligible for homeowners' or disabled veterans' exemption from the transferor's ownership and occupancy. Rental homes are not eligible."
-    },
-    {
-      "id": "F-P19-RENTAL",
-      "category": "state",
-      "label": "Rental property is excluded from the Prop 19 parent-child exclusion",
-      "value": "Not eligible",
-      "status": "verified",
-      "sources": [
-        "BOE-PROP19-PAGE"
-      ],
-      "notes": "The third unit in Property B would be treated under the family-home definition; mixed-use treatment must be confirmed by the SF Assessor (flagged)."
-    },
-    {
-      "id": "F-DTT-BASE",
-      "category": "state",
-      "label": "Documentary transfer tax, statutory base rate",
-      "value": "$0.55 per $500 ($1.10 per $1,000)",
-      "status": "verified",
-      "sources": [
-        "RTC-11911"
-      ],
-      "notes": "Counties may impose; the Santa Clara County and San Francisco adopted rates were not confirmed on official pages (flagged)."
-    },
-    {
-      "id": "F-DTT-EXEMPT-DEATH",
-      "category": "state",
-      "label": "Transfer tax exemption for transfers by reason of death or inter vivos gift, outright or in trust",
-      "value": "Exempt",
-      "status": "verified",
-      "sources": [
-        "RTC-11930"
-      ],
-      "notes": "Claim on the recorded deed; see inheritance process."
-    },
-    {
-      "id": "F-PCOR",
-      "category": "state",
-      "label": "Preliminary Change of Ownership Report (BOE-502-A) required on transfer",
-      "value": "Required; parent-child / inheritance boxes",
-      "status": "verified",
-      "sources": [
-        "BOE-502A"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "F-SF-RATE-2627",
-      "category": "local",
-      "label": "San Francisco secured property tax rate, FY2026-27",
-      "value": "1.18162182%",
-      "status": "verified",
-      "sources": [
-        "SF-TREASURER-SECURED"
-      ],
-      "notes": "Secondary sites listed 1.18268325% for an earlier year; the official figure is used. Supplemental assessments follow a change in ownership."
-    },
-    {
-      "id": "F-SF-DUE",
-      "category": "local",
-      "label": "SF secured property tax due dates and penalty",
-      "value": "1st installment delinquent after Dec 10 (10%); 2nd after Apr 10 (10% plus fees)",
-      "status": "verified",
-      "sources": [
-        "SF-TREASURER-SECURED"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "F-SF-RENT-CAP",
-      "category": "local",
-      "label": "SF allowable annual rent increase, covered units, Mar 1, 2026 \u2013 Feb 28, 2027",
-      "value": "1.6%",
-      "status": "verified",
-      "sources": [
-        "SF-RENT-BOARD"
-      ],
-      "notes": "Applies to covered units; not all units are covered. Confirm coverage with the Rent Board."
-    },
-    {
-      "id": "F-SF-WATER-W1B",
-      "category": "utility",
-      "label": "SFPUC W-1B multi-family water: service charge per meter per month (FY2026-27)",
-      "value": "$19.65",
-      "status": "verified",
-      "sources": [
-        "SFPUC-RATES-2026-27"
-      ],
-      "notes": "Eff. 7/1/2026; adopted Apr 28, 2026 (Res. 26-0064/0066/0068 per schedule)."
-    },
-    {
-      "id": "F-SF-WATER-UNIT",
-      "category": "utility",
-      "label": "SFPUC W-1B quantity charge per dwelling unit (first 3 units)",
-      "value": "$12.03 per unit; additional $12.91",
-      "status": "verified",
-      "sources": [
-        "SFPUC-RATES-2026-27"
-      ],
-      "notes": "Sewer and stormwater charges are not in the excerpt reviewed; cannot reconcile user's total without bills (flagged)."
-    },
-    {
-      "id": "F-CUP-WATER-SJW",
-      "category": "utility",
-      "label": "San Jose Water Schedule No. 1 (portions of Cupertino): 5/8-inch service charge",
-      "value": "$79.67 per meter per month",
-      "status": "verified",
-      "sources": [
-        "SJW-AL-629A"
-      ],
-      "notes": "Eff. 7/1/2026 (CPUC-approved tariff). Confirm the water provider for the actual service address (not published)."
-    },
-    {
-      "id": "F-CUP-WATER-QTY",
-      "category": "utility",
-      "label": "San Jose Water residential quantity rates per 100 cu ft (ccf)",
-      "value": "$5.0355 (0\u20136 ccf); $7.5156 (6\u201312 ccf); $14.3548 (12+ ccf)",
-      "status": "verified",
-      "sources": [
-        "SJW-AL-629A"
-      ],
-      "notes": "At the user's $100\u2013150/month range, implied usage for a 5/8-inch meter is roughly 4\u20139 ccf/month (computed from the tariff; see flags)."
-    },
-    {
-      "id": "F-PGE-BSC",
-      "category": "utility",
-      "label": "PG&E Base Services Charge applies to almost all residential customers (income-graduated daily fixed charge)",
-      "value": "Applies (fixed daily charge; tiers 1\u20133)",
-      "status": "partially verified",
-      "sources": [
-        "PGE-BSC-AL-7825E"
-      ],
-      "notes": "Applicability confirmed on the advice-letter status page; the per-day tier amounts ($0.19713 / $0.39688 / $0.79343) were not confirmed on the fetched pages and are flagged."
-    },
-    {
-      "id": "F-CPI-2026",
-      "category": "macro",
-      "label": "U.S. CPI, 12-month change, September 2026",
-      "value": "3.7% (reported)",
-      "status": "secondary",
-      "sources": [
-        "BLS-CPI"
-      ],
-      "notes": "Not confirmed on the BLS release page this session. Used only as a stress-test input, flagged."
-    },
-    {
-      "id": "F-FED-TARGET",
-      "category": "macro",
-      "label": "Federal Reserve longer-run inflation objective (PCE)",
-      "value": "2 percent",
-      "status": "verified",
-      "sources": [
-        "FED-PCE-TARGET"
-      ],
-      "notes": "Base-case inflation assumption."
-    },
-    {
-      "id": "F-HR1301",
-      "category": "legislation",
-      "label": "H.R.1301 Death Tax Repeal Act (119th Congress)",
-      "value": "Introduced Feb 13, 2025; referred to House Ways and Means; no further action recorded",
-      "status": "verified",
-      "sources": [
-        "CONGRESS-HR1301"
-      ],
-      "notes": "Status as of access; not law."
-    },
-    {
-      "id": "F-P19-REPEAL-BALLOT",
-      "category": "legislation",
-      "label": "Prop 19 repeal measure on the Nov 3, 2026 ballot",
-      "value": "Not on the official list of qualified measures",
-      "status": "verified",
-      "sources": [
-        "SOS-QUALIFIED-MEASURES"
-      ],
-      "notes": "Conflicting secondary blog claims were not used. Official list reviewed: Props 1\u20135 and 37\u201345."
-    },
-    {
-      "id": "F-P43",
-      "category": "legislation",
-      "label": "Prop 43: two-thirds vote for voter-initiated local special taxes (from Jan 1, 2027 if passed)",
-      "value": "Measure text confirmed; result not certified",
-      "status": "secondary",
-      "sources": [
-        "SOS-QUALIFIED-MEASURES",
-        "NEWS-CALMATTERS-PROP43",
-        "NEWS-DAILYBULLETIN-PROP43"
-      ],
-      "notes": "Preliminary returns showed the measure trailing (45.2% yes / 54.8% no at 11 p.m. Nov 3). Official certification pending; not a final result."
-    },
-    {
-      "id": "F-CA-IT-RATES",
-      "category": "state",
-      "label": "California personal income tax brackets, 2026 (for capital-gain planning)",
-      "value": "Not confirmed",
-      "status": "secondary",
-      "sources": [
-        "FTB-FORMS"
-      ],
-      "notes": "FTB rate-table page could not be retrieved this session; secondary sources cite a 9.3% single-filer bracket above $72,724. Not used as a verified value; left blank in tax tables."
-    },
-    {
-      "id": "F-CA-ESTATE",
-      "category": "state",
-      "label": "California estate or inheritance tax",
-      "value": "Not confirmed on an official page this session",
-      "status": "secondary",
-      "sources": [
-        "FTB-FORMS"
-      ],
-      "notes": "Widely reported as none; not confirmed on an official California page this session. Flagged; no CA estate tax is assumed in calculations."
-    }
-  ]
+ "note": "Every row published on the site comes from this file. status: verified = confirmed on an official page or statute during this session; partially verified = applicability confirmed but a figure is not confirmed on the fetched page (flagged); user-provided = supplied by the owner, not confirmable from an official record (flagged); secondary = only from non-official sources (flagged, not used as a value).",
+ "rows": [
+  {
+   "id": "F-EST-2026",
+   "category": "federal",
+   "label": "Federal estate & gift basic exclusion amount, 2026 deaths",
+   "value": "$15,000,000 per person",
+   "status": "verified",
+   "sources": [
+    "IRS-2026-INFLATION",
+    "IRS-ESTATE-TAX",
+    "CRS-ESTATE-R48183"
+   ],
+   "notes": "Per person; with portability of the deceased spouse's unused exclusion a couple can combine to $30,000,000 in 2026 (CRS R48183). Annual gifts up to $19,000 per donee (2026) do not use it."
+  },
+  {
+   "id": "F-EST-2025",
+   "category": "federal",
+   "label": "Federal estate filing threshold, 2025 deaths",
+   "value": "$13,990,000",
+   "status": "verified",
+   "sources": [
+    "IRS-ESTATE-TAX"
+   ],
+   "notes": "Shows the step-up in the exclusion after 2025."
+  },
+  {
+   "id": "F-GIFT-ANNUAL",
+   "category": "federal",
+   "label": "Annual gift tax exclusion, 2026",
+   "value": "$19,000 per recipient",
+   "status": "verified",
+   "sources": [
+    "IRS-2026-INFLATION"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "F-EST-RATE",
+   "category": "federal",
+   "label": "Top federal estate tax rate above the exclusion",
+   "value": "40% of the taxable estate above the exclusion",
+   "status": "verified",
+   "sources": [
+    "FTB-ESTATE-TAX-ANALYSIS",
+    "CRS-ESTATE-R48183"
+   ],
+   "notes": "Confirmed 2026-11-06: FTB analysis ('The highest estate and gift tax rate is 40 percent') and CRS R48183 ('The estate tax rate on the taxable portion of the estate, if any, is 40%'). Prior flag X16 resolved."
+  },
+  {
+   "id": "F-LTCG-SINGLE-2026",
+   "category": "federal",
+   "label": "2026 long-term capital gain brackets, single: 0% up to $49,450; 15% to $545,500; 20% above",
+   "value": "0% / 15% / 20%",
+   "status": "verified",
+   "sources": [
+    "IRS-REV-PROC-2025-32"
+   ],
+   "notes": "Married filing jointly: 0% to $98,900; 15% to $613,700. Estates/trusts: 0% to $3,300; 15% to $16,250."
+  },
+  {
+   "id": "F-STEPUP",
+   "category": "federal",
+   "label": "Basis of inherited property = fair market value at date of death (step-up)",
+   "value": "Yes (FMV at death)",
+   "status": "partially verified",
+   "sources": [
+    "IRS-PUB-551"
+   ],
+   "notes": "Pub 551 'Basis of Assets' covers basis of property acquired from a decedent; the specific inherited-property text was not read this session (verify on the linked page). Sale soon after death generally produces little or no gain."
+  },
+  {
+   "id": "F-NIIT",
+   "category": "federal",
+   "label": "Net investment income tax thresholds (3.8%)",
+   "value": "3.8% on the lesser of net investment income or MAGI over $200,000 (single) / $250,000 (MFJ)",
+   "status": "verified",
+   "sources": [
+    "IRS-NIIT-QA"
+   ],
+   "notes": "IRS NIIT Q&A: thresholds not indexed for inflation; income includes rental and royalty income and gain on the sale of a second home that is not a principal residence; gain excluded under IRC §121 on a principal residence is not subject. Flag X19 resolved 2026-11-06."
+  },
+  {
+   "id": "F-DEPR-27.5",
+   "category": "federal",
+   "label": "Residential rental property depreciation period (GDS)",
+   "value": "27.5 years, straight-line",
+   "status": "verified",
+   "sources": [
+    "IRS-PUB-527"
+   ],
+   "notes": "Used only in the tax discussion; rental income tax not modeled in projections."
+  },
+  {
+   "id": "F-PROP13-CAP",
+   "category": "state",
+   "label": "Assessed value increase cap for property without change in ownership",
+   "value": "Limited to inflation, not more than 2% per year",
+   "status": "verified",
+   "sources": [
+    "BOE-LTA-2009-036"
+   ],
+   "notes": "Factored base year value; decreases allowed."
+  },
+  {
+   "id": "F-P19-CAP",
+   "category": "state",
+   "label": "Prop 19 excluded amount (value cap) for transfers Feb 16, 2025 – Feb 15, 2027",
+   "value": "$1,044,586 above factored base year value",
+   "status": "verified",
+   "sources": [
+    "BOE-LTA-2025-009",
+    "BOE-LTA-2026-026"
+   ],
+   "notes": "Next adjustment February 2027. Projection assumes future adjustments follow inflation (flagged assumption)."
+  },
+  {
+   "id": "F-P19-NTV",
+   "category": "state",
+   "label": "Prop 19 New Taxable Value formula (family home, 100% transferred)",
+   "value": "Factored base year value + (full cash value − excluded amount), i.e., full cash value − $1,044,586 when value exceeds the cap",
+   "status": "verified",
+   "sources": [
+    "BOE-LTA-2026-026"
+   ],
+   "notes": "Excluded amount = factored base year value + $1M cap; excess is added to the base."
+  },
+  {
+   "id": "F-P19-DEATH",
+   "category": "state",
+   "label": "Prop 19 applies to transfers by reason of death, including distributions from a trust",
+   "value": "Yes",
+   "status": "verified",
+   "sources": [
+    "BOE-LTA-2026-026"
+   ],
+   "notes": "'Transfer' includes transfers occurring due to death, whether within or outside a trust."
+  },
+  {
+   "id": "F-P19-RESIDENCE",
+   "category": "state",
+   "label": "Prop 19 family-home exclusion conditions",
+   "value": "Heir must occupy as principal residence within 1 year of transfer and claim the Homeowners' Exemption (Form BOE-266) within 1 year; file exclusion claim (Form BOE-19-P) within 3 years",
+   "status": "verified",
+   "sources": [
+    "BOE-LTA-2026-026",
+    "BOE-PROP19-PAGE"
+   ],
+   "notes": "Family home = dwelling eligible for homeowners' or disabled veterans' exemption from the transferor's ownership and occupancy. Rental homes are not eligible. Filing windows per BOE Prop 19 checklist (verified 2026-11-06)."
+  },
+  {
+   "id": "F-P19-RENTAL",
+   "category": "state",
+   "label": "Rental property is excluded from the Prop 19 parent-child exclusion",
+   "value": "Not eligible",
+   "status": "verified",
+   "sources": [
+    "BOE-PROP19-PAGE"
+   ],
+   "notes": "The third unit in Property B would be treated under the family-home definition; mixed-use treatment must be confirmed by the SF Assessor (flagged)."
+  },
+  {
+   "id": "F-DTT-BASE",
+   "category": "state",
+   "label": "Documentary transfer tax, statutory base rate",
+   "value": "$0.55 per $500 ($1.10 per $1,000)",
+   "status": "verified",
+   "sources": [
+    "RTC-11911"
+   ],
+   "notes": "Counties may impose; the Santa Clara County and San Francisco adopted rates were not confirmed on official pages (flagged)."
+  },
+  {
+   "id": "F-DTT-EXEMPT-DEATH",
+   "category": "state",
+   "label": "Transfer tax exemption for transfers by reason of death or inter vivos gift, outright or in trust",
+   "value": "Exempt",
+   "status": "verified",
+   "sources": [
+    "RTC-11930"
+   ],
+   "notes": "Claim on the recorded deed; see inheritance process."
+  },
+  {
+   "id": "F-PCOR",
+   "category": "state",
+   "label": "Preliminary Change of Ownership Report (BOE-502-A) required on transfer",
+   "value": "Required; parent-child / inheritance boxes",
+   "status": "verified",
+   "sources": [
+    "BOE-502A"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "F-SF-RATE-2627",
+   "category": "local",
+   "label": "San Francisco secured property tax rate, FY2026-27",
+   "value": "1.18162182%",
+   "status": "verified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": "Secondary sites listed 1.18268325% for an earlier year; the official figure is used. Supplemental assessments follow a change in ownership."
+  },
+  {
+   "id": "F-SF-DUE",
+   "category": "local",
+   "label": "SF secured property tax due dates and penalty",
+   "value": "1st installment delinquent after Dec 10 (10%); 2nd after Apr 10 (10% plus fees)",
+   "status": "verified",
+   "sources": [
+    "SF-TREASURER-SECURED"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "F-SF-RENT-CAP",
+   "category": "local",
+   "label": "SF allowable annual rent increase, covered units, Mar 1, 2026 – Feb 28, 2027",
+   "value": "1.6%",
+   "status": "verified",
+   "sources": [
+    "SF-RENT-BOARD"
+   ],
+   "notes": "Applies to covered units; not all units are covered. Confirm coverage with the Rent Board."
+  },
+  {
+   "id": "F-SF-WATER-W1B",
+   "category": "utility",
+   "label": "SFPUC W-1B multi-family water: service charge per meter per month (FY2026-27)",
+   "value": "$19.65",
+   "status": "verified",
+   "sources": [
+    "SFPUC-RATES-2026-27"
+   ],
+   "notes": "Eff. 7/1/2026; adopted Apr 28, 2026 (Res. 26-0064/0066/0068 per schedule)."
+  },
+  {
+   "id": "F-SF-WATER-UNIT",
+   "category": "utility",
+   "label": "SFPUC W-1B quantity charge per dwelling unit (first 3 units)",
+   "value": "$12.03 per unit; additional $12.91",
+   "status": "verified",
+   "sources": [
+    "SFPUC-RATES-2026-27"
+   ],
+   "notes": "Sewer and stormwater charges are not in the excerpt reviewed; cannot reconcile user's total without bills (flagged)."
+  },
+  {
+   "id": "F-CUP-WATER-SJW",
+   "category": "utility",
+   "label": "San Jose Water Schedule No. 1 (portions of Cupertino): 5/8-inch service charge",
+   "value": "$79.67 per meter per month",
+   "status": "verified",
+   "sources": [
+    "SJW-AL-629A"
+   ],
+   "notes": "Eff. 7/1/2026 (CPUC-approved tariff). Confirm the water provider for the actual service address (not published)."
+  },
+  {
+   "id": "F-CUP-WATER-QTY",
+   "category": "utility",
+   "label": "San Jose Water residential quantity rates per 100 cu ft (ccf)",
+   "value": "$5.0355 (0–6 ccf); $7.5156 (6–12 ccf); $14.3548 (12+ ccf)",
+   "status": "verified",
+   "sources": [
+    "SJW-AL-629A"
+   ],
+   "notes": "At the user's $100–150/month range, implied usage for a 5/8-inch meter is roughly 4–9 ccf/month (computed from the tariff; see flags)."
+  },
+  {
+   "id": "F-PGE-BSC",
+   "category": "utility",
+   "label": "PG&E Base Services Charge applies to almost all residential customers (income-graduated daily fixed charge)",
+   "value": "Applies (fixed daily charge; tiers 1–3)",
+   "status": "partially verified",
+   "sources": [
+    "PGE-BSC-AL-7825E"
+   ],
+   "notes": "Applicability confirmed on the advice-letter status page; the per-day tier amounts ($0.19713 / $0.39688 / $0.79343) were not confirmed on the fetched pages and are flagged."
+  },
+  {
+   "id": "F-CPI-2026",
+   "category": "macro",
+   "label": "U.S. CPI, 12-month change, September 2026",
+   "value": "3.7% (12 months ending September 2026)",
+   "status": "verified",
+   "sources": [
+    "BLS-CPI"
+   ],
+   "notes": "BLS news release USDL-26-1574 fetched 2026-11-06: CPI-U +3.7% over 12 months; core (less food and energy) +2.6%; electricity +4.4%. Flag X20 resolved."
+  },
+  {
+   "id": "F-FED-TARGET",
+   "category": "macro",
+   "label": "Federal Reserve longer-run inflation objective (PCE)",
+   "value": "2 percent",
+   "status": "verified",
+   "sources": [
+    "FED-PCE-TARGET"
+   ],
+   "notes": "Base-case inflation assumption."
+  },
+  {
+   "id": "F-HR1301",
+   "category": "legislation",
+   "label": "H.R.1301 Death Tax Repeal Act (119th Congress)",
+   "value": "Introduced Feb 13, 2025; referred to House Ways and Means; no further action recorded",
+   "status": "verified",
+   "sources": [
+    "CONGRESS-HR1301"
+   ],
+   "notes": "Status as of access; not law."
+  },
+  {
+   "id": "F-P19-REPEAL-BALLOT",
+   "category": "legislation",
+   "label": "Prop 19 repeal measure on the Nov 3, 2026 ballot",
+   "value": "Not on the official list of qualified measures",
+   "status": "verified",
+   "sources": [
+    "SOS-QUALIFIED-MEASURES"
+   ],
+   "notes": "Conflicting secondary blog claims were not used. Official list reviewed: Props 1–5 and 37–45."
+  },
+  {
+   "id": "F-P43",
+   "category": "legislation",
+   "label": "Prop 43: two-thirds vote for voter-initiated local special taxes (from Jan 1, 2027 if passed)",
+   "value": "Measure text confirmed; result not certified",
+   "status": "secondary",
+   "sources": [
+    "SOS-QUALIFIED-MEASURES",
+    "NEWS-CALMATTERS-PROP43",
+    "NEWS-DAILYBULLETIN-PROP43"
+   ],
+   "notes": "Preliminary returns showed the measure trailing (45.2% yes / 54.8% no at 11 p.m. Nov 3). Official certification pending; not a final result."
+  },
+  {
+   "id": "F-CA-IT-RATES",
+   "category": "state",
+   "label": "California personal income tax brackets, 2026 (for capital-gain planning)",
+   "value": "2026 Schedule X (single): 1% up to $11,456; 9.3% on $75,197–$384,109; 12.3% above $768,213 (marginal rates 1%–12.3%)",
+   "status": "verified",
+   "sources": [
+    "FTB-CA-2026-RATES"
+   ],
+   "notes": "FTB 2026 California Tax Rate Schedules retrieved 2026-11-06. Flag X17 resolved."
+  },
+  {
+   "id": "F-CA-ESTATE",
+   "category": "state",
+   "label": "California estate or inheritance tax",
+   "value": "None — California does not conform to the federal estate/GST tax; the state estate 'pick-up' tax equals the repealed federal credit, i.e., $0",
+   "status": "verified",
+   "sources": [
+    "FTB-ESTATE-TAX-ANALYSIS"
+   ],
+   "notes": "FTB: 'Because the federal estate tax credit was repealed, the state's pick-up tax is zero.' No California inheritance tax either. Flag X18 resolved 2026-11-06."
+  },
+  {
+   "id": "F-ESTATE-COVERAGE",
+   "category": "federal",
+   "label": "Share of U.S. decedents who owe federal estate tax",
+   "value": "About 0.07% (2019 year-of-death data)",
+   "status": "verified",
+   "sources": [
+    "CRS-ESTATE-R48183"
+   ],
+   "notes": "CRS R48183: declined from 2.1% of the population (2001) to 0.07% (2019). Context for how rarely the tax applies."
+  },
+  {
+   "id": "F-COUPLE-EXCLUSION",
+   "category": "federal",
+   "label": "Combined federal estate & gift basic exclusion for a couple with portability, 2026",
+   "value": "$30,000,000 ($15M each, including the deceased spouse's unused exclusion)",
+   "status": "verified",
+   "sources": [
+    "CRS-ESTATE-R48183",
+    "IRS-ESTATE-TAX"
+   ],
+   "notes": "Portability requires a timely filed Form 706 for the first spouse to die (IRS)."
+  },
+  {
+   "id": "F-AB1482",
+   "category": "legislation",
+   "label": "AB 1482 statewide rent cap (California Tenant Protection Act)",
+   "value": "5% + CPI or 10% max per 12 months (lower of the two), max two increases/year; sunsets Jan 1, 2030",
+   "status": "verified",
+   "sources": [
+    "LEGINFO-AB1482"
+   ],
+   "notes": "Applies to a Property A rental while the heir lives elsewhere; owner-occupied single-family homes renting no more than two units are exempt. SF covered units also follow SF Rent Board rules."
+  },
+  {
+   "id": "F-SB284",
+   "category": "legislation",
+   "label": "CA SB 284 (2025-26): extend Prop 19 family-home/farm exclusion to eligible transferees",
+   "value": "Active bill, not law — held in Assembly committee (last action July 14, 2025)",
+   "status": "verified",
+   "sources": [
+    "LEGINFO-SB284"
+   ],
+   "notes": "Would change who can use the intergenerational exclusion. Watch status."
+  },
+  {
+   "id": "F-S587",
+   "category": "legislation",
+   "label": "S.587 Death Tax Repeal Act of 2025 (119th Congress)",
+   "value": "Introduced Feb 13, 2025; referred to Senate Finance; not law",
+   "status": "verified",
+   "sources": [
+    "CONGRESS-S587"
+   ],
+   "notes": "Would repeal the federal estate and GST taxes. Companion bill H.R. 1301 in the House. Neither enacted as of 2026-11-06."
+  },
+  {
+   "id": "F-SCC-TRA",
+   "category": "local",
+   "label": "Santa Clara County total property tax rate structure (FY 2025-26)",
+   "value": "1.000% base rate + voter-approved debt by Tax Rate Area; example TRA totals 1.12580%–1.24090%",
+   "status": "verified",
+   "sources": [
+    "SCC-TAX-RATE-BOOK"
+   ],
+   "notes": "Exact TRA for Property A needs a parcel lookup (kept off-site for privacy). Owner-billed totals imply 1.32%–1.41% — see flags X04/X06."
+  }
+ ]
 }
