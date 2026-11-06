@@ -1,238 +1,358 @@
 {
-  "accessed": "2026-11-06",
-  "note": "Every table row on the site cites one or more IDs below. 'official' = government agency, statute, utility-filed CPUC tariff, or IRS/Congress/SOS. 'secondary' = used only to flag conflicts, never as a value source.",
-  "sources": [
-    {
-      "id": "BOE-LTA-2026-026",
-      "type": "official",
-      "publisher": "California State Board of Equalization",
-      "title": "Proposition 19 Intergenerational Transfer Exclusion FAQ (LTA 2026/026, Aug 3, 2026)",
-      "url": "https://www.boe.ca.gov/proptaxes/pdf/lta26026.pdf",
-      "supports": "Excluded amount = factored base year value + $1M (adjusted); New Taxable Value formula; transfers at death included whether or not in trust; family home definition"
-    },
-    {
-      "id": "BOE-LTA-2025-009",
-      "type": "official",
-      "publisher": "California State Board of Equalization",
-      "title": "Letter to Assessors 2025/009 \u2014 Prop 19 $1 million adjustment",
-      "url": "https://www.boe.ca.gov/proptaxes/pdf/lta25009.pdf",
-      "supports": "$1,044,586 adjusted amount for transfers Feb 16, 2025 \u2013 Feb 15, 2027; next adjustment Feb 2027"
-    },
-    {
-      "id": "BOE-PROP19-PAGE",
-      "type": "official",
-      "publisher": "California State Board of Equalization",
-      "title": "Proposition 19 \u2014 Frequently Asked Questions",
-      "url": "https://www.boe.ca.gov/prop19/",
-      "supports": "Rental homes/units are not eligible for the parent-child family-home exclusion"
-    },
-    {
-      "id": "BOE-LTA-2009-036",
-      "type": "official",
-      "publisher": "California State Board of Equalization",
-      "title": "Letter to Assessors 2009/036 (Article XIII A, \u00a72(b) 2% inflation cap explained)",
-      "url": "https://boe.ca.gov/proptaxes/pdf/lta09036.pdf",
-      "supports": "Factored base year value increases limited to inflation, not exceeding 2% per year"
-    },
-    {
-      "id": "BOE-502A",
-      "type": "official",
-      "publisher": "California State Board of Equalization",
-      "title": "BOE-502-A Preliminary Change of Ownership Report (sample)",
-      "url": "https://www.boe.ca.gov/proptaxes/pdf/sample-boe502a.pdf",
-      "supports": "PCOR must be filed for inheritance/parent-child transfers"
-    },
-    {
-      "id": "RTC-11911",
-      "type": "official",
-      "publisher": "California Legislative Information",
-      "title": "California Revenue and Taxation Code \u00a711911 (Documentary transfer tax authorization)",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=11911",
-      "supports": "Base documentary transfer tax of $0.55 per $500 (= $1.10 per $1,000) that counties may impose"
-    },
-    {
-      "id": "RTC-11930",
-      "type": "official",
-      "publisher": "California Legislative Information",
-      "title": "California Revenue and Taxation Code \u00a711930 (Death and gift transfers exempt)",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=RTC&division=2.&part=6.7.&chapter=3.",
-      "supports": "No documentary transfer tax on transfers by reason of death or inter vivos gift, outright or in trust"
-    },
-    {
-      "id": "SF-TREASURER-SECURED",
-      "type": "official",
-      "publisher": "City & County of San Francisco, Treasurer & Tax Collector",
-      "title": "Secured Property Taxes",
-      "url": "https://sftreasurer.org/property/secured-property-taxes",
-      "supports": "FY2026-27 secured rate 1.18162182%; delinquency dates Dec 10 / Apr 10; penalties 10%"
-    },
-    {
-      "id": "SF-TREASURER-HEIRS",
-      "type": "official",
-      "publisher": "City & County of San Francisco, Treasurer & Tax Collector",
-      "title": "Information for Heirs",
-      "url": "https://sftreasurer.org/property/information-heirs",
-      "supports": "Claims procedures for absent or unknown heirs funds"
-    },
-    {
-      "id": "SF-ASSESSOR",
-      "type": "official",
-      "publisher": "City & County of San Francisco, Assessor-Recorder",
-      "title": "Assessor-Recorder \u2014 Property value, change in ownership, Prop 19",
-      "url": "https://www.sf.gov/departments--assessor-recorder",
-      "supports": "Change-in-ownership reassessment; parent-to-child exclusions; supplemental assessments"
-    },
-    {
-      "id": "SCC-ASSESSOR",
-      "type": "official",
-      "publisher": "County of Santa Clara, Office of the Assessor",
-      "title": "Office of the Assessor \u2014 Property Search, Assessment Look-Up",
-      "url": "https://asr.santaclaracounty.gov/home",
-      "supports": "Official assessed-value lookup for Santa Clara County parcels (used to verify user-provided history)"
-    },
-    {
-      "id": "SF-RENT-BOARD",
-      "type": "official",
-      "publisher": "City & County of San Francisco, Rent Board",
-      "title": "Rent Board \u2014 Allowable rent increase 3/1/2026\u20132/28/2027",
-      "url": "https://www.sf.gov/departments--rent-board",
-      "supports": "Allowable annual increase for covered units: 1.6% (Mar 1, 2026 \u2013 Feb 28, 2027)"
-    },
-    {
-      "id": "SFPUC-RATES-2026-27",
-      "type": "official",
-      "publisher": "San Francisco Public Utilities Commission",
-      "title": "Water & Sewer Rate Schedule FY2026-27 and FY2027-28 (adopted Apr 28, 2026)",
-      "url": "https://www.sfpuc.gov/sites/default/files/accounts-and-services/Rates_Schedule_Water_Sewer_2026-7.pdf",
-      "supports": "W-1B multi-family service charge $19.65/meter/mo; first 3 units $12.03 per dwelling unit; additional $12.91 (eff. 7/1/2026)"
-    },
-    {
-      "id": "SJW-AL-629A",
-      "type": "official",
-      "publisher": "San Jose Water Company / CPUC Water Division (approved tariff)",
-      "title": "Advice Letter 629-A \u2014 Schedule No. 1 General Metered Service (eff. 7/1/2026)",
-      "url": "https://www.sjwater.com/media/4ekhlke4/san-jose-water-company-al-629-a-approved.pdf",
-      "supports": "Schedule 1 applies to portions of Cupertino; 5/8\" meter service charge $79.67/mo; residential quantity rates $5.0355 (0\u20136 ccf), $7.5156 (6\u201312), $14.3548 (12+)"
-    },
-    {
-      "id": "PGE-BSC-AL-7825E",
-      "type": "official",
-      "publisher": "Pacific Gas and Electric Company (CPUC-filed advice letter)",
-      "title": "Advice Letter 7825-E \u2014 Base Services Charge (BSC) tiers",
-      "url": "https://www.pge.com/tariffs/assets/pdf/adviceletter/ELEC_7825-E.pdf",
-      "supports": "BSC per day: $0.19713 / $0.39688 / $0.79343 for tiers 1\u20133 (\u2248 $6.00 / $12.08 / $24.15 per 30.4-day month)"
-    },
-    {
-      "id": "CDI-HOME",
-      "type": "official",
-      "publisher": "California Department of Insurance",
-      "title": "Consumer information \u2014 insurance company and rate information",
-      "url": "https://www.insurance.ca.gov/01-consumers/120-company/",
-      "supports": "Official entry point for rate filings and company information; no per-home premium data published for this analysis"
-    },
-    {
-      "id": "IRS-2026-INFLATION",
-      "type": "official",
-      "publisher": "Internal Revenue Service",
-      "title": "IRS releases tax inflation adjustments for tax year 2026 (incl. OBBBA amendments)",
-      "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
-      "supports": "Federal estate/gift basic exclusion $15,000,000 (2026); annual gift exclusion $19,000"
-    },
-    {
-      "id": "IRS-ESTATE-TAX",
-      "type": "official",
-      "publisher": "Internal Revenue Service",
-      "title": "Estate tax \u2014 filing threshold for year of death",
-      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax",
-      "supports": "Filing threshold $15,000,000 for 2026 deaths; $13,990,000 for 2025; portability election for surviving spouse"
-    },
-    {
-      "id": "IRS-REV-PROC-2025-32",
-      "type": "official",
-      "publisher": "Internal Revenue Service",
-      "title": "Rev. Proc. 2025-32 (2026 inflation adjustments)",
-      "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
-      "supports": "2026 long-term capital gain brackets (0/15/20%) and estate/trust brackets"
-    },
-    {
-      "id": "IRS-PUB-551",
-      "type": "official",
-      "publisher": "Internal Revenue Service",
-      "title": "Publication 551 (12/2025), Basis of Assets",
-      "url": "https://www.irs.gov/publications/p551",
-      "supports": "Basis rules for property acquired from a decedent (see 'Inherited property' section; step-up to fair market value at death)"
-    },
-    {
-      "id": "IRS-PUB-527",
-      "type": "official",
-      "publisher": "Internal Revenue Service",
-      "title": "Publication 527 (2025), Residential Rental Property",
-      "url": "https://www.irs.gov/publications/p527",
-      "supports": "Residential rental property depreciated straight-line over 27.5 years (GDS)"
-    },
-    {
-      "id": "FED-PCE-TARGET",
-      "type": "official",
-      "publisher": "Board of Governors of the Federal Reserve System",
-      "title": "Economy at a glance \u2014 Inflation (PCE)",
-      "url": "https://www.federalreserve.gov/economy-at-a-glance-inflation-pce.htm",
-      "supports": "Longer-run PCE inflation objective of 2 percent (base inflation assumption)"
-    },
-    {
-      "id": "BLS-CPI",
-      "type": "official",
-      "publisher": "U.S. Bureau of Labor Statistics",
-      "title": "Consumer Price Index (latest release)",
-      "url": "https://www.bls.gov/cpi/",
-      "supports": "Stress-case inflation reference (reported 12-month all-items change for September 2026: 3.7%; verify on release page)"
-    },
-    {
-      "id": "CONGRESS-HR1301",
-      "type": "official",
-      "publisher": "U.S. Congress",
-      "title": "H.R.1301 \u2014 Death Tax Repeal Act of 2025 (119th Congress)",
-      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1301",
-      "supports": "Introduced Feb 13, 2025; referred to House Ways and Means; no further action recorded at access date"
-    },
-    {
-      "id": "SOS-QUALIFIED-MEASURES",
-      "type": "official",
-      "publisher": "California Secretary of State",
-      "title": "Qualified Ballot Measures \u2014 November 3, 2026",
-      "url": "https://www.sos.ca.gov/elections/ballot-measures/qualified-ballot-measures",
-      "supports": "List of 14 measures (Props 1\u20135 and 37\u201345); no Prop 19 repeal measure on the list"
-    },
-    {
-      "id": "SOS-VIG-2026",
-      "type": "official",
-      "publisher": "California Secretary of State",
-      "title": "Official Voter Information Guide \u2014 November 3, 2026 (complete)",
-      "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf",
-      "supports": "Official text of measures including Prop 43 (two-thirds vote for voter-initiated local special taxes)"
-    },
-    {
-      "id": "NEWS-CALMATTERS-PROP43",
-      "type": "secondary",
-      "publisher": "CalMatters",
-      "title": "Prop. 43: Should it be harder to raise local taxes for specific services? (Nov 4, 2026)",
-      "url": "https://calmatters.org/politics/2026/11/california-election-2026-prop-43/",
-      "supports": "Unofficial early returns: Prop 43 trailing (~55% no) \u2014 flagged; not an official result"
-    },
-    {
-      "id": "NEWS-DAILYBULLETIN-PROP43",
-      "type": "secondary",
-      "publisher": "Daily Bulletin (news wire)",
-      "title": "Election results: Prop. 43 trails in early returns (Nov 4, 2026)",
-      "url": "https://www.dailybulletin.com/2026/11/03/california-prop-43-local-tax-election-results/",
-      "supports": "Unofficial preliminary statewide returns: 45.2% yes / 54.8% no at 11 p.m. on Nov 3, 2026 \u2014 flagged"
-    },
-    {
-      "id": "FTB-FORMS",
-      "type": "official",
-      "publisher": "California Franchise Tax Board",
-      "title": "Forms and publications index",
-      "url": "https://www.ftb.ca.gov/forms/index.html",
-      "supports": "Official entry point for California rate tables and publications (rate tables not retrieved this session)"
-    }
-  ]
+ "accessed": "2026-11-06",
+ "note": "Every table row on the site cites one or more IDs below. 'official' = government agency, statute, utility-filed CPUC tariff, or IRS/Congress/SOS. 'secondary' = used only to flag conflicts, never as a value source.",
+ "sources": [
+  {
+   "id": "BOE-LTA-2026-026",
+   "type": "official",
+   "publisher": "California State Board of Equalization",
+   "title": "Proposition 19 Intergenerational Transfer Exclusion FAQ (LTA 2026/026, Aug 3, 2026)",
+   "url": "https://www.boe.ca.gov/proptaxes/pdf/lta26026.pdf",
+   "supports": "Excluded amount = factored base year value + $1M (adjusted); New Taxable Value formula; transfers at death included whether or not in trust; family home definition"
+  },
+  {
+   "id": "BOE-LTA-2025-009",
+   "type": "official",
+   "publisher": "California State Board of Equalization",
+   "title": "Letter to Assessors 2025/009 — Prop 19 $1 million adjustment",
+   "url": "https://www.boe.ca.gov/proptaxes/pdf/lta25009.pdf",
+   "supports": "$1,044,586 adjusted amount for transfers Feb 16, 2025 – Feb 15, 2027; next adjustment Feb 2027"
+  },
+  {
+   "id": "BOE-PROP19-PAGE",
+   "type": "official",
+   "publisher": "California State Board of Equalization",
+   "title": "Proposition 19 — Frequently Asked Questions",
+   "url": "https://www.boe.ca.gov/prop19/",
+   "supports": "Rental homes/units are not eligible for the parent-child family-home exclusion"
+  },
+  {
+   "id": "BOE-LTA-2009-036",
+   "type": "official",
+   "publisher": "California State Board of Equalization",
+   "title": "Letter to Assessors 2009/036 (Article XIII A, §2(b) 2% inflation cap explained)",
+   "url": "https://boe.ca.gov/proptaxes/pdf/lta09036.pdf",
+   "supports": "Factored base year value increases limited to inflation, not exceeding 2% per year"
+  },
+  {
+   "id": "BOE-502A",
+   "type": "official",
+   "publisher": "California State Board of Equalization",
+   "title": "BOE-502-A Preliminary Change of Ownership Report (sample)",
+   "url": "https://www.boe.ca.gov/proptaxes/pdf/sample-boe502a.pdf",
+   "supports": "PCOR must be filed for inheritance/parent-child transfers"
+  },
+  {
+   "id": "RTC-11911",
+   "type": "official",
+   "publisher": "California Legislative Information",
+   "title": "California Revenue and Taxation Code §11911 (Documentary transfer tax authorization)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=11911",
+   "supports": "Base documentary transfer tax of $0.55 per $500 (= $1.10 per $1,000) that counties may impose"
+  },
+  {
+   "id": "RTC-11930",
+   "type": "official",
+   "publisher": "California Legislative Information",
+   "title": "California Revenue and Taxation Code §11930 (Death and gift transfers exempt)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=RTC&division=2.&part=6.7.&chapter=3.",
+   "supports": "No documentary transfer tax on transfers by reason of death or inter vivos gift, outright or in trust"
+  },
+  {
+   "id": "SF-TREASURER-SECURED",
+   "type": "official",
+   "publisher": "City & County of San Francisco, Treasurer & Tax Collector",
+   "title": "Secured Property Taxes",
+   "url": "https://sftreasurer.org/property/secured-property-taxes",
+   "supports": "FY2026-27 secured rate 1.18162182%; delinquency dates Dec 10 / Apr 10; penalties 10%"
+  },
+  {
+   "id": "SF-TREASURER-HEIRS",
+   "type": "official",
+   "publisher": "City & County of San Francisco, Treasurer & Tax Collector",
+   "title": "Information for Heirs",
+   "url": "https://sftreasurer.org/property/information-heirs",
+   "supports": "Claims procedures for absent or unknown heirs funds"
+  },
+  {
+   "id": "SF-ASSESSOR",
+   "type": "official",
+   "publisher": "City & County of San Francisco, Assessor-Recorder",
+   "title": "Assessor-Recorder — Property value, change in ownership, Prop 19",
+   "url": "https://www.sf.gov/departments--assessor-recorder",
+   "supports": "Change-in-ownership reassessment; parent-to-child exclusions; supplemental assessments"
+  },
+  {
+   "id": "SCC-ASSESSOR",
+   "type": "official",
+   "publisher": "County of Santa Clara, Office of the Assessor",
+   "title": "Office of the Assessor — Property Search, Assessment Look-Up",
+   "url": "https://asr.santaclaracounty.gov/home",
+   "supports": "Official assessed-value lookup for Santa Clara County parcels (used to verify user-provided history)"
+  },
+  {
+   "id": "SF-RENT-BOARD",
+   "type": "official",
+   "publisher": "City & County of San Francisco, Rent Board",
+   "title": "Rent Board — Allowable rent increase 3/1/2026–2/28/2027",
+   "url": "https://www.sf.gov/departments--rent-board",
+   "supports": "Allowable annual increase for covered units: 1.6% (Mar 1, 2026 – Feb 28, 2027)"
+  },
+  {
+   "id": "SFPUC-RATES-2026-27",
+   "type": "official",
+   "publisher": "San Francisco Public Utilities Commission",
+   "title": "Water & Sewer Rate Schedule FY2026-27 and FY2027-28 (adopted Apr 28, 2026)",
+   "url": "https://www.sfpuc.gov/sites/default/files/accounts-and-services/Rates_Schedule_Water_Sewer_2026-7.pdf",
+   "supports": "W-1B multi-family service charge $19.65/meter/mo; first 3 units $12.03 per dwelling unit; additional $12.91 (eff. 7/1/2026)"
+  },
+  {
+   "id": "SJW-AL-629A",
+   "type": "official",
+   "publisher": "San Jose Water Company / CPUC Water Division (approved tariff)",
+   "title": "Advice Letter 629-A — Schedule No. 1 General Metered Service (eff. 7/1/2026)",
+   "url": "https://www.sjwater.com/media/4ekhlke4/san-jose-water-company-al-629-a-approved.pdf",
+   "supports": "Schedule 1 applies to portions of Cupertino; 5/8\" meter service charge $79.67/mo; residential quantity rates $5.0355 (0–6 ccf), $7.5156 (6–12), $14.3548 (12+)"
+  },
+  {
+   "id": "PGE-BSC-AL-7825E",
+   "type": "official",
+   "publisher": "Pacific Gas and Electric Company (CPUC-filed advice letter)",
+   "title": "Advice Letter 7825-E — Base Services Charge (BSC) tiers",
+   "url": "https://www.pge.com/tariffs/assets/pdf/adviceletter/ELEC_7825-E.pdf",
+   "supports": "BSC per day: $0.19713 / $0.39688 / $0.79343 for tiers 1–3 (≈ $6.00 / $12.08 / $24.15 per 30.4-day month)"
+  },
+  {
+   "id": "CDI-HOME",
+   "type": "official",
+   "publisher": "California Department of Insurance",
+   "title": "Consumer information — insurance company and rate information",
+   "url": "https://www.insurance.ca.gov/01-consumers/120-company/",
+   "supports": "Official entry point for rate filings and company information; no per-home premium data published for this analysis"
+  },
+  {
+   "id": "IRS-2026-INFLATION",
+   "type": "official",
+   "publisher": "Internal Revenue Service",
+   "title": "IRS releases tax inflation adjustments for tax year 2026 (incl. OBBBA amendments)",
+   "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+   "supports": "Federal estate/gift basic exclusion $15,000,000 (2026); annual gift exclusion $19,000"
+  },
+  {
+   "id": "IRS-ESTATE-TAX",
+   "type": "official",
+   "publisher": "Internal Revenue Service",
+   "title": "Estate tax — filing threshold for year of death",
+   "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax",
+   "supports": "Filing threshold $15,000,000 for 2026 deaths; $13,990,000 for 2025; portability election for surviving spouse"
+  },
+  {
+   "id": "IRS-REV-PROC-2025-32",
+   "type": "official",
+   "publisher": "Internal Revenue Service",
+   "title": "Rev. Proc. 2025-32 (2026 inflation adjustments)",
+   "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+   "supports": "2026 long-term capital gain brackets (0/15/20%) and estate/trust brackets"
+  },
+  {
+   "id": "IRS-PUB-551",
+   "type": "official",
+   "publisher": "Internal Revenue Service",
+   "title": "Publication 551 (12/2025), Basis of Assets",
+   "url": "https://www.irs.gov/publications/p551",
+   "supports": "Basis rules for property acquired from a decedent (see 'Inherited property' section; step-up to fair market value at death)"
+  },
+  {
+   "id": "IRS-PUB-527",
+   "type": "official",
+   "publisher": "Internal Revenue Service",
+   "title": "Publication 527 (2025), Residential Rental Property",
+   "url": "https://www.irs.gov/publications/p527",
+   "supports": "Residential rental property depreciated straight-line over 27.5 years (GDS)"
+  },
+  {
+   "id": "FED-PCE-TARGET",
+   "type": "official",
+   "publisher": "Board of Governors of the Federal Reserve System",
+   "title": "Economy at a glance — Inflation (PCE)",
+   "url": "https://www.federalreserve.gov/economy-at-a-glance-inflation-pce.htm",
+   "supports": "Longer-run PCE inflation objective of 2 percent (base inflation assumption)"
+  },
+  {
+   "id": "BLS-CPI",
+   "type": "official",
+   "publisher": "U.S. Bureau of Labor Statistics",
+   "title": "Consumer Price Index (latest release)",
+   "url": "https://www.bls.gov/cpi/",
+   "supports": "Stress-case inflation reference (reported 12-month all-items change for September 2026: 3.7%; verify on release page)"
+  },
+  {
+   "id": "CONGRESS-HR1301",
+   "type": "official",
+   "publisher": "U.S. Congress",
+   "title": "H.R.1301 — Death Tax Repeal Act of 2025 (119th Congress)",
+   "url": "https://www.congress.gov/bill/119th-congress/house-bill/1301",
+   "supports": "Introduced Feb 13, 2025; referred to House Ways and Means; no further action recorded at access date"
+  },
+  {
+   "id": "SOS-QUALIFIED-MEASURES",
+   "type": "official",
+   "publisher": "California Secretary of State",
+   "title": "Qualified Ballot Measures — November 3, 2026",
+   "url": "https://www.sos.ca.gov/elections/ballot-measures/qualified-ballot-measures",
+   "supports": "List of 14 measures (Props 1–5 and 37–45); no Prop 19 repeal measure on the list"
+  },
+  {
+   "id": "SOS-VIG-2026",
+   "type": "official",
+   "publisher": "California Secretary of State",
+   "title": "Official Voter Information Guide — November 3, 2026 (complete)",
+   "url": "https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf",
+   "supports": "Official text of measures including Prop 43 (two-thirds vote for voter-initiated local special taxes)"
+  },
+  {
+   "id": "NEWS-CALMATTERS-PROP43",
+   "type": "secondary",
+   "publisher": "CalMatters",
+   "title": "Prop. 43: Should it be harder to raise local taxes for specific services? (Nov 4, 2026)",
+   "url": "https://calmatters.org/politics/2026/11/california-election-2026-prop-43/",
+   "supports": "Unofficial early returns: Prop 43 trailing (~55% no) — flagged; not an official result"
+  },
+  {
+   "id": "NEWS-DAILYBULLETIN-PROP43",
+   "type": "secondary",
+   "publisher": "Daily Bulletin (news wire)",
+   "title": "Election results: Prop. 43 trails in early returns (Nov 4, 2026)",
+   "url": "https://www.dailybulletin.com/2026/11/03/california-prop-43-local-tax-election-results/",
+   "supports": "Unofficial preliminary statewide returns: 45.2% yes / 54.8% no at 11 p.m. on Nov 3, 2026 — flagged"
+  },
+  {
+   "id": "FTB-FORMS",
+   "type": "official",
+   "publisher": "California Franchise Tax Board",
+   "title": "Forms and publications index",
+   "url": "https://www.ftb.ca.gov/forms/index.html",
+   "supports": "Official entry point for California rate tables and publications (rate tables not retrieved this session)"
+  },
+  {
+   "id": "CRS-ESTATE-R48183",
+   "type": "official",
+   "publisher": "Congressional Research Service (congress.gov)",
+   "title": "The Estate and Gift Tax: An Overview (CRS R48183, updated 07/14/2025)",
+   "url": "https://www.congress.gov/crs-product/R48183",
+   "supports": "Estate tax rate on the taxable portion is 40%; $15M basic exclusion for 2026 (P.L. 119-21), indexed; about 0.07% of decedents owe the tax (2019); couple combined exclusion $30M in 2026 with portability"
+  },
+  {
+   "id": "IRS-NIIT-QA",
+   "type": "official",
+   "publisher": "Internal Revenue Service",
+   "title": "Questions and Answers on the Net Investment Income Tax",
+   "url": "https://www.irs.gov/newsroom/questions-and-answers-on-the-net-investment-income-tax",
+   "supports": "NIIT rate 3.8%; thresholds $200,000 single / $250,000 MFJ / $125,000 MFS, not indexed for inflation; includes rental income and gain on sale of a second home that is not a principal residence; gain excluded under IRC §121 on a principal residence is not subject"
+  },
+  {
+   "id": "FTB-ESTATE-TAX-ANALYSIS",
+   "type": "official",
+   "publisher": "California Franchise Tax Board",
+   "title": "FTB analysis of SB 378 (2019) — California Estate & Gift Taxes",
+   "url": "https://www.ftb.ca.gov/tax-pros/law/legislation/2019-2020/SB378-032519.pdf",
+   "supports": "Highest estate and gift tax rate is 40 percent; California does not conform to federal estate/GST tax and its estate 'pick-up' tax equals the repealed federal credit, i.e., zero; estate tax generally due within nine months of death"
+  },
+  {
+   "id": "FTB-CA-2026-RATES",
+   "type": "official",
+   "publisher": "California Franchise Tax Board",
+   "title": "2026 California Tax Rate Schedules (Schedule X, single or married/RDP filing separately)",
+   "url": "https://www.ftb.ca.gov/forms/2026/2026-540-tax-rate-schedules.pdf",
+   "supports": "2026 single-filer marginal rates 1%–12.3%: 9.3% on $75,197–$384,109; 12.3% above $768,213"
+  },
+  {
+   "id": "CDI-RESIDENTIAL-REPORT",
+   "type": "official",
+   "publisher": "California Department of Insurance",
+   "title": "Residential Property Insurance Report — Part I studies and data (2008–2023)",
+   "url": "https://www.insurance.ca.gov/0400-news/0200-studies-reports/0250-homeowners-study/",
+   "supports": "Part I data summary: statewide average written premium by coverage type (Homeowners multi-peril $1,176; tenant/multi-family $601; condo $537; renters $190 over 2008–2023)"
+  },
+  {
+   "id": "CDI-SB824-DATA",
+   "type": "official",
+   "publisher": "California Department of Insurance",
+   "title": "SB 824 report — Residential Property Coverage Amounts, Wildfire Risk and Losses (data workbook)",
+   "url": "https://www.insurance.ca.gov/01-consumers/200-wrr/WildfireRiskInfoRpt.cfm",
+   "supports": "2023 statewide totals: $14.22B earned premium ÷ 12.58M policy-years = $1,130 average earned premium per residential policy (computed from published totals); average Coverage A (main structure) $324,973"
+  },
+  {
+   "id": "SCC-TAX-RATE-BOOK",
+   "type": "official",
+   "publisher": "Santa Clara County Controller",
+   "title": "FY 2025-26 Property Tax Rate Book",
+   "url": "https://controller.santaclaracounty.gov/property-tax-distribution/property-tax-rate-book",
+   "supports": "Total rate = 1.000% base rate plus voter-approved debt, set by Tax Rate Area; example TRA totals in the book range 1.12580%–1.24090% for FY 2025-26"
+  },
+  {
+   "id": "LEGINFO-AB1482",
+   "type": "official",
+   "publisher": "California Legislature (leginfo)",
+   "title": "AB 1482 Tenant Protection Act (2019, Chapter 597) — bill text",
+   "url": "https://www.leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200AB1482",
+   "supports": "Statewide rent increase cap: 5% + local CPI, or 10%, whichever is lower; no more than two increases in 12 months; sunsets Jan 1, 2030; single-family owner-occupied homes (owner rents no more than two units) exempt"
+  },
+  {
+   "id": "LEGINFO-SB284",
+   "type": "official",
+   "publisher": "California Legislature (leginfo)",
+   "title": "SB 284 (2025-26) — status",
+   "url": "https://leginfo.legislature.ca.gov/faces/billStatusClient.xhtml?bill_id=202520260SB284",
+   "supports": "Would extend the Proposition 19 family-home/farm transfer exclusion to specified eligible transferees; active bill held in Assembly committee (last action 7/14/2025); not law"
+  },
+  {
+   "id": "CONGRESS-S587",
+   "type": "official",
+   "publisher": "congress.gov (Library of Congress)",
+   "title": "S.587 Death Tax Repeal Act of 2025 (119th Congress)",
+   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/587",
+   "supports": "Introduced 02/13/2025; read twice and referred to Senate Finance; status: Introduced — not law"
+  },
+  {
+   "id": "FHFA-HPI-2026Q2",
+   "type": "official",
+   "publisher": "Federal Housing Finance Agency",
+   "title": "FHFA House Price Index Report 2026Q2",
+   "url": "https://www.fhfa.gov/document/d/hpi/fhfa-house-price-index-report-2026q2",
+   "supports": "California purchase-only HPI: −0.20% over 12 months; +17.31% over 5 years; +317.15% since 1991Q1 (≈4.1%/yr, computed)"
+  },
+  {
+   "id": "FRED-SP500",
+   "type": "official",
+   "publisher": "Federal Reserve Bank of St. Louis (FRED)",
+   "title": "S&P 500 Index (FRED daily series SP500)",
+   "url": "https://fred.stlouisfed.org/series/SP500",
+   "supports": "2,131.52 (2016-11-07) → 7,688.62 (2026-11-04); 10-year change ≈13.7% per year (computed from the official series; past performance, not a forecast)"
+  },
+  {
+   "id": "FRED-GS10",
+   "type": "official",
+   "publisher": "Federal Reserve Bank of St. Louis (FRED)",
+   "title": "10-Year Treasury Constant Maturity Rate (FRED GS10)",
+   "url": "https://fred.stlouisfed.org/series/GS10",
+   "supports": "5.13% (observation 2026-10-01)"
+  },
+  {
+   "id": "CPUC-SOLAR-GUIDE",
+   "type": "official",
+   "publisher": "California Public Utilities Commission",
+   "title": "California Solar Consumer Protection Guide",
+   "url": "https://www.cpuc.ca.gov/-/media/cpuc-website/divisions/energy-division/documents/solar-guide/solarguide22_011922.pdf",
+   "supports": "PG&E, SCE and SDG&E customers are guaranteed net energy metering for 20 years from installation; excess annual generation is paid as net surplus compensation of about 2–3 cents per kWh"
+  },
+  {
+   "id": "SCC-COURTS-TRUST",
+   "type": "official",
+   "publisher": "Superior Court of California, County of Santa Clara",
+   "title": "Probate — Trusts (trustee duties after the settlor dies)",
+   "url": "https://santaclara.courts.ca.gov/divisions/probate-division/probate-trusts",
+   "supports": "Successor trustee: Acceptance/Certification of Trust (Prob. Code §18100.5); written notice to beneficiaries and heirs within 60 days (Prob. Code §16061.7); written notice to the county Assessor within 150 days of death (R&TC §480(b)); inventory and date-of-death valuation; estate tax returns and payment within 9 months; trust EIN"
+  }
+ ]
 }

@@ -184,7 +184,7 @@ def build_index():
   <div class='card'>
     <h3>What to do next</h3>
     <ul>
-      <li>Re-supply the full multi-year assessment history (only some years are retained; see Flagged).</li>
+      <li>Verify the restored full-year assessment history against the assessor portals (links on the Property tax page).</li>
       <li>Verify parcel-level values on the county assessor portals (links on Property tax page).</li>
       <li>Confirm occupancy plans for Property A and mixed-use treatment for Property B with the assessors.</li>
       <li>Get an estate attorney or CPA to review the trust documents and the inheritance steps.</li>
@@ -218,9 +218,16 @@ def build_property_tax():
             r["metric"],
             money(r["value"]) if r["value"] is not None else "blank",
             status_badge(r["status"]),
+            esc(r.get("notes") or "—"),
             r["sources"],
         ])
-    hist = table(["Property", "Year", "Metric", "Value", "Status", ], [r[:5] + [r[5]] for r in rows], "property-history", "Owner-provided assessment history (retained records; flagged)")
+    hist = table(["Property", "Year", "Metric", "Value", "Status", "Notes"],
+                 [r[:6] + [r[6]] for r in rows], "property-history",
+                 "Owner-provided assessment history, complete as supplied (Property A 2014–2026; Property B "
+                 "2016–2025): values and owner-reported YoY % are unverified; each tax row shows the computed "
+                 "implied tax÷AV ratio (A 1.32%–1.41%, B 1.73%–2.13% vs official SF rate 1.18162182% and "
+                 "county TRA examples 1.126%–1.241% — flags X04/X06). Property A tax repeats in 2017–18 and "
+                 "2019–20 as supplied.")
 
     facts_rows = []
     for f in FACTS:
@@ -264,6 +271,10 @@ def build_costs():
         ["Property B insurance, three-unit rental (owner guess $1,500/yr)", "$1,500/yr (model); likely low for a landlord policy", status_badge("user-provided — unverified"), ["CDI-HOME"]],
         ["Property B rent, two covered units (owner)", "$7,150/mo (model)", status_badge("user-provided — unverified"), ["SF-RENT-BOARD"]],
         ["Property A rental income", "blank (not provided)", status_badge("blank"), ["SCC-ASSESSOR"]],
+        ["California statewide average homeowners premium benchmark (multi-peril, 2008–2023)", "$1,176 average written premium per policy-year", status_badge("verified"), ["CDI-RESIDENTIAL-REPORT"]],
+        ["California statewide average earned premium per residential policy, 2023", "$1,130 ($14.22B ÷ 12.58M policy-years, computed from CDI totals)", status_badge("verified"), ["CDI-SB824-DATA"]],
+        ["California statewide average Coverage A (main structure limit), 2023", "$324,973", status_badge("verified"), ["CDI-SB824-DATA"]],
+        ["Rooftop solar export credits (context for the owner's $10–20/mo credit)", "NEM guaranteed 20 years; surplus annual generation paid ≈2–3¢/kWh", status_badge("verified"), ["CPUC-SOLAR-GUIDE"]],
         ["Maintenance (placeholders)", "A 0.5% and B 1.0% of market value per year", status_badge("assumption"), ["NONE"]],
     ]
     tbl = table(["Item", "Value used", "Status"], cost_rows, "costs", "Ownership costs: tariffs (official) and owner inputs")
@@ -276,6 +287,8 @@ def build_costs():
 <li>Owner's $100–150/mo Property A water range corresponds to about 4–9 ccf per month on a 5/8-inch meter under Schedule No. 1, so the meter size and usage should be confirmed (flag X12).</li>
 <li>Property A electricity: the fixed charge is modeled at the top tier, net of the owner's $15 average credit. The per-day tier amounts still need confirming (flag X11).</li>
 <li>Property B water in SF is not reconciled to tariff components because sewer and stormwater charges were not reviewed (flag X13).</li>
+<li>Official statewide insurance benchmarks (CDI) are shown for context only — they are not property-specific. The owner's $1,500/yr figures for both properties remain unverified; property and landlord quotes are required (flag X14).</li>
+<li>Statewide insurance averages cannot be applied to a specific home: CDI publishes per-ZIP data (SB 824 workbook) but it was not machine-readable in this session; retrieve a quote instead.</li>
 </ul>
 """
     page("ownership-costs.html", "Ownership costs", body, "ownership-costs.html")
@@ -322,6 +335,14 @@ def build_projections():
     for s in SENS:
         sens_rows.append([s["scenario"], s["inherit_year"], money(s["cup_live_nw_h"]), money(s["cup_sell_nw_h"]), money(s["sf_keep_nw_h"]), money(s["sf_sell_nw_h"]), ["NONE"]])
     sens_tbl = table(["Scenario", "Inheritance", "A live (net worth)", "A sell", "B keep", "B sell", ], [r[:6] + [r[6]] for r in sens_rows], "sens", None)
+    bench = [
+        ["California home price growth, purchase-only (FHFA, 2026Q2)", "Last 12 months −0.20%; last 5 years +17.31% (≈4.1%/yr since 1991Q1, computed)", status_badge("verified"), ["FHFA-HPI-2026Q2"]],
+        ["U.S. large-cap equities (S&P 500 index)", "2,131.52 → 7,688.62 over 10 years (2016-11-07 → 2026-11-04), ≈13.7%/yr computed from the official FRED series — history, not a forecast", status_badge("verified"), ["FRED-SP500"]],
+        ["10-year U.S. Treasury yield", "5.13% (2026-10-01 observation)", status_badge("verified"), ["FRED-GS10"]],
+        ["U.S. inflation (CPI-U)", "+3.7% over the 12 months ending September 2026", status_badge("verified"), ["BLS-CPI"]],
+        ["Model cost-inflation assumption", "2%–3% per year (assumption; Fed longer-run PCE objective 2%)", status_badge("assumption"), ["FED-PCE-TARGET"]],
+    ]
+    bench_tbl = table(["Reference benchmark", "Value", "Status"], bench, "bench", None)
     body = f"""
 <h1>Projections, 2026–2050</h1>
 <p class='lede'>Base case: inheritance in {D45['inherit_year']}, home values growing 3% a year, costs inflating 2–3%. Tax after inheritance assumes the heir's occupancy for Property A (Prop 19) and full reassessment for Property B. Projections are not forecasts. Change the assumptions in the flagged list and re-run.</p>
@@ -330,6 +351,8 @@ def build_projections():
 <h2>Sensitivity: net worth 10 years after inheritance (nominal)</h2>
 <p>Appreciation and portfolio return are the two inputs with the biggest effect. "Live" nets out the carrying costs; "sell" invests the proceeds. Positive differences favor selling for A; for B, a keep result above the sell result means keeping is better.</p>
 {sens_tbl}
+<h2>Official reference benchmarks (context for the assumptions above)</h2>
+{bench_tbl}
 """
     page("projections.html", "Projections", body, "projections.html")
 
@@ -394,7 +417,7 @@ def build_tax():
 {table(["Rule", "Value", "Status"], rows_of(fed), "fed", None)}
 <h2>Estate exclusion by year of death (projection after 2026)</h2>
 {est_tbl}
-<p>Estate tax exposure = (taxable estate − exclusion) × rate. The top rate is not confirmed (flag X16) so exposure is left blank. Enter the estate total from the owner's own records to test against these thresholds.</p>
+<p>Estate tax exposure = (taxable estate − exclusion) × rate. The top rate is 40% (FTB analysis; CRS R48183). Only about 0.07% of decedents owe any federal estate tax (2019 data, CRS), and a couple can cover $30M in 2026 with portability. Enter the estate total from the owner's own records to test against these thresholds.</p>
 <h2>California</h2>
 {table(["Rule", "Value", "Status"], rows_of(st), "state", None)}
 <h2>Local (San Francisco) and county</h2>
@@ -409,7 +432,7 @@ def build_process():
     steps = [
         ("1", "Confirm the trust terms and the successor trustee", "Read the trust for distribution rules and whether the property goes outright or in continuing trust. Prop 19 applies to distributions from a trust.", ["BOE-LTA-2026-026"]),
         ("2", "Obtain date-of-death values for both properties", "Appraisal or broker opinion of value at the date of death. This sets the new basis for a later sale (step-up).", ["IRS-PUB-551"]),
-        ("3", "Check federal estate tax filing", "Form 706 is required when the gross estate plus adjusted taxable gifts exceeds the filing threshold for the year of death ($15,000,000 for 2026). Portability to a surviving spouse requires a timely return.", ["IRS-ESTATE-TAX"]),
+        ("3", "Check federal estate tax filing", "Form 706 is required when the gross estate plus adjusted taxable gifts exceeds the filing threshold for the year of death ($15,000,000 for 2026). It is due within 9 months of death (extensions available), and portability to a surviving spouse requires a timely return.", ["IRS-ESTATE-TAX", "FTB-ESTATE-TAX-ANALYSIS"]),
         ("4", "Deed from trustee to heir and documentary transfer tax exemption", "Transfers by reason of death, outright or in trust, are exempt from the documentary transfer tax. Claim the exemption on the recorded deed.", ["RTC-11930"]),
         ("5", "File the Preliminary Change of Ownership Report (BOE-502-A)", "Required on the change in ownership. Mark the inheritance or parent-child box, as applicable.", ["BOE-502A"]),
         ("6", "Property A: choose occupancy and claim Prop 19 if eligible", "Prop 19 keeps the value below the cap only if the heir makes it their principal residence and claims the homeowners' exemption within the BOE windows. Otherwise full reassessment applies.", ["BOE-LTA-2026-026", "BOE-PROP19-PAGE"]),
@@ -417,9 +440,11 @@ def build_process():
         ("8", "Set up tax bills and due dates", "SF secured taxes: first installment delinquent after Dec 10 (10% penalty); second after Apr 10 (10% plus fees).", ["SF-TREASURER-SECURED"]),
         ("9", "Property B: rental obligations", "Owner must pay the Rent Board fee and keep the Housing Inventory current. The allowable increase for covered units is 1.6% for Mar 1, 2026 – Feb 28, 2027.", ["SF-RENT-BOARD"]),
         ("10", "Transfer utilities and insurance", "Move water, electricity, and the property policy into the heir's name. Get a landlord policy for Property B.", ["SJW-AL-629A", "SFPUC-RATES-2026-27", "CDI-HOME"]),
-        ("11", "Decide: live, rent, or sell (see Decision page)", "Compare the break-even rent for Property A and the keep vs sell results for Property B using the owner's own inputs.", ["BOE-LTA-2026-026"]),
-        ("12", "If selling, track basis and holding period", "Basis is the value at death. A sale soon after death generally produces little gain. Use the federal brackets for any gain.", ["IRS-REV-PROC-2025-32", "IRS-PUB-551"]),
-        ("13", "Keep records", "Retain the appraisal, the deed, the PCOR, Prop 19 filings, and tax bills. These support basis and exclusion claims.", ["IRS-PUB-551"]),
+        ("11", "Send the statutory trust notices", "Within 60 days of the settlor's death the trustee must give written notice to all beneficiaries and heirs (Prob. Code §16061.7), and within 150 days give written notice to the county Assessor of any real estate in the trust (R&TC §480(b)) — per the Santa Clara Superior Court.", ["SCC-COURTS-TRUST"]),
+        ("12", "Inventory, value assets, set up the trust EIN", "The trustee inventories and values all assets as of the date of death to test the estate-tax threshold; file/pay any estate tax within 9 months; obtain a trust EIN for income-tax filing.", ["SCC-COURTS-TRUST"]),
+        ("13", "Decide: live, rent, or sell (see Decision page)", "Compare the break-even rent for Property A and the keep vs sell results for Property B using the owner's own inputs.", ["BOE-LTA-2026-026"]),
+        ("14", "If selling, track basis and holding period", "Basis is the value at death. A sale soon after death generally produces little gain. Use the federal brackets for any gain.", ["IRS-REV-PROC-2025-32", "IRS-PUB-551"]),
+        ("15", "Keep records", "Retain the appraisal, the deed, the PCOR, Prop 19 filings, the 60-day and 150-day notices, and tax bills. These support basis and exclusion claims.", ["IRS-PUB-551", "SCC-COURTS-TRUST"]),
     ]
     rows = [[s[0], f"<strong>{esc(s[1])}</strong><br>{esc(s[2])}", s[3]] for s in steps]
     tbl = table(["Step", "What to do", ], [[r[0], r[1], r[2]] for r in rows], "process", None)
