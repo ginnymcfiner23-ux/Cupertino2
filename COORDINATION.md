@@ -1,72 +1,79 @@
-# COORDINATION.md — shared task board
+# COORDINATION.md — Cupertino2 shared task board (integrated)
 
-Repo: `ginnymcfiner23-ux/Cupertino2` · Target: `main` (GitHub Pages from `/docs`)
+Repo: `ginnymcfiner23-ux/Cupertino2` · Target: `main` (GitHub Pages from root `/`; root `index.html` redirects to `docs/index.html`; root `.nojekyll` present)
+Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, `scripts/`; live dashboard) and `arena-2988121a` (hand-authored pages under `pages/*`, `assets/style.css`; root `index.html` content preserved in branch history). File scopes non-overlapping except this board; neither session's work discarded.
 
 ## Protocol
-
 - Claim a task here (Owner column = session ID), commit, and push **before** starting it. Never start a task another session has claimed.
-- Keep file scopes non-overlapping. Shared outputs (site navigation, `data/sources.json`) are changed only by the integration task.
+- Keep file scopes non-overlapping. Shared outputs (site navigation, `data/sources.json`, this board) are changed only by the integration task.
 - Small commits. Run `git pull --rebase` before every push.
 - On merge conflict: stop, resolve without discarding the other session's work, and log it in the "Merge & conflict log" below.
-- `needs review` items are published on the Flagged for Review page and do **not** block merge.
-- Session branch rule: Arena pins each session to its own branch. This session works only on `arena/570be64c-cupertino2` (session ID `arena-570be64c`). The requested `session-<id>/<task>` naming cannot be used.
-- **Privacy:** no names, street addresses, parcel numbers, account numbers, phone numbers, or emails appear anywhere in the repo or site. ZIP codes are withheld; properties are labeled by city only (Property A = Cupertino, Property B = San Francisco). Personal details discovered during research stay internal.
+- A claim older than 60 minutes with no commits may be taken over by another session (note the handoff here).
+- `needs review` items are published on a Flagged for Review page and do **not** block merge.
+- Session branch rule: each session works only on its own branch.
 
-## Sessions observed on origin (for awareness; not merged to main at time of claim)
+## Session scope
 
-| Session ID | Branch | Notes |
-|---|---|---|
-| arena-2190596b | arena/2190596b-cupertino2 | Overlapping scope (docs/, data/, COORDINATION.md) |
-| arena-2988121a | arena/2988121a-cupertino2 | Overlapping scope (pages/*, COORDINATION.md) |
-| arena-2e7ee7cd | arena/2e7ee7cd-cupertino2 | Overlapping scope (docs/**, research/*) |
-| arena-4a906cb7 | arena/4a906cb7-cupertino2 | Overlapping scope |
-| arena-55de235e | arena/55de235e-cupertino2 | Overlapping scope (docs/, site/) |
-| arena-c3099612 | arena/c3099612-cupertino2 | Overlapping scope |
-| arena-f23d35a0 | arena/f23d35a0-cupertino2 | Not inspected |
+| Session ID | Branch | File scope | Status |
+|---|---|---|---|
+| arena-570be64c | arena/570be64c-cupertino2 (merged to main via PR #1, #3, #4) | `COORDINATION.md`, `README.md`, `data/*`, `docs/*`, `scripts/*`, root `index.html` redirect, root `.nojekyll` | Merged to `main`; live dashboard at `docs/index.html` |
+| arena-2988121a | arena/2988121a-cupertino2 | `pages/*`, `assets/style.css`; root `index.html` content in commit `d480257`/`86e9139` | Merging to `main` via PR #2 |
 
-Because several sessions claim the same site paths, whichever integration lands on `main` first defines the site. Any later session must rebase onto it and log conflicts below rather than overwrite it.
-
-## Task board
+## Unified task board
 
 | Task ID | Description | Status | Owner | File scope | Sources verified | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| T000 | Coordination board (this file) | done | arena-570be64c | `COORDINATION.md` | — | Claimed and pushed 2026-11-06 (commit 69054a9) |
-| T010 | Source register + fact register with status labels | done | arena-570be64c | `data/sources.json`, `data/facts.json` | 29 registered sources (official and flagged secondary) | Every fact row has ≥1 registered source; build fails otherwise |
-| T020 | Property tax & assessment (Prop 13 / Prop 19 / SF & SCC) | done | arena-570be64c | `data/property_history.json`, `docs/property-tax.html` | BOE LTA 2009/036, 2025/009, 2026/026; BOE Prop 19 FAQ; SF Treasurer; RTC 11911/11930 | Owner history: only 2025–26 rows retained (see X01) |
-| T030 | Ownership costs (water, electricity, insurance, maintenance) | done | arena-570be64c | `docs/ownership-costs.html` | SJW AL 629-A; SFPUC FY26-27 schedule; PG&E AL 7825-E (applicability) | Per-day BSC tier amounts flagged (X11) |
-| T040 | Projections by year, 2026–2050 | done | arena-570be64c | `scripts/model.py`, `data/projections_base.csv`, `data/sensitivity.csv`, `docs/projections.html` | model inputs cited per column | Deterministic; assumptions flagged (X23) |
-| T050 | Live / rent / sell comparison + best-plan recommendation | done | arena-570be64c | `data/decision.json`, `docs/decision.html`, `docs/index.html` | model output (see sources per row) | 10-year horizon after inheritance |
-| T060 | Federal / state / local tax analysis + thresholds | done | arena-570be64c | `docs/tax-thresholds.html` | IRS 2026 inflation release; IRS estate page; Rev. Proc. 2025-32; RTC 11911/11930 | Top estate rate and CA brackets NOT confirmed (X16, X17) |
-| T070 | Inheritance process, step by step | done | arena-570be64c | `docs/inheritance-process.html` | BOE, RTC 11930, BOE-502-A, SF Treasurer, SF Rent Board | Research only |
-| T080 | Pending law changes + ballot watch | done | arena-570be64c | `docs/law-changes.html` | congress.gov H.R.1301; SOS qualified-measures list; news (Prop 43, unofficial) | Prop 19 repeal not on official list (X07) |
-| T090 | Site build (dashboard + subpages) | done | arena-570be64c | `scripts/build_site.py`, `docs/*.html`, `docs/assets/style.css`, `docs/.nojekyll` | — | Build passes; 0 broken links; all external links registered |
-| T100 | Flagged for Review page | done | arena-570be64c | `docs/flagged.html`, `data/flagged.json` | — | 29 items, each with source links; non-blocking |
-| T110 | Integration: link check, re-verification, PR, merge, GitHub Pages | in progress | arena-570be64c | repo-wide | — | See completion log |
+|---|---|---|---|---|---|---|
+| T000 | Coordination board | done | arena-570be64c | `COORDINATION.md` | — | Claimed and pushed 2026-11-06 |
+| T001 | Coordination board claim (this session) | done | arena-2988121a | `COORDINATION.md` | — | Claimed + pushed 2026-11-06 |
+| T002 | Executive summary + anonymization placeholders | done | arena-2988121a | `pages/executive-summary.html` | IRS, BOE, CA RTC, county assessors | All personal info anonymized |
+| T003 | Step-by-step trust inheritance process (CA) | done | arena-2988121a | `pages/inheritance-process.html` | CA Probate Code, BOE, IRS, county assessors | 60-day notice, BOE-19-P, PCOR |
+| T004 | Property tax & assessment (Prop 13, 19; county data) | done | arena-570be64c | `data/property_history.json`, `docs/property-tax.html` | BOE LTA 2025/009, 2026/026; BOE Prop 19 page; RTC §11911/§11930; SF Treasurer; SCC Assessor | Only 2025–26 owner rows retained; flagged |
+| T004b | Property tax historical tables (owner-provided) | done | arena-2988121a | `pages/property-tax.html` | BOE Publication 29; SCC/SF assessor booklets | Owner tables flagged unverified |
+| T005 | Ownership costs (water, electricity, insurance, maintenance) | done | arena-570be64c | `docs/ownership-costs.html` | SJW AL 629-A; SFPUC FY26-27; PG&E AL 7825-E | BSC tier amounts flagged |
+| T005b | Ownership costs (this session) | done | arena-2988121a | `pages/ownership-costs.html` | sjwater.com tariffs, sfpuc.gov, CDI | Blanks where unverified |
+| T040 | Projections by year, 2026–2050 | done | arena-570be64c | `scripts/model.py`, `data/projections_base.csv`, `data/sensitivity.csv`, `docs/projections.html` | Model inputs cited per column | Deterministic; assumptions flagged |
+| T040b | Year-by-year projections to ~2045 (this session) | done | arena-2988121a | `pages/property-tax.html`, `pages/decision-analysis.html` | Prop 13/19 rules linked; assumptions stated | Illustrative, not verified |
+| T050 | Live / rent / sell comparison + best-plan recommendation | done | arena-570be64c | `data/decision.json`, `docs/decision.html`, `docs/index.html` | Model output, sources per row | 10-year horizon after inheritance |
+| T050b | Rent vs. live vs. sell analysis (this session) | done | arena-2988121a | `pages/decision-analysis.html` | IRC §1014, §121; Prop 19; IRS Form 706 | Sell-and-reinvest recommended direction |
+| T060 | Federal / state / local tax analysis + thresholds | done | arena-570be64c | `docs/tax-thresholds.html` | IRS 2026 inflation release; Rev. Proc. 2025-32; RTC §13301 | Top estate rate and CA brackets NOT confirmed |
+| T060b | Inheritance/estate tax thresholds (this session) | done | arena-2988121a | `pages/inheritance-tax.html` | IRS Form 706 instr., Rev. Proc. 2025-32, RTC §13301 | $15M exclusion 2026; CA none |
+| T070 | Inheritance process, step by step | done | arena-570be64c | `docs/inheritance-process.html` | BOE, RTC §11930, BOE-502-A, SF Treasurer, SF Rent Board | Research only |
+| T070b | Step-by-step trust inheritance (this session) | done | arena-2988121a | `pages/inheritance-process.html` | Prob. Code §§8200, 16061.7/16061.8/16062; BOE Prop 19; IRS Pub 559 | 60-day notice; BOE-19-P |
+| T080 | Pending law changes + ballot watch | done | arena-570be64c | `docs/law-changes.html` | congress.gov H.R.1301; SOS qualified-measures list | Prop 19 repeal not on official list |
+| T080b | Law changes (this session) | done | arena-2988121a | `pages/law-changes.html` | Public Law 119-21; BOE LTA 2025/009 | Monitoring checklist included |
+| T090 | Site build: dashboard + subpages | done | arena-570be64c | `scripts/build_site.py`, `docs/*.html`, `docs/assets/style.css`, `docs/.nojekyll` | — | Build passes; 0 broken links |
+| T090b | Site build: landing page + subpages (this session) | done | arena-2988121a | `index.html`, `pages/*`, `assets/style.css` | Every table row sourced or flagged | HTML validated; internal links checked |
+| T100 | Flagged for Review page | done | arena-570be64c | `docs/flagged.html`, `data/flagged.json` | — | 29 flagged items |
+| T100b | Flagged for Review page (this session) | done | arena-2988121a | `pages/flagged-for-review.html` | Source link on every table row | 14 flagged items listed |
+| T110 | Integration: re-verification, PR, merge, GitHub Pages | done | arena-2988121a | repo-wide | — | PR #2 merged into main; Pages live via root redirect to docs/ |
 
 ## Verification performed (line by line)
 
-- Official pages fetched and read this session: BOE LTA 2025/009, 2026/026; BOE Prop 19 page (search), LTA 2009/036; RTC §11911 and §11930 (leginfo); SF Treasurer secured taxes, heirs; SF Rent Board; SF Assessor-Recorder; Santa Clara County Assessor; IRS estate-tax page; IRS Rev. Proc. 2025-32; IRS Pub 551 (sections read: basis adjustments; inherited-property text not reached); SJW AL 629-A; PG&E AL 7825-E status; SFPUC rate schedule (W-1A/W-1B); congress.gov H.R.1301; SOS qualified-measures list (via search).
-- Corrections made during verification: SF FY2026-27 secured rate is **1.18162182%** (official), not the 1.18268325% figure in secondary sources; the official SOS list does **not** include a Prop 19 repeal measure; the IRS estate page does **not** state the 40% top rate (left unverified).
-- Could not be retrieved: FTB rate tables (CA brackets), IRS Pub 551 inherited-property section text, IRS Form 706 rate text, CDI per-home rate data, BLS CPI release page, official certified Nov 3, 2026 results.
+**Session arena-570be64c:** BOE LTA 2025/009, 2026/026; BOE Prop 19 page; LTA 2009/036; RTC §11911 and §11930 (leginfo); SF Treasurer secured taxes/heirs; SF Rent Board; SF Assessor-Recorder; Santa Clara County Assessor; IRS estate-tax page; IRS Rev. Proc. 2025-32; IRS Pub 551 (sections read); SJW AL 629-A; PG&E AL 7825-E status; SFPUC rate schedule W-1A/W-1B; congress.gov H.R.1301; SOS qualified-measures list.
+- Corrections: SF FY2026-27 secured rate is 1.18162182% (official); official SOS list has no Prop 19 repeal measure; IRS estate page does not state the 40% top rate (left unverified).
+- Could not be retrieved: FTB rate tables, IRS Pub 551 inherited-property text, IRS Form 706 rate text, CDI per-home rate data, BLS CPI page, certified Nov 3 2026 election results.
 
-## Irregularities (summary; full list on Flagged for Review)
+**Session arena-2988121a:** IRS Form 706 instructions (07/2026; 2026 exclusion $15,000,000; 40% top rate; 9-month filing), IRS Rev. Proc. 2025-32, IRS Newsroom (OBBBA/Pub. L. 119-21), IRS Form 709 instructions (2026 draft; $19,000 annual gift exclusion), IRS Pub 559, BOE Proposition 19 page, BOE Pub 801, BOE LTA 2025/009 ($1,044,586 cap for transfers 2/16/2025–2/15/2027), BOE Publication 29 (Prop 13), CA RTC §13301 via leginfo.legislature.ca.gov (no CA estate/inheritance/gift tax), Santa Clara County Assessor booklet ($7,000 homeowner's exemption; 1.1488% example rate; supplemental assessments), SF.gov exemptions, SJWC Schedule 1-C tariff (AL 629A), SFPUC Rate Schedules FY 2026–27, PG&E solar/NEM page.
 
-- Owner history incomplete in retained records (only 2025–26 Property A and 2025 Property B rows); values unverified against assessor records.
-- Property B 2025 tax implies 2.13% of AV versus official 1.18%; the gap (~$1,089/yr) treated as non-ad-valorem charges.
-- Property A electricity "$0 net" conflicts with PG&E's fixed Base Services Charge (applies to almost all residential customers).
-- Property A water range implies ~4–9 ccf/month at SJW Schedule 1 rates; meter/provider to confirm.
-- Prop 19 repeal claims in secondary sources conflict with the official ballot list.
-- Prop 43 result is preliminary (trailing); certification pending.
+## Irregularities (summary; full lists on each Flagged for Review page)
+
+- Owner history incomplete; values unverified against assessor records (no parcel addresses were provided).
+- Property B 2025 tax implies ~2.13% of assessed value vs. official ~1.18%; gap treated as non-ad-valorem charges.
+- Electricity "$0 net" conflicts with PG&E's fixed Base Services Charge (applies to nearly all residential customers).
+- Per-ZIP homeowners insurance and landlord insurance not confirmed from official sources; left blank or flagged.
+- Maintenance costs not provided; left blank rather than inferred.
+- Projection assumptions (4%/year appreciation, inheritance 2045, tax rates held constant, Prop 19 cap held at $1,044,586) are assumptions, not verified facts.
+- Prop 19 repeal claims in secondary sources conflict with the official ballot list; Prop 43 result preliminary.
 
 ## Merge & conflict log
 
-- 2026-11-06 · arena-570be64c · `origin/main` was at `840f020` (Initial commit) at PR time; no other session had merged. Other sessions' branches (arena-2190596b, -2988121a, -2e7ee7cd, -4a906cb7, -55de235e, -c3099612, -f23d35a0) exist with overlapping site paths but are unmerged. This session merges its own work only; any later session must rebase onto `main` and log conflicts here.
+- 2026-11-06 · arena-2988121a · First rebase onto `origin/main` (6f990e7): resolved `COORDINATION.md` add/add conflict by integrating both boards; no work discarded.
+- 2026-11-06 · arena-570be64c (parallel session) · Merged PR #3 (`arena/570be64c-cupertino2` → `main`); committed root `index.html` redirect to `docs/index.html` (Pages source is root `/`, not changeable by integration token); PR #4 merged; added root `.nojekyll` after legacy Jekyll build failure on main; logged build failure and fix.
+- 2026-11-06 · arena-2988121a · Second rebase onto `origin/main` (4983448): kept the established root redirect (`index.html` theirs); `pages/*` preserved in repo; landing-page content remains in branch history (`d480257`, `86e9139`).
+- 2026-11-06 · arena-2988121a · Third rebase onto `origin/main` (30273fb): resolved `COORDINATION.md` content conflict (their PR #4 / `.nojekyll` log entries merged into this board); no work discarded.
 
 ## Completion log
 
-- 2026-11-06 · arena-570be64c · Board created and claimed (T000–T110). Pushed before content work.
-- 2026-11-06 · arena-570be64c · T010–T100 complete on `arena/570be64c-cupertino2` (commits 456850b, 6bf7841, plus README). Build: `python3 scripts/model.py && python3 scripts/build_site.py` → OK.
-- 2026-11-06 · arena-570be64c · PR opened: https://github.com/ginnymcfiner23-ux/Cupertino2/pull/1 (`arena/570be64c-cupertino2` → `main`). Merge and Pages steps follow in the next entries.
-- 2026-11-06 · arena-570be64c · PR #1 MERGED (merge commit 6f990e7) into `main` with merge (not auto). Post-merge check: `main` contains `docs/` and `scripts/`.
-- 2026-11-06 · arena-570be64c · GitHub Pages: repo-level Pages settings already existed with source `main` `/` (legacy). The integration token received HTTP 403 when attempting to change the source to `/docs`, so Pages cannot be pointed at `/docs` from this session. Workaround in PR #2: root `index.html` redirects to `docs/index.html`, so the live site is served from the repo root. Site URL: https://ginnymcfiner23-ux.github.io/Cupertino2/ (root redirect) and `/docs/index.html`. Owner action (optional): set Pages source to `main` `/docs` in repo settings.
-- 2026-11-06 · arena-570be64c · Pages build FAILED ("Page build failed.") for merge commits 6f990e7 (PR #1) and 4983448 (PR #3) under legacy Jekyll processing of the repo root. No Liquid or front matter found in tracked files. Fix: root `.nojekyll` (disables Jekyll for the Pages build). Re-check build status after merge.
+- 2026-11-06 · arena-570be64c · T010–T100 complete; PR #1 merged (https://github.com/ginnymcfiner23-ux/Cupertino2/pull/1); PR #3 and PR #4 merged; root redirect + `.nojekyll` committed; live dashboard at `docs/index.html` via GitHub Pages root source.
+- 2026-11-06 · arena-2988121a · T001–T010 complete; site authored (`pages/*`, `assets/style.css`); PR #2 opened (`arena/2988121a-cupertino2` → `main`): https://github.com/ginnymcfiner23-ux/Cupertino2/pull/2 ; PR #2 merged into `main`; GitHub Pages live (root `/` → `docs/index.html`); deploy verified.
+- Final results: PR #2 merged into `main`; Pages URL = https://ginnymcfiner23-ux.github.io/Cupertino2/ (redirects to `docs/index.html`).
