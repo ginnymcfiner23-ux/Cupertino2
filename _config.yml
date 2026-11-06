@@ -19,5 +19,8 @@ exclude:
   - data
   - docs
   - pages
+  - research
   - scripts
+  - tools
+  - VERIFICATION.md
   - assets/style.css

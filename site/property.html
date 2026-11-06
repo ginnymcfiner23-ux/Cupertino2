@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Properties &amp;amp; Property Tax &middot; Cupertino2</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="dot"></span>
+    <div>
+      <div class="bt">Cupertino2</div>
+      <div class="bs">Property inheritance decision support &middot; ZIP 95014 &amp; 94122</div>
+    </div>
+  </div>
+  <div class="topmeta">
+    <span class="pill">Valuation date November 2026</span>
+    <a class="pill warnpill" href="flagged.html">16 flagged items</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="side"><a href="index.html">Executive Summary</a>
+<a href="prop19.html">Proposition 19</a>
+<a class="active" href="property.html">Properties &amp; Tax</a>
+<a href="projections.html">Projections</a>
+<a href="scenarios.html">Scenarios</a>
+<a href="taxes.html">Taxes on Transfer</a>
+<a href="costs.html">Carrying Costs</a>
+<a href="rental.html">The 94122 Rental</a>
+<a href="process.html">Transfer Process</a>
+<a href="legislation.html">Law &amp; Changes</a>
+<a href="assumptions.html">Assumptions</a>
+<a href="sources.html">Sources</a>
+<a href="flagged.html">Flagged for Review</a></nav>
+  <main>
+    <h1>Properties &amp;amp; Property Tax</h1>
+    <p class="lede">Supplied bill history, the parcel bill model derived from it, and what each parcel's Proposition 13 lock-in is worth.</p>
+    <h2>Parcel bill model</h2>
+<p>California bills are <em>ad valorem rate &times; net assessed value</em>,
+plus flat charges (parcel taxes, special assessments, direct charges) that are the same in
+dollars regardless of assessed value. Fitting the supplied history to
+<code>tax = rate &times; (assessment &minus; $7,000) + flat</code> separates the two:</p>
+<div class="tablewrap">
+<div class="tablecap">Both the rate and the flat component are DERIVED, not published. See FLAG-03 and FLAG-04.</div>
+<table class="data ">
+<thead><tr>
+<th class="tl">Parcel</th>
+<th class="tr">Ad valorem rate</th>
+<th class="tl">Rate provenance</th>
+<th class="tr">Flat charges 2026</th>
+<th class="tl">Flat residual range</th>
+<th class="tl">Fit quality</th>
+<th class="tr">Official county reference rate</th>
+<th class="tl">Source</th>
+</tr></thead><tbody>
+<tr>
+<td class="tl">Cupertino 95014</td>
+<td class="tr">1.0851%</td>
+<td class="tl">OLS slope of the 12 supplied years</td>
+<td class="tr">$1,462</td>
+<td class="tl">$1,263 &ndash; $1,542</td>
+<td class="tl">R&sup2; 0.955, n=12</td>
+<td class="tr">1.1488%</td>
+<td class="tl nowrap"><a class="src src-official" href="https://files.santaclaracounty.gov/exjcpb1521/2024-10/2024_assessment_information_booklet.pdf" target="_blank" rel="noopener" title="Santa Clara County Assessor - Assessment Information for the Santa Clara County Property Owner (Prop. 13; typical Tax Rate Area = 1.1488%)">County of Santa Clara, Office of the Assessor</a><span class="badge warn">derived</span></td>
+</tr>
+<tr>
+<td class="tl">San Francisco 94122</td>
+<td class="tr">1.1816%</td>
+<td class="tl">official FY2026-27 secured rate (the unconstrained fit is degenerate)</td>
+<td class="tr">$1,201</td>
+<td class="tl">$617 &ndash; $1,172</td>
+<td class="tl">R&sup2; 0.809, n=10</td>
+<td class="tr">1.1816%</td>
+<td class="tl nowrap"><a class="src src-official" href="https://sftreasurer.org/property/secured-property-taxes" target="_blank" rel="noopener" title="SF Treasurer &amp; Tax Collector - Secured Property Taxes (secured property tax rate for Fiscal Year 2026-27 is 1.18162182%)">City and County of San Francisco</a><span class="badge warn">derived</span></td>
+</tr>
+</tbody></table></div>
+<div class="callout warn">
+<h3>Why the obvious calculation is wrong</h3>
+<p>Dividing the bill by the assessed value gives 1.34% for Cupertino and 2.13% for San
+Francisco. Neither is the tax rate. Both are inflated by flat per-parcel charges, which
+loom large on a parcel whose Prop 13 assessed value is a small fraction of its market
+value. Using those ratios to project future bills would overstate growth badly.</p></div>
+<h2>Cupertino 95014 &mdash; supplied history</h2>
+<div class="tablewrap">
+<div class="tablecap">Implied ratio = tax &divide; assessment. Shown for transparency only &mdash; it is not the tax rate.</div>
+<table class="data ">
+<thead><tr>
+<th class="tr">Year</th>
+<th class="tr">Property taxes</th>
+<th class="tr">Tax assessment</th>
+<th class="tr">Assessment change (supplied)</th>
+<th class="tr">Implied ratio</th>
+<th class="tl">Note</th>
+<th class="tl">Source</th>
+</tr></thead><tbody>
+<tr>
+<td class="tr">2026</td>
+<td class="tr"><span class="badge bad">not supplied</span></td>
+<td class="tr">$550,537</td>
+<td class="tr">2.0%</td>
+<td class="tr">&mdash;</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2025</td>
+<td class="tr">$7,207</td>
+<td class="tr">$539,743</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.335%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2024</td>
+<td class="tr">$7,003</td>
+<td class="tr">$529,161</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.323%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2023</td>
+<td class="tr">$6,917</td>
+<td class="tr">$518,786</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.333%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2022</td>
+<td class="tr">$6,755</td>
+<td class="tr">$508,614</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.328%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2021</td>
+<td class="tr">$6,662</td>
+<td class="tr">$498,642</td>
+<td class="tr">1.0%</td>
+<td class="tr">1.336%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2020</td>
+<td class="tr">$6,565</td>
+<td class="tr">$493,530</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.330%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2019</td>
+<td class="tr">$6,565</td>
+<td class="tr">$483,854</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.357%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2018</td>
+<td class="tr">$6,383</td>
+<td class="tr">$474,368</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.346%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2017</td>
+<td class="tr">$6,383</td>
+<td class="tr">$465,067</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.372%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2016</td>
+<td class="tr">$6,414</td>
+<td class="tr">$455,949</td>
+<td class="tr">1.5%</td>
+<td class="tr">1.407%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2015</td>
+<td class="tr">$6,130</td>
+<td class="tr">$449,101</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.365%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2014</td>
+<td class="tr">$5,965</td>
+<td class="tr">$440,305</td>
+<td class="tr">0.5%</td>
+<td class="tr">1.355%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+</tbody></table></div>
+<h2>San Francisco 94122 &mdash; supplied history</h2>
+<div class="tablewrap">
+<div class="tablecap">Implied ratio = tax &divide; assessment. Shown for transparency only &mdash; it is not the tax rate.</div>
+<table class="data ">
+<thead><tr>
+<th class="tr">Year</th>
+<th class="tr">Property taxes</th>
+<th class="tr">Tax assessment</th>
+<th class="tr">Assessment change (supplied)</th>
+<th class="tr">Implied ratio</th>
+<th class="tl">Note</th>
+<th class="tl">Source</th>
+</tr></thead><tbody>
+<tr>
+<td class="tr">2026</td>
+<td class="tr"><span class="badge bad">not supplied</span></td>
+<td class="tr">$116,533</td>
+<td class="tr">&mdash;</td>
+<td class="tr">&mdash;</td>
+<td class="tl"><em>Assessed value derived: prior year $114,248 x 1.02 (BOE 2026-27 inflation factor).</em></td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.boe.ca.gov/proptaxes/pdf/lta26002.pdf" target="_blank" rel="noopener" title="BOE Letter to Assessors No. 2026/002 - 2026-27 California Consumer Price Index (inflation factor 1.02)">CA State Board of Equalization</a><span class="badge warn">derived</span></td>
+</tr>
+<tr>
+<td class="tr">2025</td>
+<td class="tr">$2,439</td>
+<td class="tr">$114,248</td>
+<td class="tr">2.0%</td>
+<td class="tr">2.135%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2024</td>
+<td class="tr">$2,315</td>
+<td class="tr">$112,008</td>
+<td class="tr">2.0%</td>
+<td class="tr">2.067%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2023</td>
+<td class="tr">$2,179</td>
+<td class="tr">$109,814</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.984%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2022</td>
+<td class="tr">$2,107</td>
+<td class="tr">$107,662</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.957%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2021</td>
+<td class="tr">$2,066</td>
+<td class="tr">$105,595</td>
+<td class="tr">1.0%</td>
+<td class="tr">1.957%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2020</td>
+<td class="tr">$2,197</td>
+<td class="tr">$104,513</td>
+<td class="tr">2.0%</td>
+<td class="tr">2.102%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2019</td>
+<td class="tr">$2,134</td>
+<td class="tr">$102,465</td>
+<td class="tr">2.0%</td>
+<td class="tr">2.083%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2018</td>
+<td class="tr">$2,061</td>
+<td class="tr">$100,456</td>
+<td class="tr">2.0%</td>
+<td class="tr">2.052%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2017</td>
+<td class="tr">$1,740</td>
+<td class="tr">$98,488</td>
+<td class="tr">2.0%</td>
+<td class="tr">1.767%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tr">2016</td>
+<td class="tr">$1,675</td>
+<td class="tr">$96,557</td>
+<td class="tr">1.5%</td>
+<td class="tr">1.735%</td>
+<td class="tl"></td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+</tbody></table></div>
+<h2>How the two parcels compare</h2>
+<div class="tablewrap">
+<table class="data ">
+<thead><tr>
+<th class="tl">Measure</th>
+<th class="tr">Cupertino 95014</th>
+<th class="tr">San Francisco 94122</th>
+<th class="tl">Source</th>
+</tr></thead><tbody>
+<tr>
+<td class="tl">Modelled 2026 property tax</td>
+<td class="tr">$7,360</td>
+<td class="tr">$2,495</td>
+<td class="tl nowrap"><a class="src src-official" href="https://asr.santaclaracounty.gov/" target="_blank" rel="noopener" title="Santa Clara County Office of the Assessor">County of Santa Clara</a><span class="badge warn">derived</span></td>
+</tr>
+<tr>
+<td class="tl">Tax as a share of estimated market value</td>
+<td class="tr">0.237%</td>
+<td class="tr">0.139%</td>
+<td class="tl nowrap"><a class="src src-official" href="https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CONS&amp;division=&amp;title=&amp;part=&amp;chapter=&amp;article=XIII%20A" target="_blank" rel="noopener" title="California Constitution Article XIII A (Proposition 13) - 1% rate cap, 2% assessment growth cap, base year value">California Legislative Information</a><span class="badge warn">derived</span></td>
+</tr>
+<tr>
+<td class="tl">Prop 13 lock-in (market value less assessed value)</td>
+<td class="tr">$2,549,463</td>
+<td class="tr">$1,683,467</td>
+<td class="tl nowrap"><a class="src src-official" href="https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CONS&amp;division=&amp;title=&amp;part=&amp;chapter=&amp;article=XIII%20A" target="_blank" rel="noopener" title="California Constitution Article XIII A (Proposition 13) - 1% rate cap, 2% assessment growth cap, base year value">California Legislative Information</a><span class="badge warn">derived</span></td>
+</tr>
+<tr>
+<td class="tl">Annual property tax avoided by that lock-in</td>
+<td class="tr">$27,664</td>
+<td class="tr">$19,892</td>
+<td class="tl nowrap"><a class="src src-official" href="https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CONS&amp;division=&amp;title=&amp;part=&amp;chapter=&amp;article=XIII%20A" target="_blank" rel="noopener" title="California Constitution Article XIII A (Proposition 13) - 1% rate cap, 2% assessment growth cap, base year value">California Legislative Information</a><span class="badge warn">derived</span></td>
+</tr>
+<tr>
+<td class="tl">Occupancy</td>
+<td class="tr">to be confirmed (see FLAG-05)</td>
+<td class="tr">owner occupies one of three units; two are rented</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+</tbody></table></div>
+    <footer class="foot">
+      <p><strong>Not tax, legal or investment advice.</strong> This is a research and
+      modelling workspace. Every figure links to the source it came from. Values that
+      could not be confirmed against an official government source are marked
+      <span class="badge bad">unverified</span> or <span class="badge bad">assumption</span>
+      and are listed on the <a href="flagged.html">Flagged for Review</a> page.</p>
+      <p>No personal information appears anywhere on this site. Properties are
+      referenced by ZIP code only.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

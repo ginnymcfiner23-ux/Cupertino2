@@ -1,0 +1,69 @@
+# research/ — working notes
+
+Generated working notes. The published site is authoritative for anything that
+appears in both; these files exist so the raw material is auditable in the repo.
+
+- **FLAG-01** (high) — 2026 property tax is blank for the Cupertino parcel
+  - The supplied 95014 table shows '--' for 2026 property taxes while giving a 2026 assessment of $550,537. The bill has most likely simply not been published yet. The model projects 2026 tax from the parcel's fitted bill formula rather than inventing a number.
+  - Action: Replace with the actual 2026-27 Santa Clara County bill when it arrives (mailed before November 1).
+  - Source: <https://asr.santaclaracounty.gov/>
+- **FLAG-02** (medium) — The 94122 table has no 2026 row and one anomalous year (2021: -5.9%)
+  - The 2026 assessment is derived as 2025 x 1.02 = $116,533. Separately, 2021 property taxes fell 5.9% while the assessment rose 1%, and 2018 taxes rose 18.4% on a 2% assessment increase. Neither is consistent with a pure ad valorem bill, which indicates one-time credits/refunds or new voter-approved charges in those years.
+  - Action: Pull the actual SF bill detail (block/lot) and reconcile the direct-charge lines before relying on the fitted flat component.
+  - Source: <https://www.sf.gov/departments--assessor-recorder>
+- **FLAG-03** (high) — Cupertino parcel's implied tax rate (~1.33%) exceeds the county's published 'typical' rate (1.1488%)
+  - Dividing the supplied 2025 tax ($7,207) by the supplied 2025 assessment ($539,743) gives 1.335%. Santa Clara County's own workbook example shows a typical Tax Rate Area at 1.1488%. The gap is explained by parcel-specific voter-approved bonds and by flat (non-ad-valorem) parcel charges, which inflate any tax/assessment ratio.
+  - Action: Confirm the parcel's Tax Rate Area and its direct charges in the Santa Clara County Property Tax Rate Book before using the fitted rate for decisions.
+  - Source: <https://files.santaclaracounty.gov/exjcpb1521/2024-10/2024_assessment_information_booklet.pdf>
+- **FLAG-04** (high) — San Francisco parcel's implied tax rate (~2.14%) is far above the official FY2025-26 secured rate (1.18268325%)
+  - The supplied 2025 figure ($2,439 on a $114,248 assessment) implies 2.135%, roughly 1.8x the official secured rate. This is the classic signature of flat per-parcel charges (school parcel tax, City College parcel tax, stormwater, Rent Board fee and similar) on a parcel with a very low Prop 13 assessed value. It does NOT mean the ad valorem rate is 2.14%.
+  - Action: Use the official 1.18268325% for anything driven by assessed value, and add the flat charges separately. Obtain the actual bill to size the flat charges.
+  - Source: <https://sftreasurer.org/property/secured-property-taxes>
+- **FLAG-05** (critical) — Whether the Cupertino house is the transferor's principal residence is unknown and decides everything
+  - Proposition 19 (R&TC 63.2) restricts the parent-child reassessment exclusion to the transferor's principal residence (or a family farm). If the Cupertino house is a rental or second home at the date of transfer, NO exclusion is available at any value, and the assessed value resets to full market value on day one. This single fact moves the annual tax bill by tens of thousands of dollars.
+  - Action: Confirm occupancy status of the 95014 property at the planned transfer date, and whether the transfer is parent-to-child or grandparent-to-grandchild (the latter requires the middle generation to be deceased).
+  - Source: <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=63.2.&lawCode=RTC>
+- **FLAG-06** (critical) — The heir can claim the Prop 19 exclusion for only ONE property
+  - The exclusion requires the transferee to occupy the home as a principal residence within one year and keep occupying it. The household currently occupies a unit at 94122. Moving to 95014 to claim the exclusion makes the SF unit available to rent, but it also means the exclusion is lost the moment they stop occupying Cupertino - at which point the assessed value is set as of the lien date following the move-out.
+  - Action: Treat the occupancy requirement as a binding, multi-decade constraint, not a formality. Model the 'move out later' cliff explicitly.
+  - Source: <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=63.2.&lawCode=RTC>
+- **FLAG-07** (medium) — Home insurance premiums cannot be verified from an official source
+  - Neither the California Department of Insurance nor the FAIR Plan publishes a ZIP-level average premium for a specific dwelling. Available figures come from commercial rate-shopping sites and disagree widely ($864-$1,189/yr for 95014 in one survey versus a $1,571 statewide average reported elsewhere).
+  - Action: Obtain live quotes for the actual dwelling (replacement cost, roof, wildfire score) before relying on the $1,500 assumption.
+  - Source: <https://www.insurance.ca.gov/>
+- **FLAG-08** (medium) — Market rent for the Cupertino house is an assumption, not a verified figure
+  - Listing aggregators report a Cupertino median rent around $3,800-$4,128/month across all bedroom counts and property types, which is apartment-weighted and is not a rent for a single-family house valued at $3.1M. The model uses $4,500/month as a placeholder.
+  - Action: Obtain a broker opinion of rent or comparable single-family rental data for 95014.
+  - Source: <https://www.zillow.com/rental-manager/market-trends/cupertino-ca/>
+- **FLAG-09** (medium) — The Prop 19 exclusion cap is officially known only through February 15, 2027
+  - The $1,044,586 figure applies to transfers between February 16, 2025 and February 15, 2027 (BOE Letter to Assessors 2025/009). For a 2040-2050 transfer the cap will have been re-set roughly eight to twelve more times by the FHFA California House Price Index. The model grows it at an ASSUMED 3%/yr.
+  - Action: Re-run the model with the actual cap in force at the time.
+  - Source: <https://www.boe.ca.gov/proptaxes/pdf/lta25009.pdf>
+- **FLAG-10** (low) — Water provider for 95014 depends on the exact address
+  - The City of Cupertino is served by three separate water systems: California Water Service (Bear Gulch district) in the northeast, San Jose Water Company in the southeast, and the City's own system in the west, which is operated by San Jose Water Company under a lease running to 2036. Rates differ by system.
+  - Action: Identify the provider for the parcel and pull the current tariff.
+  - Source: <https://www.cupertino.gov/Residents/Utilities/Water>
+- **FLAG-11** (medium) — Solar export value depends on which NEM tariff the system is on
+  - Systems interconnected before April 15, 2023 sit on NEM 2.0 and are grandfathered for 20 years from interconnection; exports are credited at roughly retail. Systems interconnected later are on NEM 3.0 (net billing), where exports earn only a few cents per kWh. The supplied $10-$20/month net credit is consistent with NEM 2.0, but the interconnection date must be confirmed - and NEM 2.0 grandfathering is lost if the system is materially modified.
+  - Action: Confirm the interconnection date and tariff from the PG&E bill.
+  - Source: <https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/demand-side-management/net-energy-metering>
+- **FLAG-12** (medium) — Rent-control status of the 94122 units is not established
+  - SF's 1.6% local cap applies to units with a certificate of occupancy on or before June 13, 1979. Single-family homes and condos are exempt under Costa-Hawkins for tenancies beginning on or after January 1, 1996. If the units fall outside the local ordinance, the AB 1482 statewide cap (8.8% for 8/1/2026-7/31/2027) governs instead - a fivefold difference in permitted rent growth.
+  - Action: Confirm the certificate-of-occupancy date and tenancy start dates for all three units.
+  - Source: <https://www.sf.gov/learn-about-rent-increases-san-francisco>
+- **FLAG-13** (low) — Estate size is unknown, so whether the federal estate tax applies cannot be determined
+  - The request states the inheritance includes 'a considerable amount of money' that 'could be over' the exempt amount. The federal basic exclusion is $15,000,000 per person for 2026 ($30,000,000 for a married couple with a timely portability election), made permanent by OBBBA and indexed for inflation from 2027. California and its local governments impose no estate or inheritance tax at all. No estate tax is owed unless the gross estate plus adjusted taxable gifts exceeds the exclusion for the year of death.
+  - Action: Size the gross estate (real property at date-of-death FMV plus all other assets, plus adjusted taxable gifts) against the exclusion for the actual year of death. Note that the $15M is per person, and that portability requires a timely Form 706.
+  - Source: <https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax>
+- **FLAG-14** (low) — California Proposition 43 (Nov 3, 2026) does not change the Prop 13 rate or the 2% cap
+  - Prop 43 adds a two-thirds voter-approval requirement for local special taxes proposed under the local initiative power, starting January 1, 2027, and bars additional ad valorem property taxes imposed by initiative. It does not amend Prop 13's 1% rate, the 2% assessment cap, or the Prop 19 transfer rules. The broader 'Save Prop 13' initiative (which would have capped transfer taxes) was withdrawn in June 2026.
+  - Action: No action needed for the 2040-2050 decision; monitor future sessions.
+  - Source: <https://www.sos.ca.gov/elections/ballot-measures>
+- **FLAG-15** (low) — Whether a 3-unit building counts as a 'family home' for Prop 19 is not settled here
+  - R&TC 63.2(a)(1) refers to real property that is the principal residence of the transferor. Where the transferor occupies one unit of a three-unit building and rents the others, the scope of the exclusion for the rented portion is a facts-and-circumstances question that should be put to the county assessor or counsel.
+  - Action: Get written guidance from the SF Assessor-Recorder (94122) and Santa Clara County Assessor (95014) before finalising a transfer plan.
+  - Source: <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=63.2.&lawCode=RTC>
+- **FLAG-16** (medium) — Land value percentages used for depreciation are assumptions
+  - Depreciation under IRC 168 applies to buildings only, not land. The model assumes 55% land for 95014 and 35% for 94122. County assessor records show land and improvement values separately and should be used instead.
+  - Action: Take the land/improvement split from the county assessment roll.
+  - Source: <https://asr.santaclaracounty.gov/>

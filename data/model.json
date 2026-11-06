@@ -1,0 +1,4467 @@
+{
+ "meta": {
+  "generated": "model build",
+  "valuation_date": "November 2026",
+  "privacy": "No personal information. Properties referenced by ZIP code only; people referenced only as placeholders ([OWNER-1], [HEIR-A], [TRUST]).",
+  "provenance_tags": {
+   "official": "Primary government source; link included.",
+   "derived": "Computed from supplied data or official values; formula shown.",
+   "supplied": "Given as-is by the requester; no official source exists.",
+   "unofficial": "Commercial or secondary source. Flagged for review.",
+   "assumption": "Planning assumption to confirm or change. Never presented as fact."
+  }
+ },
+ "sources": {
+  "S-BOE-PROP19": {
+   "name": "California State Board of Equalization - Proposition 19",
+   "url": "https://www.boe.ca.gov/prop19/",
+   "type": "official",
+   "publisher": "CA State Board of Equalization"
+  },
+  "S-BOE-LTA25009": {
+   "name": "BOE Letter to Assessors No. 2025/009 - Intergenerational Transfer Exclusion, Adjustment of the $1 Million Amount ($1,044,586)",
+   "url": "https://www.boe.ca.gov/proptaxes/pdf/lta25009.pdf",
+   "type": "official",
+   "publisher": "CA State Board of Equalization"
+  },
+  "S-BOE-LTA2026002": {
+   "name": "BOE Letter to Assessors No. 2026/002 - 2026-27 California Consumer Price Index (inflation factor 1.02)",
+   "url": "https://www.boe.ca.gov/proptaxes/pdf/lta26002.pdf",
+   "type": "official",
+   "publisher": "CA State Board of Equalization"
+  },
+  "S-BOE-LTA2026026": {
+   "name": "BOE Letter to Assessors No. 2026/026 - Proposition 19 Intergenerational Transfer Exclusion: Frequently Asked Questions and Answers",
+   "url": "https://www.boe.ca.gov/proptaxes/pdf/lta26026.pdf",
+   "type": "official",
+   "publisher": "CA State Board of Equalization"
+  },
+  "S-BOE-LTA2026012": {
+   "name": "BOE Letter to Assessors No. 2026/012 - Filing Period Extension for Parent/Child and Grandparent/Grandchild Exclusion Claims in Specified Los Angeles and Ventura County Disaster Areas",
+   "url": "https://www.boe.ca.gov/proptaxes/pdf/lta26012.pdf",
+   "type": "official",
+   "publisher": "CA State Board of Equalization"
+  },
+  "S-SCC-PROP19": {
+   "name": "Santa Clara County Assessor - Proposition 19 Overview",
+   "url": "https://asr.santaclaracounty.gov/proposition-19-overview",
+   "type": "official",
+   "publisher": "County of Santa Clara, Office of the Assessor"
+  },
+  "S-CA-RTC-632": {
+   "name": "California Revenue and Taxation Code section 63.2 (parent-child / grandparent-grandchild reassessment exclusion)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=63.2.&lawCode=RTC",
+   "type": "official",
+   "publisher": "California Legislative Information"
+  },
+  "S-CA-RTC-62": {
+   "name": "California Revenue and Taxation Code section 62(d) (transfer to revocable trust is not a change in ownership)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=62.&lawCode=RTC",
+   "type": "official",
+   "publisher": "California Legislative Information"
+  },
+  "S-CA-RTC-51": {
+   "name": "California Revenue and Taxation Code section 51 (2% annual inflation cap on base year value)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=51.&lawCode=RTC",
+   "type": "official",
+   "publisher": "California Legislative Information"
+  },
+  "S-CA-CONST-13A": {
+   "name": "California Constitution Article XIII A (Proposition 13) - 1% rate cap, 2% assessment growth cap, base year value",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CONS&division=&title=&part=&chapter=&article=XIII%20A",
+   "type": "official",
+   "publisher": "California Legislative Information"
+  },
+  "S-SCC-ASSESSOR-BOOKLET": {
+   "name": "Santa Clara County Assessor - Assessment Information for the Santa Clara County Property Owner (Prop. 13; typical Tax Rate Area = 1.1488%)",
+   "url": "https://files.santaclaracounty.gov/exjcpb1521/2024-10/2024_assessment_information_booklet.pdf",
+   "type": "official",
+   "publisher": "County of Santa Clara, Office of the Assessor"
+  },
+  "S-SCC-PROP13": {
+   "name": "Santa Clara County Assessor - Understanding Proposition 13",
+   "url": "https://asr.santaclaracounty.gov/faq/understanding-proposition-13",
+   "type": "official",
+   "publisher": "County of Santa Clara, Office of the Assessor"
+  },
+  "S-SCC-ASSESSOR": {
+   "name": "Santa Clara County Office of the Assessor",
+   "url": "https://asr.santaclaracounty.gov/",
+   "type": "official",
+   "publisher": "County of Santa Clara"
+  },
+  "S-SF-TAXRATE": {
+   "name": "SF Treasurer & Tax Collector - Secured Property Taxes (secured property tax rate for Fiscal Year 2026-27 is 1.18162182%)",
+   "url": "https://sftreasurer.org/property/secured-property-taxes",
+   "type": "official",
+   "publisher": "City and County of San Francisco"
+  },
+  "S-SF-ASSESSOR": {
+   "name": "San Francisco Office of the Assessor-Recorder",
+   "url": "https://www.sf.gov/departments--assessor-recorder",
+   "type": "official",
+   "publisher": "City and County of San Francisco"
+  },
+  "S-SF-RENTINCREASE": {
+   "name": "SF.gov - Learn about rent increases in San Francisco (1.6% allowed, March 1 2026 - February 28 2027)",
+   "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+   "type": "official",
+   "publisher": "City and County of San Francisco"
+  },
+  "S-SF-HEIRS": {
+   "name": "SF Treasurer & Tax Collector - Information for Heirs",
+   "url": "https://sftreasurer.org/property/information-heirs",
+   "type": "official",
+   "publisher": "City and County of San Francisco"
+  },
+  "S-SF-RENTBOARD": {
+   "name": "San Francisco Rent Board",
+   "url": "https://www.sf.gov/departments--rent-board/",
+   "type": "official",
+   "publisher": "City and County of San Francisco"
+  },
+  "S-CA-AG-RENTCAPS": {
+   "name": "California Attorney General - Limits on Rent Increases (AB 1482 statewide caps by region)",
+   "url": "https://oag.ca.gov/rentcaps",
+   "type": "official",
+   "publisher": "California Attorney General"
+  },
+  "S-CA-CIV-1947-12": {
+   "name": "California Civil Code section 1947.12 (statewide rent cap: 5% + CPI, max 10%)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV",
+   "type": "official",
+   "publisher": "California Legislative Information"
+  },
+  "S-IRS-2026-INFLATION": {
+   "name": "IRS IR-2025-103 - Tax inflation adjustments for tax year 2026 (standard deduction, brackets, $15,000,000 estate basic exclusion, $19,000 gift annual exclusion)",
+   "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+   "type": "official",
+   "publisher": "Internal Revenue Service"
+  },
+  "S-IRS-RP-2025-32": {
+   "name": "IRS Revenue Procedure 2025-32 (2026 inflation-adjusted items; OBBBA section 70106 sets estate basic exclusion at $15,000,000 for 2026, indexed for 2027+)",
+   "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+   "type": "official",
+   "publisher": "Internal Revenue Service"
+  },
+  "S-IRS-ESTATETAX": {
+   "name": "IRS - Estate tax (filing threshold by year of death; 2026 = $15,000,000; portability)",
+   "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax",
+   "type": "official",
+   "publisher": "Internal Revenue Service"
+  },
+  "S-IRS-NIIT": {
+   "name": "IRS - Net Investment Income Tax (3.8%; thresholds $200,000 single / $250,000 MFJ; not inflation-indexed)",
+   "url": "https://www.irs.gov/individuals/net-investment-income-tax",
+   "type": "official",
+   "publisher": "Internal Revenue Service"
+  },
+  "S-IRS-TOPIC409": {
+   "name": "IRS Tax Topic 409 - Capital gains tax rates (0/15/20%; 25% unrecaptured section 1250 gain)",
+   "url": "https://www.irs.gov/taxtopics/tc409",
+   "type": "official",
+   "publisher": "Internal Revenue Service"
+  },
+  "S-USC-1014": {
+   "name": "26 U.S.C. section 1014 - Basis of property acquired from a decedent (step-up in basis)",
+   "url": "https://www.govinfo.gov/link/uscode/26/1014",
+   "type": "official",
+   "publisher": "U.S. Government Publishing Office (govinfo)"
+  },
+  "S-USC-1411": {
+   "name": "26 U.S.C. section 1411 - Imposition of net investment income tax",
+   "url": "https://www.govinfo.gov/link/uscode/26/1411",
+   "type": "official",
+   "publisher": "U.S. Government Publishing Office (govinfo)"
+  },
+  "S-USC-121": {
+   "name": "26 U.S.C. section 121 - Exclusion of gain from sale of principal residence ($250,000 / $500,000)",
+   "url": "https://www.govinfo.gov/link/uscode/26/121",
+   "type": "official",
+   "publisher": "U.S. Government Publishing Office (govinfo)"
+  },
+  "S-USC-1031": {
+   "name": "26 U.S.C. section 1031 - Exchange of property held for productive use or investment",
+   "url": "https://www.govinfo.gov/link/uscode/26/1031",
+   "type": "official",
+   "publisher": "U.S. Government Publishing Office (govinfo)"
+  },
+  "S-CA-RTC-17043": {
+   "name": "California Revenue and Taxation Code section 17043 - Additional 1% tax on taxable income over $1,000,000 (Behavioral Health Services Tax)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=17043.&lawCode=RTC",
+   "type": "official",
+   "publisher": "California Legislative Information"
+  },
+  "S-FTB-FORMS": {
+   "name": "California Franchise Tax Board - Forms & publications (current-year tax rate schedules)",
+   "url": "https://www.ftb.ca.gov/forms/search.aspx",
+   "type": "official",
+   "publisher": "California Franchise Tax Board"
+  },
+  "S-CDI": {
+   "name": "California Department of Insurance",
+   "url": "https://www.insurance.ca.gov/",
+   "type": "official",
+   "publisher": "State of California"
+  },
+  "S-CDI-FAIRPLAN": {
+   "name": "California FAIR Plan (insurer of last resort)",
+   "url": "https://www.cfpnet.com/",
+   "type": "official",
+   "publisher": "California FAIR Plan Association"
+  },
+  "S-CUPERTINO-WATER": {
+   "name": "City of Cupertino - Water (three separate water systems serve the city: California Water Service, San Jose Water Company, and the City system operated by San Jose Water Company)",
+   "url": "https://www.cupertino.gov/Residents/Utilities/Water",
+   "type": "official",
+   "publisher": "City of Cupertino"
+  },
+  "S-CALWATER-IIP-2026": {
+   "name": "California Water Service - 2026 Infrastructure Improvement Plan notice, Bear Gulch District (CPUC-approved rate adjustments effective July 1, 2026)",
+   "url": "https://es.calwater.com/docs/iip/2026/2026-IIP-Mailer-BG.pdf",
+   "type": "official",
+   "publisher": "California Water Service (CPUC-regulated utility)"
+  },
+  "S-CPUC-CALW-AL2574": {
+   "name": "CPUC Division of Water and Audits - California Water Service Company Advice Letter 2574 (Bear Gulch fees and terms)",
+   "url": "https://files.cpuc.ca.gov/wateradviceletters/Water_Division/Advice_Letters/2025/Class_A/California_Water_Service_Company/AL_2574_-_Updates_to_Rule_15_Fees_and_Terms.pdf",
+   "type": "official",
+   "publisher": "California Public Utilities Commission"
+  },
+  "S-SFPUC-RATES-2026": {
+   "name": "SFPUC Proposition 218 notice - proposed water & sewer rates effective July 1, 2026 (monthly service charge by meter size; stormwater component)",
+   "url": "https://www.sfpuc.gov/accounts-services/water-power-sewer-rates/proposed-water-sewer-rates-2026/proposition-218-notice",
+   "type": "official",
+   "publisher": "San Francisco Public Utilities Commission"
+  },
+  "S-PGE": {
+   "name": "PG&E - electric rates and net energy metering tariffs",
+   "url": "https://www.pge.com/",
+   "type": "official",
+   "publisher": "Pacific Gas and Electric Company"
+  },
+  "S-CPUC-NEM": {
+   "name": "CPUC - Net Energy Metering / Net Billing Tariff (NEM 2.0 vs NEM 3.0) proceedings",
+   "url": "https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/demand-side-management/net-energy-metering",
+   "type": "official",
+   "publisher": "California Public Utilities Commission"
+  },
+  "S-CA-SOS-BALLOT": {
+   "name": "California Secretary of State - Ballot Measures (qualified statewide measures)",
+   "url": "https://www.sos.ca.gov/elections/ballot-measures",
+   "type": "official",
+   "publisher": "California Secretary of State"
+  },
+  "S-CA-SOS-QUALIFIED": {
+   "name": "California Secretary of State - Qualified Statewide Ballot Measures",
+   "url": "https://www.sos.ca.gov/elections/ballot-measures/qualified-ballot-measures",
+   "type": "official",
+   "publisher": "California Secretary of State"
+  },
+  "S-CA-LAO": {
+   "name": "California Legislative Analyst's Office - ballot measure analyses",
+   "url": "https://lao.ca.gov/BallotAnalysis",
+   "type": "official",
+   "publisher": "California Legislative Analyst's Office"
+  },
+  "S-FHFA-HPI": {
+   "name": "Federal Housing Finance Agency - House Price Index (the index BOE uses to biennially adjust the Prop. 19 $1 million amount)",
+   "url": "https://www.fhfa.gov/data/house-price-index",
+   "type": "official",
+   "publisher": "Federal Housing Finance Agency"
+  },
+  "S-BLS-CPI": {
+   "name": "U.S. Bureau of Labor Statistics - Consumer Price Index (source of the CPI figures used in AB 1482 and SF rent formulas)",
+   "url": "https://www.bls.gov/regions/subjects/consumer-price-indexes.htm#CA",
+   "type": "official",
+   "publisher": "U.S. Bureau of Labor Statistics"
+  },
+  "S-DIR-CPI": {
+   "name": "California Department of Industrial Relations - California Consumer Price Index",
+   "url": "https://www.dir.ca.gov/oprl/CPI/PresentCCPIchange.PDF",
+   "type": "official",
+   "publisher": "CA Department of Industrial Relations"
+  },
+  "U-INS-QUOTES-95014": {
+   "name": "Zip-code home-insurance rate shopping data for 95014 (commercial aggregator; NOT an official filing)",
+   "url": "https://www.gethomeinsurancequotes.com/california/95014-home-insurance-rates.php",
+   "type": "unofficial",
+   "publisher": "commercial rate-shopping site"
+  },
+  "U-INS-QUOTES-CA": {
+   "name": "California home-insurance premium survey by ZIP, 1,121 ZIP codes (commercial aggregator using Quadrant rate data; NOT an official filing)",
+   "url": "https://www.insurancequotes.com/home/rates-by-state/california",
+   "type": "unofficial",
+   "publisher": "commercial rate-shopping site"
+  },
+  "U-ZILLOW-CUPERTINO-RENT": {
+   "name": "Zillow rental market trends - Cupertino, CA (median rent, all bedroom counts and property types)",
+   "url": "https://www.zillow.com/rental-manager/market-trends/cupertino-ca/",
+   "type": "unofficial",
+   "publisher": "Zillow (listing aggregator)"
+  },
+  "U-ZUMPER-CUPERTINO-RENT": {
+   "name": "Zumper - average rent in Cupertino, CA",
+   "url": "https://www.zumper.com/rent-research/cupertino-ca",
+   "type": "unofficial",
+   "publisher": "Zumper (listing aggregator)"
+  },
+  "U-PGE-NEM3": {
+   "name": "PG&E average residential rate and NEM 3.0 average export credit reporting (industry blog; not a tariff)",
+   "url": "https://nrgcleanpower.com/learning-center/nem-3-0-is-final/",
+   "type": "unofficial",
+   "publisher": "industry blog"
+  },
+  "U-PROP43": {
+   "name": "Background on California Proposition 43 (November 3, 2026) and the withdrawn 'Save Prop 13' initiative",
+   "url": "https://propertytaxduedates.com/blog/california-save-prop-13-ballot-measure-2026",
+   "type": "unofficial",
+   "publisher": "industry blog"
+  },
+  "U-ESTATE-2026-MIDTERM": {
+   "name": "Summary of 2026 federal proposals affecting the estate tax and step-up in basis (proposals, not law)",
+   "url": "https://smartasset.com/estate-planning/midterm-election-what-it-could-mean-for-your-estate-plan-and-inheritance",
+   "type": "unofficial",
+   "publisher": "personal-finance publisher"
+  }
+ },
+ "official": {
+  "estate_basic_exclusion_2026": {
+   "v": 15000000,
+   "src": "S-IRS-RP-2025-32",
+   "note": "IRC 2010(c)(3) as amended by OBBBA section 70106. Permanent; indexed for inflation for calendar year 2027 and later."
+  },
+  "estate_basic_exclusion_2025": {
+   "v": 13990000,
+   "src": "S-IRS-ESTATETAX",
+   "note": "For comparison only."
+  },
+  "gst_exemption_2026": {
+   "v": 15000000,
+   "src": "S-IRS-RP-2025-32",
+   "note": "IRC 2631(c) equals the basic exclusion amount."
+  },
+  "estate_top_rate": {
+   "v": 0.4,
+   "src": "S-IRS-ESTATETAX",
+   "note": "Applied to the taxable estate above the exclusion."
+  },
+  "gift_annual_exclusion_2026": {
+   "v": 19000,
+   "src": "S-IRS-2026-INFLATION",
+   "note": "Per recipient, per donor. Unchanged from 2025."
+  },
+  "standard_deduction_2026_mfj": {
+   "v": 32200,
+   "src": "S-IRS-2026-INFLATION",
+   "note": ""
+  },
+  "standard_deduction_2026_single": {
+   "v": 16100,
+   "src": "S-IRS-2026-INFLATION",
+   "note": ""
+  },
+  "ca_estate_tax": {
+   "v": 0,
+   "src": "S-CA-RTC-17043",
+   "note": "California has no inheritance tax (repealed 1982 by Proposition 6) and no operative estate tax (the pick-up tax in R&TC 13302 has collected nothing for deaths after 2004). No official FTB page states a CA estate tax because none exists. Verified against R&TC and the CA Constitution."
+  },
+  "ca_local_estate_tax": {
+   "v": 0,
+   "src": "S-CA-SOS-BALLOT",
+   "note": "No California city or county imposes an estate or inheritance tax. No official source exists because no such tax exists."
+  },
+  "prop13_rate_cap": {
+   "v": 0.01,
+   "src": "S-CA-CONST-13A",
+   "note": "Maximum ad valorem rate, plus voter-approved debt service."
+  },
+  "prop13_growth_cap": {
+   "v": 0.02,
+   "src": "S-CA-RTC-51",
+   "note": "Lesser of 2% or the change in the California CPI."
+  },
+  "prop13_inflation_factor_2026": {
+   "v": 1.02,
+   "src": "S-BOE-LTA2026002",
+   "note": "BOE Letter to Assessors No. 2026/002 for the 2026-27 roll."
+  },
+  "scc_typical_tra_rate": {
+   "v": 0.011488,
+   "src": "S-SCC-ASSESSOR-BOOKLET",
+   "note": "Santa Clara County's own worked example: 1% base + county bonds 0.0388% + school bonds 0.100% + water bonds 0.010% = 1.1488%. A 'typical' Tax Rate Area; the actual parcel rate differs."
+  },
+  "sf_secured_rate_fy2026_27": {
+   "v": 0.0118162182,
+   "src": "S-SF-TAXRATE",
+   "note": "SF secured property tax rate for Fiscal Year 2026-27, per the Treasurer & Tax Collector. The prior year (FY 2025-26) was 1.18268325%. The rate is recommended by the Controller, adopted by the Board of Supervisors and approved by the Mayor, so it moves slightly each year. Direct charges and special assessments are added separately."
+  },
+  "p19_cap_2025_2027": {
+   "v": 1044586,
+   "src": "S-BOE-LTA25009",
+   "note": "Applies to transfers occurring February 16, 2025 through February 15, 2027. Adjusted every other February 16 by the FHFA House Price Index for California. Next adjustment February 16, 2027."
+  },
+  "p19_cap_2023_2025": {
+   "v": 1022600,
+   "src": "S-BOE-LTA25009",
+   "note": "Prior two-year period."
+  },
+  "p19_cap_2021_2023": {
+   "v": 1000000,
+   "src": "S-BOE-LTA25009",
+   "note": "Original statutory amount."
+  },
+  "p19_effective_date": {
+   "v": "2021-02-16",
+   "src": "S-BOE-PROP19",
+   "note": "Proposition 19 (ACA 11, 2019-20) approved November 3, 2020; inherited-property provisions effective February 16, 2021."
+  },
+  "p19_homeowners_exemption_deadline_years": {
+   "v": 1,
+   "src": "S-CA-RTC-632",
+   "note": "R&TC 63.2(a)(1)(A)-(B): occupy as principal residence within one year AND file for the homeowners' (or disabled veterans') exemption within one year."
+  },
+  "p19_claim_deadline_years": {
+   "v": 3,
+   "src": "S-CA-RTC-632",
+   "note": "R&TC 63.2(f): file BOE-19-P within three years of transfer, or before transfer to a third party, whichever is earlier."
+  },
+  "niit_rate": {
+   "v": 0.038,
+   "src": "S-IRS-NIIT",
+   "note": "Thresholds $200,000 single / $250,000 MFJ / $125,000 MFS. Not indexed for inflation."
+  },
+  "niit_threshold_single": {
+   "v": 200000,
+   "src": "S-IRS-NIIT",
+   "note": ""
+  },
+  "niit_threshold_mfj": {
+   "v": 250000,
+   "src": "S-IRS-NIIT",
+   "note": ""
+  },
+  "ltcg_top_rate": {
+   "v": 0.2,
+   "src": "S-IRS-TOPIC409",
+   "note": "0% / 15% / 20% ladder."
+  },
+  "unrecaptured_1250_rate": {
+   "v": 0.25,
+   "src": "S-IRS-TOPIC409",
+   "note": "Maximum rate on the depreciation slice of a real-property gain."
+  },
+  "section_121_single": {
+   "v": 250000,
+   "src": "S-USC-121",
+   "note": "2 of the 5 years before sale, owner-occupied."
+  },
+  "section_121_mfj": {
+   "v": 500000,
+   "src": "S-USC-121",
+   "note": ""
+  },
+  "step_up_in_basis": {
+   "v": "IRC 1014",
+   "src": "S-USC-1014",
+   "note": "Basis of property acquired from a decedent = FMV at date of death (alt. valuation date, IRC 2032)."
+  },
+  "ab1482_cap_sf_2026_27": {
+   "v": 0.088,
+   "src": "S-CA-AG-RENTCAPS",
+   "note": "Statewide Tenant Protection Act cap for the San Francisco Area (Alameda, Contra Costa, Marin, San Francisco, San Mateo) for increases starting 8/1/2026-7/31/2027. 5% + CPI, capped at 10%."
+  },
+  "ab1482_cap_sf_2025_26": {
+   "v": 0.063,
+   "src": "S-CA-AG-RENTCAPS",
+   "note": "Prior period (8/1/2025-7/31/2026)."
+  },
+  "sf_allowable_increase_2026_27": {
+   "v": 0.016,
+   "src": "S-SF-RENTINCREASE",
+   "note": "SF Rent Ordinance, 60% of Bay Area CPI. Effective March 1, 2026 through February 28, 2027. Applies only to covered units (generally certificate of occupancy on or before June 13, 1979)."
+  },
+  "sf_rent_control_cutoff": {
+   "v": "1979-06-13",
+   "src": "S-SF-RENTBOARD",
+   "note": "Coverage threshold; single-family homes and condos are generally exempt for tenancies beginning on or after January 1, 1996 (Costa-Hawkins)."
+  },
+  "sf_water_monthly_charge_5_8in_fye2027": {
+   "v": 19.65,
+   "src": "S-SFPUC-RATES-2026",
+   "note": "Proposed FYE 2027 monthly service charge, 5/8-inch meter. Proposed FYE 2028 is $21.02. Sewer and stormwater are billed separately."
+  },
+  "sf_stormwater_tier1_fye2027": {
+   "v": 12.63,
+   "src": "S-SFPUC-RATES-2026",
+   "note": "Proposed monthly stormwater component, residential tier 1 (0-1,700 sq ft). Current FYE 2026 is $8.24; proposed FYE 2028 is $18.08."
+  },
+  "homeowners_exemption": {
+   "v": 7000,
+   "src": "S-SCC-ASSESSOR-BOOKLET",
+   "note": "Reduces assessed value. Worth roughly $70-$85/yr at typical rates."
+  }
+ },
+ "assumptions": {
+  "valuation_date": "November 2026",
+  "prop13_inflation_factor": 0.02,
+  "appreciation_base": 0.04,
+  "appreciation_low": 0.025,
+  "appreciation_high": 0.055,
+  "p19_cap_growth": 0.03,
+  "general_inflation": 0.025,
+  "inheritance_years": [
+   2040,
+   2045,
+   2050
+  ],
+  "base_inheritance_year": 2045,
+  "horizon": 2055,
+  "insurance_95014_primary": 1500,
+  "insurance_94122_rental": 1500,
+  "water_95014_month": 125,
+  "water_94122_month": 365,
+  "electric_95014_month_net": -15,
+  "electric_94122_month": 50,
+  "nem_grandfathering_end_year": 2035,
+  "electric_95014_post_nem_month": 60,
+  "maintenance_95014_pct": 0.005,
+  "maintenance_94122_pct": 0.01,
+  "insurance_inflation": 0.05,
+  "rent_94122_month_total": 7150,
+  "rent_95014_month_market": 4500,
+  "vacancy_and_credit_loss": 0.05,
+  "management_pct": 0.0,
+  "selling_cost_pct": 0.055,
+  "portfolio_nominal_return": 0.07,
+  "portfolio_income_yield": 0.018,
+  "marginal_rate_on_investment_income": 0.371,
+  "discount_rate": 0.045,
+  "federal_ordinary_marginal": 0.32,
+  "ca_marginal": 0.093,
+  "depreciation_years": 27.5,
+  "land_pct_95014": 0.55,
+  "land_pct_94122": 0.35
+ },
+ "parcel_fit": {
+  "95014": {
+   "rate": 0.010850959528160963,
+   "rate_provenance": "derived",
+   "rate_note": "OLS slope of the supplied (assessment, tax) pairs. The supplied assessment figures are the factored base year value, so the $7,000 homeowners' exemption is subtracted before applying the rate.",
+   "ols_slope": 0.010850959528160963,
+   "r2": 0.9551172700562962,
+   "n": 12,
+   "flat_2026": 1462,
+   "flat_min": 1263,
+   "flat_max": 1542,
+   "flat_note": "Residual = tax - rate x (assessment - $7,000). Interpreted as non-ad-valorem parcel charges, special assessments and direct charges. DERIVED, not published. Range across the supplied years: $1,263 to $1,542.",
+   "implied_latest_rate": 0.013352651169167548,
+   "official_reference_rate": 0.011488,
+   "official_reference_src": "S-SCC-ASSESSOR-BOOKLET"
+  },
+  "94122": {
+   "rate": 0.0118162182,
+   "rate_provenance": "official",
+   "rate_note": "Constrained to the officially published county secured rate. The unconstrained OLS slope on the supplied data is degenerate (3.5997%) because two years in the supplied series are anomalous, so the official rate is used instead.",
+   "ols_slope": 0.03599734732871734,
+   "r2": 0.8087879316030724,
+   "n": 10,
+   "flat_2026": 1201,
+   "flat_min": 617,
+   "flat_max": 1172,
+   "flat_note": "Residual = tax - rate x (assessment - $7,000). Interpreted as non-ad-valorem parcel charges, special assessments and direct charges. DERIVED, not published. Range across the supplied years: $617 to $1,172.",
+   "implied_latest_rate": 0.02134829493732932,
+   "official_reference_rate": 0.0118162182,
+   "official_reference_src": "S-SF-TAXRATE"
+  }
+ },
+ "history": {
+  "95014": [
+   {
+    "year": 2026,
+    "tax": null,
+    "assessment": 550537,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": null,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2025,
+    "tax": 7207,
+    "assessment": 539743,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013352651169167548,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2024,
+    "tax": 7003,
+    "assessment": 529161,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013234157468142965,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2023,
+    "tax": 6917,
+    "assessment": 518786,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013333050622029122,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2022,
+    "tax": 6755,
+    "assessment": 508614,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013281191630588225,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2021,
+    "tax": 6662,
+    "assessment": 498642,
+    "assessment_change_supplied_pct": 1.0,
+    "implied_effective_rate": 0.013360286538237854,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2020,
+    "tax": 6565,
+    "assessment": 493530,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013302129556460601,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2019,
+    "tax": 6565,
+    "assessment": 483854,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013568142456195463,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2018,
+    "tax": 6383,
+    "assessment": 474368,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013455798030221263,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2017,
+    "tax": 6383,
+    "assessment": 465067,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013724904153595074,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2016,
+    "tax": 6414,
+    "assessment": 455949,
+    "assessment_change_supplied_pct": 1.5,
+    "implied_effective_rate": 0.014067362797154944,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2015,
+    "tax": 6130,
+    "assessment": 449101,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.013649490871763812,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2014,
+    "tax": 5965,
+    "assessment": 440305,
+    "assessment_change_supplied_pct": 0.5,
+    "implied_effective_rate": 0.013547427351494987,
+    "derived": [],
+    "source": "supplied"
+   }
+  ],
+  "94122": [
+   {
+    "year": 2026,
+    "tax": null,
+    "assessment": 116533,
+    "assessment_change_supplied_pct": null,
+    "implied_effective_rate": null,
+    "derived": [
+     "Assessed value derived: prior year $114,248 x 1.02 (BOE 2026-27 inflation factor)."
+    ],
+    "source": "supplied"
+   },
+   {
+    "year": 2025,
+    "tax": 2439,
+    "assessment": 114248,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.02134829493732932,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2024,
+    "tax": 2315,
+    "assessment": 112008,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.02066816655953146,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2023,
+    "tax": 2179,
+    "assessment": 109814,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.019842643014551877,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2022,
+    "tax": 2107,
+    "assessment": 107662,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.01957050770002415,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2021,
+    "tax": 2066,
+    "assessment": 105595,
+    "assessment_change_supplied_pct": 1.0,
+    "implied_effective_rate": 0.01956532032766703,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2020,
+    "tax": 2197,
+    "assessment": 104513,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.02102130835398467,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2019,
+    "tax": 2134,
+    "assessment": 102465,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.02082662372517445,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2018,
+    "tax": 2061,
+    "assessment": 100456,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.020516445010750974,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2017,
+    "tax": 1740,
+    "assessment": 98488,
+    "assessment_change_supplied_pct": 2.0,
+    "implied_effective_rate": 0.0176671269596296,
+    "derived": [],
+    "source": "supplied"
+   },
+   {
+    "year": 2016,
+    "tax": 1675,
+    "assessment": 96557,
+    "assessment_change_supplied_pct": 1.5,
+    "implied_effective_rate": 0.017347266381515583,
+    "derived": [],
+    "source": "supplied"
+   }
+  ]
+ },
+ "projections": {
+  "95014": {
+   "0.025": [
+    {
+     "year": 2026,
+     "assessed_value": 550537,
+     "market_value": 3100000,
+     "tax": 7360,
+     "assessed_over_market": 0.1776
+    },
+    {
+     "year": 2027,
+     "assessed_value": 561548,
+     "market_value": 3177500,
+     "tax": 7516,
+     "assessed_over_market": 0.1767
+    },
+    {
+     "year": 2028,
+     "assessed_value": 572779,
+     "market_value": 3256937,
+     "tax": 7675,
+     "assessed_over_market": 0.1759
+    },
+    {
+     "year": 2029,
+     "assessed_value": 584234,
+     "market_value": 3338361,
+     "tax": 7838,
+     "assessed_over_market": 0.175
+    },
+    {
+     "year": 2030,
+     "assessed_value": 595919,
+     "market_value": 3421820,
+     "tax": 8004,
+     "assessed_over_market": 0.1742
+    },
+    {
+     "year": 2031,
+     "assessed_value": 607837,
+     "market_value": 3507365,
+     "tax": 8174,
+     "assessed_over_market": 0.1733
+    },
+    {
+     "year": 2032,
+     "assessed_value": 619994,
+     "market_value": 3595050,
+     "tax": 8347,
+     "assessed_over_market": 0.1725
+    },
+    {
+     "year": 2033,
+     "assessed_value": 632394,
+     "market_value": 3684926,
+     "tax": 8524,
+     "assessed_over_market": 0.1716
+    },
+    {
+     "year": 2034,
+     "assessed_value": 645042,
+     "market_value": 3777049,
+     "tax": 8705,
+     "assessed_over_market": 0.1708
+    },
+    {
+     "year": 2035,
+     "assessed_value": 657943,
+     "market_value": 3871475,
+     "tax": 8889,
+     "assessed_over_market": 0.1699
+    },
+    {
+     "year": 2036,
+     "assessed_value": 671102,
+     "market_value": 3968262,
+     "tax": 9078,
+     "assessed_over_market": 0.1691
+    },
+    {
+     "year": 2037,
+     "assessed_value": 684524,
+     "market_value": 4067469,
+     "tax": 9270,
+     "assessed_over_market": 0.1683
+    },
+    {
+     "year": 2038,
+     "assessed_value": 698214,
+     "market_value": 4169155,
+     "tax": 9467,
+     "assessed_over_market": 0.1675
+    },
+    {
+     "year": 2039,
+     "assessed_value": 712178,
+     "market_value": 4273384,
+     "tax": 9667,
+     "assessed_over_market": 0.1667
+    },
+    {
+     "year": 2040,
+     "assessed_value": 726422,
+     "market_value": 4380219,
+     "tax": 9872,
+     "assessed_over_market": 0.1658
+    },
+    {
+     "year": 2041,
+     "assessed_value": 740950,
+     "market_value": 4489724,
+     "tax": 10081,
+     "assessed_over_market": 0.165
+    },
+    {
+     "year": 2042,
+     "assessed_value": 755769,
+     "market_value": 4601967,
+     "tax": 10295,
+     "assessed_over_market": 0.1642
+    },
+    {
+     "year": 2043,
+     "assessed_value": 770885,
+     "market_value": 4717017,
+     "tax": 10513,
+     "assessed_over_market": 0.1634
+    },
+    {
+     "year": 2044,
+     "assessed_value": 786302,
+     "market_value": 4834942,
+     "tax": 10736,
+     "assessed_over_market": 0.1626
+    },
+    {
+     "year": 2045,
+     "assessed_value": 802028,
+     "market_value": 4955816,
+     "tax": 10964,
+     "assessed_over_market": 0.1618
+    },
+    {
+     "year": 2046,
+     "assessed_value": 818069,
+     "market_value": 5079711,
+     "tax": 11197,
+     "assessed_over_market": 0.161
+    },
+    {
+     "year": 2047,
+     "assessed_value": 834430,
+     "market_value": 5206704,
+     "tax": 11434,
+     "assessed_over_market": 0.1603
+    },
+    {
+     "year": 2048,
+     "assessed_value": 851119,
+     "market_value": 5336871,
+     "tax": 11676,
+     "assessed_over_market": 0.1595
+    },
+    {
+     "year": 2049,
+     "assessed_value": 868141,
+     "market_value": 5470293,
+     "tax": 11924,
+     "assessed_over_market": 0.1587
+    },
+    {
+     "year": 2050,
+     "assessed_value": 885504,
+     "market_value": 5607050,
+     "tax": 12177,
+     "assessed_over_market": 0.1579
+    },
+    {
+     "year": 2051,
+     "assessed_value": 903214,
+     "market_value": 5747227,
+     "tax": 12435,
+     "assessed_over_market": 0.1572
+    },
+    {
+     "year": 2052,
+     "assessed_value": 921279,
+     "market_value": 5890907,
+     "tax": 12699,
+     "assessed_over_market": 0.1564
+    },
+    {
+     "year": 2053,
+     "assessed_value": 939704,
+     "market_value": 6038180,
+     "tax": 12968,
+     "assessed_over_market": 0.1556
+    },
+    {
+     "year": 2054,
+     "assessed_value": 958498,
+     "market_value": 6189135,
+     "tax": 13244,
+     "assessed_over_market": 0.1549
+    },
+    {
+     "year": 2055,
+     "assessed_value": 977668,
+     "market_value": 6343863,
+     "tax": 13525,
+     "assessed_over_market": 0.1541
+    }
+   ],
+   "0.04": [
+    {
+     "year": 2026,
+     "assessed_value": 550537,
+     "market_value": 3100000,
+     "tax": 7360,
+     "assessed_over_market": 0.1776
+    },
+    {
+     "year": 2027,
+     "assessed_value": 561548,
+     "market_value": 3224000,
+     "tax": 7516,
+     "assessed_over_market": 0.1742
+    },
+    {
+     "year": 2028,
+     "assessed_value": 572779,
+     "market_value": 3352960,
+     "tax": 7675,
+     "assessed_over_market": 0.1708
+    },
+    {
+     "year": 2029,
+     "assessed_value": 584234,
+     "market_value": 3487078,
+     "tax": 7838,
+     "assessed_over_market": 0.1675
+    },
+    {
+     "year": 2030,
+     "assessed_value": 595919,
+     "market_value": 3626562,
+     "tax": 8004,
+     "assessed_over_market": 0.1643
+    },
+    {
+     "year": 2031,
+     "assessed_value": 607837,
+     "market_value": 3771624,
+     "tax": 8174,
+     "assessed_over_market": 0.1612
+    },
+    {
+     "year": 2032,
+     "assessed_value": 619994,
+     "market_value": 3922489,
+     "tax": 8347,
+     "assessed_over_market": 0.1581
+    },
+    {
+     "year": 2033,
+     "assessed_value": 632394,
+     "market_value": 4079389,
+     "tax": 8524,
+     "assessed_over_market": 0.155
+    },
+    {
+     "year": 2034,
+     "assessed_value": 645042,
+     "market_value": 4242564,
+     "tax": 8705,
+     "assessed_over_market": 0.152
+    },
+    {
+     "year": 2035,
+     "assessed_value": 657943,
+     "market_value": 4412267,
+     "tax": 8889,
+     "assessed_over_market": 0.1491
+    },
+    {
+     "year": 2036,
+     "assessed_value": 671102,
+     "market_value": 4588757,
+     "tax": 9078,
+     "assessed_over_market": 0.1462
+    },
+    {
+     "year": 2037,
+     "assessed_value": 684524,
+     "market_value": 4772308,
+     "tax": 9270,
+     "assessed_over_market": 0.1434
+    },
+    {
+     "year": 2038,
+     "assessed_value": 698214,
+     "market_value": 4963200,
+     "tax": 9467,
+     "assessed_over_market": 0.1407
+    },
+    {
+     "year": 2039,
+     "assessed_value": 712178,
+     "market_value": 5161728,
+     "tax": 9667,
+     "assessed_over_market": 0.138
+    },
+    {
+     "year": 2040,
+     "assessed_value": 726422,
+     "market_value": 5368197,
+     "tax": 9872,
+     "assessed_over_market": 0.1353
+    },
+    {
+     "year": 2041,
+     "assessed_value": 740950,
+     "market_value": 5582925,
+     "tax": 10081,
+     "assessed_over_market": 0.1327
+    },
+    {
+     "year": 2042,
+     "assessed_value": 755769,
+     "market_value": 5806242,
+     "tax": 10295,
+     "assessed_over_market": 0.1302
+    },
+    {
+     "year": 2043,
+     "assessed_value": 770885,
+     "market_value": 6038492,
+     "tax": 10513,
+     "assessed_over_market": 0.1277
+    },
+    {
+     "year": 2044,
+     "assessed_value": 786302,
+     "market_value": 6280031,
+     "tax": 10736,
+     "assessed_over_market": 0.1252
+    },
+    {
+     "year": 2045,
+     "assessed_value": 802028,
+     "market_value": 6531232,
+     "tax": 10964,
+     "assessed_over_market": 0.1228
+    },
+    {
+     "year": 2046,
+     "assessed_value": 818069,
+     "market_value": 6792482,
+     "tax": 11197,
+     "assessed_over_market": 0.1204
+    },
+    {
+     "year": 2047,
+     "assessed_value": 834430,
+     "market_value": 7064181,
+     "tax": 11434,
+     "assessed_over_market": 0.1181
+    },
+    {
+     "year": 2048,
+     "assessed_value": 851119,
+     "market_value": 7346748,
+     "tax": 11676,
+     "assessed_over_market": 0.1158
+    },
+    {
+     "year": 2049,
+     "assessed_value": 868141,
+     "market_value": 7640618,
+     "tax": 11924,
+     "assessed_over_market": 0.1136
+    },
+    {
+     "year": 2050,
+     "assessed_value": 885504,
+     "market_value": 7946243,
+     "tax": 12177,
+     "assessed_over_market": 0.1114
+    },
+    {
+     "year": 2051,
+     "assessed_value": 903214,
+     "market_value": 8264093,
+     "tax": 12435,
+     "assessed_over_market": 0.1093
+    },
+    {
+     "year": 2052,
+     "assessed_value": 921279,
+     "market_value": 8594656,
+     "tax": 12699,
+     "assessed_over_market": 0.1072
+    },
+    {
+     "year": 2053,
+     "assessed_value": 939704,
+     "market_value": 8938443,
+     "tax": 12968,
+     "assessed_over_market": 0.1051
+    },
+    {
+     "year": 2054,
+     "assessed_value": 958498,
+     "market_value": 9295980,
+     "tax": 13244,
+     "assessed_over_market": 0.1031
+    },
+    {
+     "year": 2055,
+     "assessed_value": 977668,
+     "market_value": 9667820,
+     "tax": 13525,
+     "assessed_over_market": 0.1011
+    }
+   ],
+   "0.055": [
+    {
+     "year": 2026,
+     "assessed_value": 550537,
+     "market_value": 3100000,
+     "tax": 7360,
+     "assessed_over_market": 0.1776
+    },
+    {
+     "year": 2027,
+     "assessed_value": 561548,
+     "market_value": 3270500,
+     "tax": 7516,
+     "assessed_over_market": 0.1717
+    },
+    {
+     "year": 2028,
+     "assessed_value": 572779,
+     "market_value": 3450378,
+     "tax": 7675,
+     "assessed_over_market": 0.166
+    },
+    {
+     "year": 2029,
+     "assessed_value": 584234,
+     "market_value": 3640148,
+     "tax": 7838,
+     "assessed_over_market": 0.1605
+    },
+    {
+     "year": 2030,
+     "assessed_value": 595919,
+     "market_value": 3840356,
+     "tax": 8004,
+     "assessed_over_market": 0.1552
+    },
+    {
+     "year": 2031,
+     "assessed_value": 607837,
+     "market_value": 4051576,
+     "tax": 8174,
+     "assessed_over_market": 0.15
+    },
+    {
+     "year": 2032,
+     "assessed_value": 619994,
+     "market_value": 4274413,
+     "tax": 8347,
+     "assessed_over_market": 0.145
+    },
+    {
+     "year": 2033,
+     "assessed_value": 632394,
+     "market_value": 4509505,
+     "tax": 8524,
+     "assessed_over_market": 0.1402
+    },
+    {
+     "year": 2034,
+     "assessed_value": 645042,
+     "market_value": 4757528,
+     "tax": 8705,
+     "assessed_over_market": 0.1356
+    },
+    {
+     "year": 2035,
+     "assessed_value": 657943,
+     "market_value": 5019192,
+     "tax": 8889,
+     "assessed_over_market": 0.1311
+    },
+    {
+     "year": 2036,
+     "assessed_value": 671102,
+     "market_value": 5295248,
+     "tax": 9078,
+     "assessed_over_market": 0.1267
+    },
+    {
+     "year": 2037,
+     "assessed_value": 684524,
+     "market_value": 5586486,
+     "tax": 9270,
+     "assessed_over_market": 0.1225
+    },
+    {
+     "year": 2038,
+     "assessed_value": 698214,
+     "market_value": 5893743,
+     "tax": 9467,
+     "assessed_over_market": 0.1185
+    },
+    {
+     "year": 2039,
+     "assessed_value": 712178,
+     "market_value": 6217899,
+     "tax": 9667,
+     "assessed_over_market": 0.1145
+    },
+    {
+     "year": 2040,
+     "assessed_value": 726422,
+     "market_value": 6559884,
+     "tax": 9872,
+     "assessed_over_market": 0.1107
+    },
+    {
+     "year": 2041,
+     "assessed_value": 740950,
+     "market_value": 6920677,
+     "tax": 10081,
+     "assessed_over_market": 0.1071
+    },
+    {
+     "year": 2042,
+     "assessed_value": 755769,
+     "market_value": 7301314,
+     "tax": 10295,
+     "assessed_over_market": 0.1035
+    },
+    {
+     "year": 2043,
+     "assessed_value": 770885,
+     "market_value": 7702887,
+     "tax": 10513,
+     "assessed_over_market": 0.1001
+    },
+    {
+     "year": 2044,
+     "assessed_value": 786302,
+     "market_value": 8126545,
+     "tax": 10736,
+     "assessed_over_market": 0.0968
+    },
+    {
+     "year": 2045,
+     "assessed_value": 802028,
+     "market_value": 8573505,
+     "tax": 10964,
+     "assessed_over_market": 0.0935
+    },
+    {
+     "year": 2046,
+     "assessed_value": 818069,
+     "market_value": 9045048,
+     "tax": 11197,
+     "assessed_over_market": 0.0904
+    },
+    {
+     "year": 2047,
+     "assessed_value": 834430,
+     "market_value": 9542526,
+     "tax": 11434,
+     "assessed_over_market": 0.0874
+    },
+    {
+     "year": 2048,
+     "assessed_value": 851119,
+     "market_value": 10067365,
+     "tax": 11676,
+     "assessed_over_market": 0.0845
+    },
+    {
+     "year": 2049,
+     "assessed_value": 868141,
+     "market_value": 10621070,
+     "tax": 11924,
+     "assessed_over_market": 0.0817
+    },
+    {
+     "year": 2050,
+     "assessed_value": 885504,
+     "market_value": 11205229,
+     "tax": 12177,
+     "assessed_over_market": 0.079
+    },
+    {
+     "year": 2051,
+     "assessed_value": 903214,
+     "market_value": 11821516,
+     "tax": 12435,
+     "assessed_over_market": 0.0764
+    },
+    {
+     "year": 2052,
+     "assessed_value": 921279,
+     "market_value": 12471700,
+     "tax": 12699,
+     "assessed_over_market": 0.0739
+    },
+    {
+     "year": 2053,
+     "assessed_value": 939704,
+     "market_value": 13157643,
+     "tax": 12968,
+     "assessed_over_market": 0.0714
+    },
+    {
+     "year": 2054,
+     "assessed_value": 958498,
+     "market_value": 13881314,
+     "tax": 13244,
+     "assessed_over_market": 0.069
+    },
+    {
+     "year": 2055,
+     "assessed_value": 977668,
+     "market_value": 14644786,
+     "tax": 13525,
+     "assessed_over_market": 0.0668
+    }
+   ]
+  },
+  "94122": {
+   "0.025": [
+    {
+     "year": 2026,
+     "assessed_value": 116533,
+     "market_value": 1800000,
+     "tax": 2495,
+     "assessed_over_market": 0.0647
+    },
+    {
+     "year": 2027,
+     "assessed_value": 118864,
+     "market_value": 1845000,
+     "tax": 2553,
+     "assessed_over_market": 0.0644
+    },
+    {
+     "year": 2028,
+     "assessed_value": 121241,
+     "market_value": 1891125,
+     "tax": 2612,
+     "assessed_over_market": 0.0641
+    },
+    {
+     "year": 2029,
+     "assessed_value": 123666,
+     "market_value": 1938403,
+     "tax": 2672,
+     "assessed_over_market": 0.0638
+    },
+    {
+     "year": 2030,
+     "assessed_value": 126139,
+     "market_value": 1986863,
+     "tax": 2733,
+     "assessed_over_market": 0.0635
+    },
+    {
+     "year": 2031,
+     "assessed_value": 128662,
+     "market_value": 2036535,
+     "tax": 2796,
+     "assessed_over_market": 0.0632
+    },
+    {
+     "year": 2032,
+     "assessed_value": 131235,
+     "market_value": 2087448,
+     "tax": 2861,
+     "assessed_over_market": 0.0629
+    },
+    {
+     "year": 2033,
+     "assessed_value": 133860,
+     "market_value": 2139634,
+     "tax": 2927,
+     "assessed_over_market": 0.0626
+    },
+    {
+     "year": 2034,
+     "assessed_value": 136537,
+     "market_value": 2193125,
+     "tax": 2994,
+     "assessed_over_market": 0.0623
+    },
+    {
+     "year": 2035,
+     "assessed_value": 139268,
+     "market_value": 2247953,
+     "tax": 3063,
+     "assessed_over_market": 0.062
+    },
+    {
+     "year": 2036,
+     "assessed_value": 142053,
+     "market_value": 2304152,
+     "tax": 3133,
+     "assessed_over_market": 0.0617
+    },
+    {
+     "year": 2037,
+     "assessed_value": 144894,
+     "market_value": 2361756,
+     "tax": 3205,
+     "assessed_over_market": 0.0614
+    },
+    {
+     "year": 2038,
+     "assessed_value": 147792,
+     "market_value": 2420800,
+     "tax": 3279,
+     "assessed_over_market": 0.0611
+    },
+    {
+     "year": 2039,
+     "assessed_value": 150748,
+     "market_value": 2481320,
+     "tax": 3354,
+     "assessed_over_market": 0.0608
+    },
+    {
+     "year": 2040,
+     "assessed_value": 153763,
+     "market_value": 2543353,
+     "tax": 3431,
+     "assessed_over_market": 0.0605
+    },
+    {
+     "year": 2041,
+     "assessed_value": 156838,
+     "market_value": 2606937,
+     "tax": 3510,
+     "assessed_over_market": 0.0602
+    },
+    {
+     "year": 2042,
+     "assessed_value": 159975,
+     "market_value": 2672110,
+     "tax": 3590,
+     "assessed_over_market": 0.0599
+    },
+    {
+     "year": 2043,
+     "assessed_value": 163174,
+     "market_value": 2738913,
+     "tax": 3673,
+     "assessed_over_market": 0.0596
+    },
+    {
+     "year": 2044,
+     "assessed_value": 166438,
+     "market_value": 2807386,
+     "tax": 3757,
+     "assessed_over_market": 0.0593
+    },
+    {
+     "year": 2045,
+     "assessed_value": 169767,
+     "market_value": 2877570,
+     "tax": 3843,
+     "assessed_over_market": 0.059
+    },
+    {
+     "year": 2046,
+     "assessed_value": 173162,
+     "market_value": 2949510,
+     "tax": 3931,
+     "assessed_over_market": 0.0587
+    },
+    {
+     "year": 2047,
+     "assessed_value": 176625,
+     "market_value": 3023247,
+     "tax": 4022,
+     "assessed_over_market": 0.0584
+    },
+    {
+     "year": 2048,
+     "assessed_value": 180158,
+     "market_value": 3098829,
+     "tax": 4114,
+     "assessed_over_market": 0.0581
+    },
+    {
+     "year": 2049,
+     "assessed_value": 183761,
+     "market_value": 3176299,
+     "tax": 4208,
+     "assessed_over_market": 0.0579
+    },
+    {
+     "year": 2050,
+     "assessed_value": 187436,
+     "market_value": 3255707,
+     "tax": 4304,
+     "assessed_over_market": 0.0576
+    },
+    {
+     "year": 2051,
+     "assessed_value": 191185,
+     "market_value": 3337099,
+     "tax": 4403,
+     "assessed_over_market": 0.0573
+    },
+    {
+     "year": 2052,
+     "assessed_value": 195008,
+     "market_value": 3420527,
+     "tax": 4504,
+     "assessed_over_market": 0.057
+    },
+    {
+     "year": 2053,
+     "assessed_value": 198909,
+     "market_value": 3506040,
+     "tax": 4607,
+     "assessed_over_market": 0.0567
+    },
+    {
+     "year": 2054,
+     "assessed_value": 202887,
+     "market_value": 3593691,
+     "tax": 4712,
+     "assessed_over_market": 0.0565
+    },
+    {
+     "year": 2055,
+     "assessed_value": 206945,
+     "market_value": 3683533,
+     "tax": 4820,
+     "assessed_over_market": 0.0562
+    }
+   ],
+   "0.04": [
+    {
+     "year": 2026,
+     "assessed_value": 116533,
+     "market_value": 1800000,
+     "tax": 2495,
+     "assessed_over_market": 0.0647
+    },
+    {
+     "year": 2027,
+     "assessed_value": 118864,
+     "market_value": 1872000,
+     "tax": 2553,
+     "assessed_over_market": 0.0635
+    },
+    {
+     "year": 2028,
+     "assessed_value": 121241,
+     "market_value": 1946880,
+     "tax": 2612,
+     "assessed_over_market": 0.0623
+    },
+    {
+     "year": 2029,
+     "assessed_value": 123666,
+     "market_value": 2024755,
+     "tax": 2672,
+     "assessed_over_market": 0.0611
+    },
+    {
+     "year": 2030,
+     "assessed_value": 126139,
+     "market_value": 2105745,
+     "tax": 2733,
+     "assessed_over_market": 0.0599
+    },
+    {
+     "year": 2031,
+     "assessed_value": 128662,
+     "market_value": 2189975,
+     "tax": 2796,
+     "assessed_over_market": 0.0588
+    },
+    {
+     "year": 2032,
+     "assessed_value": 131235,
+     "market_value": 2277574,
+     "tax": 2861,
+     "assessed_over_market": 0.0576
+    },
+    {
+     "year": 2033,
+     "assessed_value": 133860,
+     "market_value": 2368677,
+     "tax": 2927,
+     "assessed_over_market": 0.0565
+    },
+    {
+     "year": 2034,
+     "assessed_value": 136537,
+     "market_value": 2463424,
+     "tax": 2994,
+     "assessed_over_market": 0.0554
+    },
+    {
+     "year": 2035,
+     "assessed_value": 139268,
+     "market_value": 2561961,
+     "tax": 3063,
+     "assessed_over_market": 0.0544
+    },
+    {
+     "year": 2036,
+     "assessed_value": 142053,
+     "market_value": 2664440,
+     "tax": 3133,
+     "assessed_over_market": 0.0533
+    },
+    {
+     "year": 2037,
+     "assessed_value": 144894,
+     "market_value": 2771017,
+     "tax": 3205,
+     "assessed_over_market": 0.0523
+    },
+    {
+     "year": 2038,
+     "assessed_value": 147792,
+     "market_value": 2881858,
+     "tax": 3279,
+     "assessed_over_market": 0.0513
+    },
+    {
+     "year": 2039,
+     "assessed_value": 150748,
+     "market_value": 2997132,
+     "tax": 3354,
+     "assessed_over_market": 0.0503
+    },
+    {
+     "year": 2040,
+     "assessed_value": 153763,
+     "market_value": 3117018,
+     "tax": 3431,
+     "assessed_over_market": 0.0493
+    },
+    {
+     "year": 2041,
+     "assessed_value": 156838,
+     "market_value": 3241698,
+     "tax": 3510,
+     "assessed_over_market": 0.0484
+    },
+    {
+     "year": 2042,
+     "assessed_value": 159975,
+     "market_value": 3371366,
+     "tax": 3590,
+     "assessed_over_market": 0.0475
+    },
+    {
+     "year": 2043,
+     "assessed_value": 163174,
+     "market_value": 3506221,
+     "tax": 3673,
+     "assessed_over_market": 0.0465
+    },
+    {
+     "year": 2044,
+     "assessed_value": 166438,
+     "market_value": 3646470,
+     "tax": 3757,
+     "assessed_over_market": 0.0456
+    },
+    {
+     "year": 2045,
+     "assessed_value": 169767,
+     "market_value": 3792329,
+     "tax": 3843,
+     "assessed_over_market": 0.0448
+    },
+    {
+     "year": 2046,
+     "assessed_value": 173162,
+     "market_value": 3944022,
+     "tax": 3931,
+     "assessed_over_market": 0.0439
+    },
+    {
+     "year": 2047,
+     "assessed_value": 176625,
+     "market_value": 4101783,
+     "tax": 4022,
+     "assessed_over_market": 0.0431
+    },
+    {
+     "year": 2048,
+     "assessed_value": 180158,
+     "market_value": 4265854,
+     "tax": 4114,
+     "assessed_over_market": 0.0422
+    },
+    {
+     "year": 2049,
+     "assessed_value": 183761,
+     "market_value": 4436488,
+     "tax": 4208,
+     "assessed_over_market": 0.0414
+    },
+    {
+     "year": 2050,
+     "assessed_value": 187436,
+     "market_value": 4613947,
+     "tax": 4304,
+     "assessed_over_market": 0.0406
+    },
+    {
+     "year": 2051,
+     "assessed_value": 191185,
+     "market_value": 4798505,
+     "tax": 4403,
+     "assessed_over_market": 0.0398
+    },
+    {
+     "year": 2052,
+     "assessed_value": 195008,
+     "market_value": 4990446,
+     "tax": 4504,
+     "assessed_over_market": 0.0391
+    },
+    {
+     "year": 2053,
+     "assessed_value": 198909,
+     "market_value": 5190063,
+     "tax": 4607,
+     "assessed_over_market": 0.0383
+    },
+    {
+     "year": 2054,
+     "assessed_value": 202887,
+     "market_value": 5397666,
+     "tax": 4712,
+     "assessed_over_market": 0.0376
+    },
+    {
+     "year": 2055,
+     "assessed_value": 206945,
+     "market_value": 5613573,
+     "tax": 4820,
+     "assessed_over_market": 0.0369
+    }
+   ],
+   "0.055": [
+    {
+     "year": 2026,
+     "assessed_value": 116533,
+     "market_value": 1800000,
+     "tax": 2495,
+     "assessed_over_market": 0.0647
+    },
+    {
+     "year": 2027,
+     "assessed_value": 118864,
+     "market_value": 1899000,
+     "tax": 2553,
+     "assessed_over_market": 0.0626
+    },
+    {
+     "year": 2028,
+     "assessed_value": 121241,
+     "market_value": 2003445,
+     "tax": 2612,
+     "assessed_over_market": 0.0605
+    },
+    {
+     "year": 2029,
+     "assessed_value": 123666,
+     "market_value": 2113634,
+     "tax": 2672,
+     "assessed_over_market": 0.0585
+    },
+    {
+     "year": 2030,
+     "assessed_value": 126139,
+     "market_value": 2229884,
+     "tax": 2733,
+     "assessed_over_market": 0.0566
+    },
+    {
+     "year": 2031,
+     "assessed_value": 128662,
+     "market_value": 2352528,
+     "tax": 2796,
+     "assessed_over_market": 0.0547
+    },
+    {
+     "year": 2032,
+     "assessed_value": 131235,
+     "market_value": 2481917,
+     "tax": 2861,
+     "assessed_over_market": 0.0529
+    },
+    {
+     "year": 2033,
+     "assessed_value": 133860,
+     "market_value": 2618422,
+     "tax": 2927,
+     "assessed_over_market": 0.0511
+    },
+    {
+     "year": 2034,
+     "assessed_value": 136537,
+     "market_value": 2762436,
+     "tax": 2994,
+     "assessed_over_market": 0.0494
+    },
+    {
+     "year": 2035,
+     "assessed_value": 139268,
+     "market_value": 2914370,
+     "tax": 3063,
+     "assessed_over_market": 0.0478
+    },
+    {
+     "year": 2036,
+     "assessed_value": 142053,
+     "market_value": 3074660,
+     "tax": 3133,
+     "assessed_over_market": 0.0462
+    },
+    {
+     "year": 2037,
+     "assessed_value": 144894,
+     "market_value": 3243766,
+     "tax": 3205,
+     "assessed_over_market": 0.0447
+    },
+    {
+     "year": 2038,
+     "assessed_value": 147792,
+     "market_value": 3422173,
+     "tax": 3279,
+     "assessed_over_market": 0.0432
+    },
+    {
+     "year": 2039,
+     "assessed_value": 150748,
+     "market_value": 3610393,
+     "tax": 3354,
+     "assessed_over_market": 0.0418
+    },
+    {
+     "year": 2040,
+     "assessed_value": 153763,
+     "market_value": 3808965,
+     "tax": 3431,
+     "assessed_over_market": 0.0404
+    },
+    {
+     "year": 2041,
+     "assessed_value": 156838,
+     "market_value": 4018458,
+     "tax": 3510,
+     "assessed_over_market": 0.039
+    },
+    {
+     "year": 2042,
+     "assessed_value": 159975,
+     "market_value": 4239473,
+     "tax": 3590,
+     "assessed_over_market": 0.0377
+    },
+    {
+     "year": 2043,
+     "assessed_value": 163174,
+     "market_value": 4472644,
+     "tax": 3673,
+     "assessed_over_market": 0.0365
+    },
+    {
+     "year": 2044,
+     "assessed_value": 166438,
+     "market_value": 4718639,
+     "tax": 3757,
+     "assessed_over_market": 0.0353
+    },
+    {
+     "year": 2045,
+     "assessed_value": 169767,
+     "market_value": 4978164,
+     "tax": 3843,
+     "assessed_over_market": 0.0341
+    },
+    {
+     "year": 2046,
+     "assessed_value": 173162,
+     "market_value": 5251963,
+     "tax": 3931,
+     "assessed_over_market": 0.033
+    },
+    {
+     "year": 2047,
+     "assessed_value": 176625,
+     "market_value": 5540821,
+     "tax": 4022,
+     "assessed_over_market": 0.0319
+    },
+    {
+     "year": 2048,
+     "assessed_value": 180158,
+     "market_value": 5845567,
+     "tax": 4114,
+     "assessed_over_market": 0.0308
+    },
+    {
+     "year": 2049,
+     "assessed_value": 183761,
+     "market_value": 6167073,
+     "tax": 4208,
+     "assessed_over_market": 0.0298
+    },
+    {
+     "year": 2050,
+     "assessed_value": 187436,
+     "market_value": 6506262,
+     "tax": 4304,
+     "assessed_over_market": 0.0288
+    },
+    {
+     "year": 2051,
+     "assessed_value": 191185,
+     "market_value": 6864106,
+     "tax": 4403,
+     "assessed_over_market": 0.0279
+    },
+    {
+     "year": 2052,
+     "assessed_value": 195008,
+     "market_value": 7241632,
+     "tax": 4504,
+     "assessed_over_market": 0.0269
+    },
+    {
+     "year": 2053,
+     "assessed_value": 198909,
+     "market_value": 7639922,
+     "tax": 4607,
+     "assessed_over_market": 0.026
+    },
+    {
+     "year": 2054,
+     "assessed_value": 202887,
+     "market_value": 8060118,
+     "tax": 4712,
+     "assessed_over_market": 0.0252
+    },
+    {
+     "year": 2055,
+     "assessed_value": 206945,
+     "market_value": 8503424,
+     "tax": 4820,
+     "assessed_over_market": 0.0243
+    }
+   ]
+  }
+ },
+ "prop19_scenarios": [
+  {
+   "zipcode": "95014",
+   "transfer_year": 2040,
+   "growth": 0.025,
+   "factored_base_year_value": 726422,
+   "market_value_at_transfer": 4380219,
+   "p19_cap": 1534010,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2260432,
+   "assessed_value_if_exclusion_qualifies": 2846209,
+   "assessed_value_if_no_exclusion": 4380219,
+   "annual_tax_if_exclusion_qualifies": 32874,
+   "annual_tax_if_no_exclusion": 49519,
+   "annual_saving_from_exclusion": 16645,
+   "formula": "Assessed value = FMV ($4,380,219) - cap ($1,534,010) = $2,846,209. (Equivalently FBYV $726,422 + excess $2,119,787.)"
+  },
+  {
+   "zipcode": "95014",
+   "transfer_year": 2040,
+   "growth": 0.04,
+   "factored_base_year_value": 726422,
+   "market_value_at_transfer": 5368197,
+   "p19_cap": 1534010,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2260432,
+   "assessed_value_if_exclusion_qualifies": 3834187,
+   "assessed_value_if_no_exclusion": 5368197,
+   "annual_tax_if_exclusion_qualifies": 43594,
+   "annual_tax_if_no_exclusion": 60240,
+   "annual_saving_from_exclusion": 16645,
+   "formula": "Assessed value = FMV ($5,368,197) - cap ($1,534,010) = $3,834,187. (Equivalently FBYV $726,422 + excess $3,107,765.)"
+  },
+  {
+   "zipcode": "95014",
+   "transfer_year": 2040,
+   "growth": 0.055,
+   "factored_base_year_value": 726422,
+   "market_value_at_transfer": 6559884,
+   "p19_cap": 1534010,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2260432,
+   "assessed_value_if_exclusion_qualifies": 5025874,
+   "assessed_value_if_no_exclusion": 6559884,
+   "annual_tax_if_exclusion_qualifies": 56525,
+   "annual_tax_if_no_exclusion": 73171,
+   "annual_saving_from_exclusion": 16645,
+   "formula": "Assessed value = FMV ($6,559,884) - cap ($1,534,010) = $5,025,874. (Equivalently FBYV $726,422 + excess $4,299,452.)"
+  },
+  {
+   "zipcode": "95014",
+   "transfer_year": 2045,
+   "growth": 0.025,
+   "factored_base_year_value": 802028,
+   "market_value_at_transfer": 4955816,
+   "p19_cap": 1778338,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2580366,
+   "assessed_value_if_exclusion_qualifies": 3177478,
+   "assessed_value_if_no_exclusion": 4955816,
+   "annual_tax_if_exclusion_qualifies": 36740,
+   "annual_tax_if_no_exclusion": 56037,
+   "annual_saving_from_exclusion": 19297,
+   "formula": "Assessed value = FMV ($4,955,816) - cap ($1,778,338) = $3,177,478. (Equivalently FBYV $802,028 + excess $2,375,450.)"
+  },
+  {
+   "zipcode": "95014",
+   "transfer_year": 2045,
+   "growth": 0.04,
+   "factored_base_year_value": 802028,
+   "market_value_at_transfer": 6531232,
+   "p19_cap": 1778338,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2580366,
+   "assessed_value_if_exclusion_qualifies": 4752894,
+   "assessed_value_if_no_exclusion": 6531232,
+   "annual_tax_if_exclusion_qualifies": 53835,
+   "annual_tax_if_no_exclusion": 73131,
+   "annual_saving_from_exclusion": 19297,
+   "formula": "Assessed value = FMV ($6,531,232) - cap ($1,778,338) = $4,752,894. (Equivalently FBYV $802,028 + excess $3,950,866.)"
+  },
+  {
+   "zipcode": "95014",
+   "transfer_year": 2045,
+   "growth": 0.055,
+   "factored_base_year_value": 802028,
+   "market_value_at_transfer": 8573505,
+   "p19_cap": 1778338,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2580366,
+   "assessed_value_if_exclusion_qualifies": 6795167,
+   "assessed_value_if_no_exclusion": 8573505,
+   "annual_tax_if_exclusion_qualifies": 75995,
+   "annual_tax_if_no_exclusion": 95292,
+   "annual_saving_from_exclusion": 19297,
+   "formula": "Assessed value = FMV ($8,573,505) - cap ($1,778,338) = $6,795,167. (Equivalently FBYV $802,028 + excess $5,993,139.)"
+  },
+  {
+   "zipcode": "95014",
+   "transfer_year": 2050,
+   "growth": 0.025,
+   "factored_base_year_value": 885504,
+   "market_value_at_transfer": 5607050,
+   "p19_cap": 2061581,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2947085,
+   "assessed_value_if_exclusion_qualifies": 3545469,
+   "assessed_value_if_no_exclusion": 5607050,
+   "annual_tax_if_exclusion_qualifies": 41040,
+   "annual_tax_if_no_exclusion": 63410,
+   "annual_saving_from_exclusion": 22370,
+   "formula": "Assessed value = FMV ($5,607,050) - cap ($2,061,581) = $3,545,469. (Equivalently FBYV $885,504 + excess $2,659,965.)"
+  },
+  {
+   "zipcode": "95014",
+   "transfer_year": 2050,
+   "growth": 0.04,
+   "factored_base_year_value": 885504,
+   "market_value_at_transfer": 7946243,
+   "p19_cap": 2061581,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2947085,
+   "assessed_value_if_exclusion_qualifies": 5884662,
+   "assessed_value_if_no_exclusion": 7946243,
+   "annual_tax_if_exclusion_qualifies": 66423,
+   "annual_tax_if_no_exclusion": 88793,
+   "annual_saving_from_exclusion": 22370,
+   "formula": "Assessed value = FMV ($7,946,243) - cap ($2,061,581) = $5,884,662. (Equivalently FBYV $885,504 + excess $4,999,158.)"
+  },
+  {
+   "zipcode": "95014",
+   "transfer_year": 2050,
+   "growth": 0.055,
+   "factored_base_year_value": 885504,
+   "market_value_at_transfer": 11205229,
+   "p19_cap": 2061581,
+   "p19_cap_provenance": "assumption",
+   "threshold_fbyv_plus_cap": 2947085,
+   "assessed_value_if_exclusion_qualifies": 9143648,
+   "assessed_value_if_no_exclusion": 11205229,
+   "annual_tax_if_exclusion_qualifies": 101786,
+   "annual_tax_if_no_exclusion": 124156,
+   "annual_saving_from_exclusion": 22370,
+   "formula": "Assessed value = FMV ($11,205,229) - cap ($2,061,581) = $9,143,648. (Equivalently FBYV $885,504 + excess $8,258,144.)"
+  }
+ ],
+ "strategies": [
+  {
+   "year": 2040,
+   "growth": 0.025,
+   "market_value": 4380219,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2040,
+    "growth": 0.025,
+    "factored_base_year_value": 726422,
+    "market_value_at_transfer": 4380219,
+    "p19_cap": 1534010,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2260432,
+    "assessed_value_if_exclusion_qualifies": 2846209,
+    "assessed_value_if_no_exclusion": 4380219,
+    "annual_tax_if_exclusion_qualifies": 32874,
+    "annual_tax_if_no_exclusion": 49519,
+    "annual_saving_from_exclusion": 16645,
+    "formula": "Assessed value = FMV ($4,380,219) - cap ($1,534,010) = $2,846,209. (Equivalently FBYV $726,422 + excess $2,119,787.)"
+   },
+   "A_live_in": {
+    "assessed_value": 2846209,
+    "gross_benefit": 76301,
+    "carrying_costs": {
+     "property_tax": 32874,
+     "insurance": 2970,
+     "water": 2119,
+     "electricity": 815,
+     "maintenance": 21901,
+     "total": 60679
+    },
+    "net_annual_benefit": 15622,
+    "vs_sell": -246488,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 4380219,
+    "gross_rent": 76301,
+    "effective_rent": 72486,
+    "carrying_costs": {
+     "property_tax": 49519,
+     "insurance": 2970,
+     "water": 2119,
+     "electricity": 815,
+     "maintenance": 21901,
+     "total": 77324
+    },
+    "depreciation": 71676,
+    "income_tax": 0,
+    "net_annual_benefit": -4838,
+    "vs_sell": -266948,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 240912,
+    "net_proceeds": 4139307,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 74508,
+    "tax_on_investment_income": 27642,
+    "gross_return": 289751,
+    "net_annual_benefit": 262109,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.01045,
+    "market_rent_month_where_live_in_ties_sell": 26899,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 1534010,
+    "annual_tax_saving_at_transfer": 16645,
+    "effective_property_tax_rate_on_market_value": 0.00751,
+    "series": [
+     {
+      "year": 2041,
+      "assessed_value": 2903133,
+      "market_value": 4489724,
+      "untaxed_gap": 1586591,
+      "annual_tax_saving_vs_market": 17216
+     },
+     {
+      "year": 2042,
+      "assessed_value": 2961196,
+      "market_value": 4601967,
+      "untaxed_gap": 1640771,
+      "annual_tax_saving_vs_market": 17804
+     },
+     {
+      "year": 2043,
+      "assessed_value": 3020420,
+      "market_value": 4717017,
+      "untaxed_gap": 1696597,
+      "annual_tax_saving_vs_market": 18410
+     },
+     {
+      "year": 2044,
+      "assessed_value": 3080828,
+      "market_value": 4834942,
+      "untaxed_gap": 1754114,
+      "annual_tax_saving_vs_market": 19034
+     },
+     {
+      "year": 2045,
+      "assessed_value": 3142445,
+      "market_value": 4955816,
+      "untaxed_gap": 1813371,
+      "annual_tax_saving_vs_market": 19677
+     },
+     {
+      "year": 2046,
+      "assessed_value": 3205294,
+      "market_value": 5079711,
+      "untaxed_gap": 1874417,
+      "annual_tax_saving_vs_market": 20339
+     },
+     {
+      "year": 2047,
+      "assessed_value": 3269399,
+      "market_value": 5206704,
+      "untaxed_gap": 1937305,
+      "annual_tax_saving_vs_market": 21022
+     },
+     {
+      "year": 2048,
+      "assessed_value": 3334787,
+      "market_value": 5336871,
+      "untaxed_gap": 2002084,
+      "annual_tax_saving_vs_market": 21725
+     },
+     {
+      "year": 2049,
+      "assessed_value": 3401483,
+      "market_value": 5470293,
+      "untaxed_gap": 2068810,
+      "annual_tax_saving_vs_market": 22449
+     },
+     {
+      "year": 2050,
+      "assessed_value": 3469513,
+      "market_value": 5607050,
+      "untaxed_gap": 2137537,
+      "annual_tax_saving_vs_market": 23194
+     },
+     {
+      "year": 2051,
+      "assessed_value": 3538903,
+      "market_value": 5747227,
+      "untaxed_gap": 2208324,
+      "annual_tax_saving_vs_market": 23962
+     },
+     {
+      "year": 2052,
+      "assessed_value": 3609681,
+      "market_value": 5890907,
+      "untaxed_gap": 2281226,
+      "annual_tax_saving_vs_market": 24753
+     },
+     {
+      "year": 2053,
+      "assessed_value": 3681875,
+      "market_value": 6038180,
+      "untaxed_gap": 2356305,
+      "annual_tax_saving_vs_market": 25568
+     },
+     {
+      "year": 2054,
+      "assessed_value": 3755512,
+      "market_value": 6189135,
+      "untaxed_gap": 2433623,
+      "annual_tax_saving_vs_market": 26407
+     },
+     {
+      "year": 2055,
+      "assessed_value": 3830623,
+      "market_value": 6343863,
+      "untaxed_gap": 2513240,
+      "annual_tax_saving_vs_market": 27271
+     }
+    ]
+   }
+  },
+  {
+   "year": 2040,
+   "growth": 0.04,
+   "market_value": 5368197,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2040,
+    "growth": 0.04,
+    "factored_base_year_value": 726422,
+    "market_value_at_transfer": 5368197,
+    "p19_cap": 1534010,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2260432,
+    "assessed_value_if_exclusion_qualifies": 3834187,
+    "assessed_value_if_no_exclusion": 5368197,
+    "annual_tax_if_exclusion_qualifies": 43594,
+    "annual_tax_if_no_exclusion": 60240,
+    "annual_saving_from_exclusion": 16645,
+    "formula": "Assessed value = FMV ($5,368,197) - cap ($1,534,010) = $3,834,187. (Equivalently FBYV $726,422 + excess $3,107,765.)"
+   },
+   "A_live_in": {
+    "assessed_value": 3834187,
+    "gross_benefit": 76301,
+    "carrying_costs": {
+     "property_tax": 43594,
+     "insurance": 2970,
+     "water": 2119,
+     "electricity": 815,
+     "maintenance": 21901,
+     "total": 71399
+    },
+    "net_annual_benefit": 4902,
+    "vs_sell": -316328,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 5368197,
+    "gross_rent": 76301,
+    "effective_rent": 72486,
+    "carrying_costs": {
+     "property_tax": 60240,
+     "insurance": 2970,
+     "water": 2119,
+     "electricity": 815,
+     "maintenance": 21901,
+     "total": 88045
+    },
+    "depreciation": 87843,
+    "income_tax": 0,
+    "net_annual_benefit": -15559,
+    "vs_sell": -336789,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 295251,
+    "net_proceeds": 5072946,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 91313,
+    "tax_on_investment_income": 33877,
+    "gross_return": 355106,
+    "net_annual_benefit": 321229,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.00764,
+    "market_rent_month_where_live_in_ties_sell": 32719,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 1534010,
+    "annual_tax_saving_at_transfer": 16645,
+    "effective_property_tax_rate_on_market_value": 0.00812,
+    "series": [
+     {
+      "year": 2041,
+      "assessed_value": 3910871,
+      "market_value": 5582925,
+      "untaxed_gap": 1672054,
+      "annual_tax_saving_vs_market": 18143
+     },
+     {
+      "year": 2042,
+      "assessed_value": 3989088,
+      "market_value": 5806242,
+      "untaxed_gap": 1817154,
+      "annual_tax_saving_vs_market": 19718
+     },
+     {
+      "year": 2043,
+      "assessed_value": 4068870,
+      "market_value": 6038492,
+      "untaxed_gap": 1969622,
+      "annual_tax_saving_vs_market": 21372
+     },
+     {
+      "year": 2044,
+      "assessed_value": 4150247,
+      "market_value": 6280031,
+      "untaxed_gap": 2129784,
+      "annual_tax_saving_vs_market": 23110
+     },
+     {
+      "year": 2045,
+      "assessed_value": 4233252,
+      "market_value": 6531232,
+      "untaxed_gap": 2297980,
+      "annual_tax_saving_vs_market": 24935
+     },
+     {
+      "year": 2046,
+      "assessed_value": 4317917,
+      "market_value": 6792482,
+      "untaxed_gap": 2474565,
+      "annual_tax_saving_vs_market": 26851
+     },
+     {
+      "year": 2047,
+      "assessed_value": 4404276,
+      "market_value": 7064181,
+      "untaxed_gap": 2659905,
+      "annual_tax_saving_vs_market": 28863
+     },
+     {
+      "year": 2048,
+      "assessed_value": 4492361,
+      "market_value": 7346748,
+      "untaxed_gap": 2854387,
+      "annual_tax_saving_vs_market": 30973
+     },
+     {
+      "year": 2049,
+      "assessed_value": 4582208,
+      "market_value": 7640618,
+      "untaxed_gap": 3058410,
+      "annual_tax_saving_vs_market": 33187
+     },
+     {
+      "year": 2050,
+      "assessed_value": 4673853,
+      "market_value": 7946243,
+      "untaxed_gap": 3272390,
+      "annual_tax_saving_vs_market": 35509
+     },
+     {
+      "year": 2051,
+      "assessed_value": 4767330,
+      "market_value": 8264093,
+      "untaxed_gap": 3496763,
+      "annual_tax_saving_vs_market": 37943
+     },
+     {
+      "year": 2052,
+      "assessed_value": 4862676,
+      "market_value": 8594656,
+      "untaxed_gap": 3731980,
+      "annual_tax_saving_vs_market": 40496
+     },
+     {
+      "year": 2053,
+      "assessed_value": 4959930,
+      "market_value": 8938443,
+      "untaxed_gap": 3978513,
+      "annual_tax_saving_vs_market": 43171
+     },
+     {
+      "year": 2054,
+      "assessed_value": 5059128,
+      "market_value": 9295980,
+      "untaxed_gap": 4236852,
+      "annual_tax_saving_vs_market": 45974
+     },
+     {
+      "year": 2055,
+      "assessed_value": 5160311,
+      "market_value": 9667820,
+      "untaxed_gap": 4507509,
+      "annual_tax_saving_vs_market": 48911
+     }
+    ]
+   }
+  },
+  {
+   "year": 2040,
+   "growth": 0.055,
+   "market_value": 6559884,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2040,
+    "growth": 0.055,
+    "factored_base_year_value": 726422,
+    "market_value_at_transfer": 6559884,
+    "p19_cap": 1534010,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2260432,
+    "assessed_value_if_exclusion_qualifies": 5025874,
+    "assessed_value_if_no_exclusion": 6559884,
+    "annual_tax_if_exclusion_qualifies": 56525,
+    "annual_tax_if_no_exclusion": 73171,
+    "annual_saving_from_exclusion": 16645,
+    "formula": "Assessed value = FMV ($6,559,884) - cap ($1,534,010) = $5,025,874. (Equivalently FBYV $726,422 + excess $4,299,452.)"
+   },
+   "A_live_in": {
+    "assessed_value": 5025874,
+    "gross_benefit": 76301,
+    "carrying_costs": {
+     "property_tax": 56525,
+     "insurance": 2970,
+     "water": 2119,
+     "electricity": 815,
+     "maintenance": 21901,
+     "total": 84330
+    },
+    "net_annual_benefit": -8029,
+    "vs_sell": -400568,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 6559884,
+    "gross_rent": 76301,
+    "effective_rent": 72486,
+    "carrying_costs": {
+     "property_tax": 73171,
+     "insurance": 2970,
+     "water": 2119,
+     "electricity": 815,
+     "maintenance": 21901,
+     "total": 100976
+    },
+    "depreciation": 107344,
+    "income_tax": 0,
+    "net_annual_benefit": -28490,
+    "vs_sell": -421029,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 360794,
+    "net_proceeds": 6199090,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 111584,
+    "tax_on_investment_income": 41398,
+    "gross_return": 433936,
+    "net_annual_benefit": 392539,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.00538,
+    "market_rent_month_where_live_in_ties_sell": 39739,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 1534010,
+    "annual_tax_saving_at_transfer": 16645,
+    "effective_property_tax_rate_on_market_value": 0.00862,
+    "series": [
+     {
+      "year": 2041,
+      "assessed_value": 5126391,
+      "market_value": 6920677,
+      "untaxed_gap": 1794286,
+      "annual_tax_saving_vs_market": 19470
+     },
+     {
+      "year": 2042,
+      "assessed_value": 5228919,
+      "market_value": 7301314,
+      "untaxed_gap": 2072395,
+      "annual_tax_saving_vs_market": 22487
+     },
+     {
+      "year": 2043,
+      "assessed_value": 5333498,
+      "market_value": 7702887,
+      "untaxed_gap": 2369389,
+      "annual_tax_saving_vs_market": 25710
+     },
+     {
+      "year": 2044,
+      "assessed_value": 5440168,
+      "market_value": 8126545,
+      "untaxed_gap": 2686377,
+      "annual_tax_saving_vs_market": 29150
+     },
+     {
+      "year": 2045,
+      "assessed_value": 5548971,
+      "market_value": 8573505,
+      "untaxed_gap": 3024534,
+      "annual_tax_saving_vs_market": 32819
+     },
+     {
+      "year": 2046,
+      "assessed_value": 5659950,
+      "market_value": 9045048,
+      "untaxed_gap": 3385098,
+      "annual_tax_saving_vs_market": 36732
+     },
+     {
+      "year": 2047,
+      "assessed_value": 5773149,
+      "market_value": 9542526,
+      "untaxed_gap": 3769377,
+      "annual_tax_saving_vs_market": 40901
+     },
+     {
+      "year": 2048,
+      "assessed_value": 5888612,
+      "market_value": 10067365,
+      "untaxed_gap": 4178753,
+      "annual_tax_saving_vs_market": 45343
+     },
+     {
+      "year": 2049,
+      "assessed_value": 6006385,
+      "market_value": 10621070,
+      "untaxed_gap": 4614685,
+      "annual_tax_saving_vs_market": 50074
+     },
+     {
+      "year": 2050,
+      "assessed_value": 6126512,
+      "market_value": 11205229,
+      "untaxed_gap": 5078717,
+      "annual_tax_saving_vs_market": 55109
+     },
+     {
+      "year": 2051,
+      "assessed_value": 6249043,
+      "market_value": 11821516,
+      "untaxed_gap": 5572473,
+      "annual_tax_saving_vs_market": 60467
+     },
+     {
+      "year": 2052,
+      "assessed_value": 6374023,
+      "market_value": 12471700,
+      "untaxed_gap": 6097677,
+      "annual_tax_saving_vs_market": 66166
+     },
+     {
+      "year": 2053,
+      "assessed_value": 6501504,
+      "market_value": 13157643,
+      "untaxed_gap": 6656139,
+      "annual_tax_saving_vs_market": 72225
+     },
+     {
+      "year": 2054,
+      "assessed_value": 6631534,
+      "market_value": 13881314,
+      "untaxed_gap": 7249780,
+      "annual_tax_saving_vs_market": 78667
+     },
+     {
+      "year": 2055,
+      "assessed_value": 6764165,
+      "market_value": 14644786,
+      "untaxed_gap": 7880621,
+      "annual_tax_saving_vs_market": 85512
+     }
+    ]
+   }
+  },
+  {
+   "year": 2045,
+   "growth": 0.025,
+   "market_value": 4955816,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2045,
+    "growth": 0.025,
+    "factored_base_year_value": 802028,
+    "market_value_at_transfer": 4955816,
+    "p19_cap": 1778338,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2580366,
+    "assessed_value_if_exclusion_qualifies": 3177478,
+    "assessed_value_if_no_exclusion": 4955816,
+    "annual_tax_if_exclusion_qualifies": 36740,
+    "annual_tax_if_no_exclusion": 56037,
+    "annual_saving_from_exclusion": 19297,
+    "formula": "Assessed value = FMV ($4,955,816) - cap ($1,778,338) = $3,177,478. (Equivalently FBYV $802,028 + excess $2,375,450.)"
+   },
+   "A_live_in": {
+    "assessed_value": 3177478,
+    "gross_benefit": 86327,
+    "carrying_costs": {
+     "property_tax": 36740,
+     "insurance": 3790,
+     "water": 2398,
+     "electricity": 922,
+     "maintenance": 24779,
+     "total": 68629
+    },
+    "net_annual_benefit": 17698,
+    "vs_sell": -278854,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 4955816,
+    "gross_rent": 86327,
+    "effective_rent": 82011,
+    "carrying_costs": {
+     "property_tax": 56037,
+     "insurance": 3790,
+     "water": 2398,
+     "electricity": 922,
+     "maintenance": 24779,
+     "total": 87926
+    },
+    "depreciation": 81095,
+    "income_tax": 0,
+    "net_annual_benefit": -5915,
+    "vs_sell": -302468,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 272570,
+    "net_proceeds": 4683246,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 84298,
+    "tax_on_investment_income": 31275,
+    "gross_return": 327827,
+    "net_annual_benefit": 296553,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.01046,
+    "market_rent_month_where_live_in_ties_sell": 30432,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 1778338,
+    "annual_tax_saving_at_transfer": 19297,
+    "effective_property_tax_rate_on_market_value": 0.00741,
+    "series": [
+     {
+      "year": 2046,
+      "assessed_value": 3241028,
+      "market_value": 5079711,
+      "untaxed_gap": 1838683,
+      "annual_tax_saving_vs_market": 19951
+     },
+     {
+      "year": 2047,
+      "assessed_value": 3305848,
+      "market_value": 5206704,
+      "untaxed_gap": 1900856,
+      "annual_tax_saving_vs_market": 20626
+     },
+     {
+      "year": 2048,
+      "assessed_value": 3371965,
+      "market_value": 5336871,
+      "untaxed_gap": 1964906,
+      "annual_tax_saving_vs_market": 21321
+     },
+     {
+      "year": 2049,
+      "assessed_value": 3439404,
+      "market_value": 5470293,
+      "untaxed_gap": 2030889,
+      "annual_tax_saving_vs_market": 22037
+     },
+     {
+      "year": 2050,
+      "assessed_value": 3508192,
+      "market_value": 5607050,
+      "untaxed_gap": 2098858,
+      "annual_tax_saving_vs_market": 22775
+     },
+     {
+      "year": 2051,
+      "assessed_value": 3578356,
+      "market_value": 5747227,
+      "untaxed_gap": 2168871,
+      "annual_tax_saving_vs_market": 23534
+     },
+     {
+      "year": 2052,
+      "assessed_value": 3649923,
+      "market_value": 5890907,
+      "untaxed_gap": 2240984,
+      "annual_tax_saving_vs_market": 24317
+     },
+     {
+      "year": 2053,
+      "assessed_value": 3722922,
+      "market_value": 6038180,
+      "untaxed_gap": 2315258,
+      "annual_tax_saving_vs_market": 25123
+     },
+     {
+      "year": 2054,
+      "assessed_value": 3797380,
+      "market_value": 6189135,
+      "untaxed_gap": 2391755,
+      "annual_tax_saving_vs_market": 25953
+     },
+     {
+      "year": 2055,
+      "assessed_value": 3873328,
+      "market_value": 6343863,
+      "untaxed_gap": 2470535,
+      "annual_tax_saving_vs_market": 26808
+     }
+    ]
+   }
+  },
+  {
+   "year": 2045,
+   "growth": 0.04,
+   "market_value": 6531232,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2045,
+    "growth": 0.04,
+    "factored_base_year_value": 802028,
+    "market_value_at_transfer": 6531232,
+    "p19_cap": 1778338,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2580366,
+    "assessed_value_if_exclusion_qualifies": 4752894,
+    "assessed_value_if_no_exclusion": 6531232,
+    "annual_tax_if_exclusion_qualifies": 53835,
+    "annual_tax_if_no_exclusion": 73131,
+    "annual_saving_from_exclusion": 19297,
+    "formula": "Assessed value = FMV ($6,531,232) - cap ($1,778,338) = $4,752,894. (Equivalently FBYV $802,028 + excess $3,950,866.)"
+   },
+   "A_live_in": {
+    "assessed_value": 4752894,
+    "gross_benefit": 86327,
+    "carrying_costs": {
+     "property_tax": 53835,
+     "insurance": 3790,
+     "water": 2398,
+     "electricity": 922,
+     "maintenance": 24779,
+     "total": 85724
+    },
+    "net_annual_benefit": 603,
+    "vs_sell": -390221,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 6531232,
+    "gross_rent": 86327,
+    "effective_rent": 82011,
+    "carrying_costs": {
+     "property_tax": 73131,
+     "insurance": 3790,
+     "water": 2398,
+     "electricity": 922,
+     "maintenance": 24779,
+     "total": 105021
+    },
+    "depreciation": 106875,
+    "income_tax": 0,
+    "net_annual_benefit": -23010,
+    "vs_sell": -413835,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 359218,
+    "net_proceeds": 6172014,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 111096,
+    "tax_on_investment_income": 41217,
+    "gross_return": 432041,
+    "net_annual_benefit": 390824,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.00678,
+    "market_rent_month_where_live_in_ties_sell": 39712,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 1778338,
+    "annual_tax_saving_at_transfer": 19297,
+    "effective_property_tax_rate_on_market_value": 0.00824,
+    "series": [
+     {
+      "year": 2046,
+      "assessed_value": 4847952,
+      "market_value": 6792482,
+      "untaxed_gap": 1944530,
+      "annual_tax_saving_vs_market": 21100
+     },
+     {
+      "year": 2047,
+      "assessed_value": 4944911,
+      "market_value": 7064181,
+      "untaxed_gap": 2119270,
+      "annual_tax_saving_vs_market": 22996
+     },
+     {
+      "year": 2048,
+      "assessed_value": 5043809,
+      "market_value": 7346748,
+      "untaxed_gap": 2302939,
+      "annual_tax_saving_vs_market": 24989
+     },
+     {
+      "year": 2049,
+      "assessed_value": 5144685,
+      "market_value": 7640618,
+      "untaxed_gap": 2495933,
+      "annual_tax_saving_vs_market": 27083
+     },
+     {
+      "year": 2050,
+      "assessed_value": 5247579,
+      "market_value": 7946243,
+      "untaxed_gap": 2698664,
+      "annual_tax_saving_vs_market": 29283
+     },
+     {
+      "year": 2051,
+      "assessed_value": 5352531,
+      "market_value": 8264093,
+      "untaxed_gap": 2911562,
+      "annual_tax_saving_vs_market": 31593
+     },
+     {
+      "year": 2052,
+      "assessed_value": 5459581,
+      "market_value": 8594656,
+      "untaxed_gap": 3135075,
+      "annual_tax_saving_vs_market": 34019
+     },
+     {
+      "year": 2053,
+      "assessed_value": 5568773,
+      "market_value": 8938443,
+      "untaxed_gap": 3369670,
+      "annual_tax_saving_vs_market": 36564
+     },
+     {
+      "year": 2054,
+      "assessed_value": 5680148,
+      "market_value": 9295980,
+      "untaxed_gap": 3615832,
+      "annual_tax_saving_vs_market": 39235
+     },
+     {
+      "year": 2055,
+      "assessed_value": 5793751,
+      "market_value": 9667820,
+      "untaxed_gap": 3874069,
+      "annual_tax_saving_vs_market": 42037
+     }
+    ]
+   }
+  },
+  {
+   "year": 2045,
+   "growth": 0.055,
+   "market_value": 8573505,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2045,
+    "growth": 0.055,
+    "factored_base_year_value": 802028,
+    "market_value_at_transfer": 8573505,
+    "p19_cap": 1778338,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2580366,
+    "assessed_value_if_exclusion_qualifies": 6795167,
+    "assessed_value_if_no_exclusion": 8573505,
+    "annual_tax_if_exclusion_qualifies": 75995,
+    "annual_tax_if_no_exclusion": 95292,
+    "annual_saving_from_exclusion": 19297,
+    "formula": "Assessed value = FMV ($8,573,505) - cap ($1,778,338) = $6,795,167. (Equivalently FBYV $802,028 + excess $5,993,139.)"
+   },
+   "A_live_in": {
+    "assessed_value": 6795167,
+    "gross_benefit": 86327,
+    "carrying_costs": {
+     "property_tax": 75995,
+     "insurance": 3790,
+     "water": 2398,
+     "electricity": 922,
+     "maintenance": 24779,
+     "total": 107884
+    },
+    "net_annual_benefit": -21557,
+    "vs_sell": -534589,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 8573505,
+    "gross_rent": 86327,
+    "effective_rent": 82011,
+    "carrying_costs": {
+     "property_tax": 95292,
+     "insurance": 3790,
+     "water": 2398,
+     "electricity": 922,
+     "maintenance": 24779,
+     "total": 127181
+    },
+    "depreciation": 140294,
+    "income_tax": 0,
+    "net_annual_benefit": -45170,
+    "vs_sell": -558203,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 471543,
+    "net_proceeds": 8101962,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 145835,
+    "tax_on_investment_income": 54105,
+    "gross_return": 567137,
+    "net_annual_benefit": 513032,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.00402,
+    "market_rent_month_where_live_in_ties_sell": 51743,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 1778338,
+    "annual_tax_saving_at_transfer": 19297,
+    "effective_property_tax_rate_on_market_value": 0.00886,
+    "series": [
+     {
+      "year": 2046,
+      "assessed_value": 6931070,
+      "market_value": 9045048,
+      "untaxed_gap": 2113978,
+      "annual_tax_saving_vs_market": 22939
+     },
+     {
+      "year": 2047,
+      "assessed_value": 7069692,
+      "market_value": 9542526,
+      "untaxed_gap": 2472834,
+      "annual_tax_saving_vs_market": 26833
+     },
+     {
+      "year": 2048,
+      "assessed_value": 7211086,
+      "market_value": 10067365,
+      "untaxed_gap": 2856279,
+      "annual_tax_saving_vs_market": 30993
+     },
+     {
+      "year": 2049,
+      "assessed_value": 7355307,
+      "market_value": 10621070,
+      "untaxed_gap": 3265763,
+      "annual_tax_saving_vs_market": 35437
+     },
+     {
+      "year": 2050,
+      "assessed_value": 7502413,
+      "market_value": 11205229,
+      "untaxed_gap": 3702816,
+      "annual_tax_saving_vs_market": 40179
+     },
+     {
+      "year": 2051,
+      "assessed_value": 7652462,
+      "market_value": 11821516,
+      "untaxed_gap": 4169054,
+      "annual_tax_saving_vs_market": 45238
+     },
+     {
+      "year": 2052,
+      "assessed_value": 7805511,
+      "market_value": 12471700,
+      "untaxed_gap": 4666189,
+      "annual_tax_saving_vs_market": 50633
+     },
+     {
+      "year": 2053,
+      "assessed_value": 7961621,
+      "market_value": 13157643,
+      "untaxed_gap": 5196022,
+      "annual_tax_saving_vs_market": 56382
+     },
+     {
+      "year": 2054,
+      "assessed_value": 8120854,
+      "market_value": 13881314,
+      "untaxed_gap": 5760460,
+      "annual_tax_saving_vs_market": 62507
+     },
+     {
+      "year": 2055,
+      "assessed_value": 8283271,
+      "market_value": 14644786,
+      "untaxed_gap": 6361515,
+      "annual_tax_saving_vs_market": 69029
+     }
+    ]
+   }
+  },
+  {
+   "year": 2050,
+   "growth": 0.025,
+   "market_value": 5607050,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2050,
+    "growth": 0.025,
+    "factored_base_year_value": 885504,
+    "market_value_at_transfer": 5607050,
+    "p19_cap": 2061581,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2947085,
+    "assessed_value_if_exclusion_qualifies": 3545469,
+    "assessed_value_if_no_exclusion": 5607050,
+    "annual_tax_if_exclusion_qualifies": 41040,
+    "annual_tax_if_no_exclusion": 63410,
+    "annual_saving_from_exclusion": 22370,
+    "formula": "Assessed value = FMV ($5,607,050) - cap ($2,061,581) = $3,545,469. (Equivalently FBYV $885,504 + excess $2,659,965.)"
+   },
+   "A_live_in": {
+    "assessed_value": 3545469,
+    "gross_benefit": 97671,
+    "carrying_costs": {
+     "property_tax": 41040,
+     "insurance": 4838,
+     "water": 2713,
+     "electricity": 1043,
+     "maintenance": 28035,
+     "total": 77669
+    },
+    "net_annual_benefit": 20002,
+    "vs_sell": -315520,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 5607050,
+    "gross_rent": 97671,
+    "effective_rent": 92788,
+    "carrying_costs": {
+     "property_tax": 63410,
+     "insurance": 4838,
+     "water": 2713,
+     "electricity": 1043,
+     "maintenance": 28035,
+     "total": 100039
+    },
+    "depreciation": 91752,
+    "income_tax": 0,
+    "net_annual_benefit": -7251,
+    "vs_sell": -342773,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 308388,
+    "net_proceeds": 5298662,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 95376,
+    "tax_on_investment_income": 35384,
+    "gross_return": 370906,
+    "net_annual_benefit": 335522,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.01045,
+    "market_rent_month_where_live_in_ties_sell": 34433,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 2061581,
+    "annual_tax_saving_at_transfer": 22370,
+    "effective_property_tax_rate_on_market_value": 0.00732,
+    "series": [
+     {
+      "year": 2051,
+      "assessed_value": 3616378,
+      "market_value": 5747227,
+      "untaxed_gap": 2130849,
+      "annual_tax_saving_vs_market": 23122
+     },
+     {
+      "year": 2052,
+      "assessed_value": 3688706,
+      "market_value": 5890907,
+      "untaxed_gap": 2202201,
+      "annual_tax_saving_vs_market": 23896
+     },
+     {
+      "year": 2053,
+      "assessed_value": 3762480,
+      "market_value": 6038180,
+      "untaxed_gap": 2275700,
+      "annual_tax_saving_vs_market": 24694
+     },
+     {
+      "year": 2054,
+      "assessed_value": 3837730,
+      "market_value": 6189135,
+      "untaxed_gap": 2351405,
+      "annual_tax_saving_vs_market": 25515
+     },
+     {
+      "year": 2055,
+      "assessed_value": 3914484,
+      "market_value": 6343863,
+      "untaxed_gap": 2429379,
+      "annual_tax_saving_vs_market": 26361
+     }
+    ]
+   }
+  },
+  {
+   "year": 2050,
+   "growth": 0.04,
+   "market_value": 7946243,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2050,
+    "growth": 0.04,
+    "factored_base_year_value": 885504,
+    "market_value_at_transfer": 7946243,
+    "p19_cap": 2061581,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2947085,
+    "assessed_value_if_exclusion_qualifies": 5884662,
+    "assessed_value_if_no_exclusion": 7946243,
+    "annual_tax_if_exclusion_qualifies": 66423,
+    "annual_tax_if_no_exclusion": 88793,
+    "annual_saving_from_exclusion": 22370,
+    "formula": "Assessed value = FMV ($7,946,243) - cap ($2,061,581) = $5,884,662. (Equivalently FBYV $885,504 + excess $4,999,158.)"
+   },
+   "A_live_in": {
+    "assessed_value": 5884662,
+    "gross_benefit": 97671,
+    "carrying_costs": {
+     "property_tax": 66423,
+     "insurance": 4838,
+     "water": 2713,
+     "electricity": 1043,
+     "maintenance": 28035,
+     "total": 103051
+    },
+    "net_annual_benefit": -5380,
+    "vs_sell": -480877,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 7946243,
+    "gross_rent": 97671,
+    "effective_rent": 92788,
+    "carrying_costs": {
+     "property_tax": 88793,
+     "insurance": 4838,
+     "water": 2713,
+     "electricity": 1043,
+     "maintenance": 28035,
+     "total": 125422
+    },
+    "depreciation": 130029,
+    "income_tax": 0,
+    "net_annual_benefit": -32634,
+    "vs_sell": -508132,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 437043,
+    "net_proceeds": 7509200,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 135166,
+    "tax_on_investment_income": 50146,
+    "gross_return": 525644,
+    "net_annual_benefit": 475498,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.00596,
+    "market_rent_month_where_live_in_ties_sell": 48212,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 2061581,
+    "annual_tax_saving_at_transfer": 22370,
+    "effective_property_tax_rate_on_market_value": 0.00836,
+    "series": [
+     {
+      "year": 2051,
+      "assessed_value": 6002355,
+      "market_value": 8264093,
+      "untaxed_gap": 2261738,
+      "annual_tax_saving_vs_market": 24542
+     },
+     {
+      "year": 2052,
+      "assessed_value": 6122402,
+      "market_value": 8594656,
+      "untaxed_gap": 2472254,
+      "annual_tax_saving_vs_market": 26826
+     },
+     {
+      "year": 2053,
+      "assessed_value": 6244850,
+      "market_value": 8938443,
+      "untaxed_gap": 2693593,
+      "annual_tax_saving_vs_market": 29228
+     },
+     {
+      "year": 2054,
+      "assessed_value": 6369747,
+      "market_value": 9295980,
+      "untaxed_gap": 2926233,
+      "annual_tax_saving_vs_market": 31752
+     },
+     {
+      "year": 2055,
+      "assessed_value": 6497142,
+      "market_value": 9667820,
+      "untaxed_gap": 3170678,
+      "annual_tax_saving_vs_market": 34405
+     }
+    ]
+   }
+  },
+  {
+   "year": 2050,
+   "growth": 0.055,
+   "market_value": 11205229,
+   "prop19": {
+    "zipcode": "95014",
+    "transfer_year": 2050,
+    "growth": 0.055,
+    "factored_base_year_value": 885504,
+    "market_value_at_transfer": 11205229,
+    "p19_cap": 2061581,
+    "p19_cap_provenance": "assumption",
+    "threshold_fbyv_plus_cap": 2947085,
+    "assessed_value_if_exclusion_qualifies": 9143648,
+    "assessed_value_if_no_exclusion": 11205229,
+    "annual_tax_if_exclusion_qualifies": 101786,
+    "annual_tax_if_no_exclusion": 124156,
+    "annual_saving_from_exclusion": 22370,
+    "formula": "Assessed value = FMV ($11,205,229) - cap ($2,061,581) = $9,143,648. (Equivalently FBYV $885,504 + excess $8,258,144.)"
+   },
+   "A_live_in": {
+    "assessed_value": 9143648,
+    "gross_benefit": 97671,
+    "carrying_costs": {
+     "property_tax": 101786,
+     "insurance": 4838,
+     "water": 2713,
+     "electricity": 1043,
+     "maintenance": 28035,
+     "total": 138415
+    },
+    "net_annual_benefit": -40744,
+    "vs_sell": -711257,
+    "note": "Housing value consumed (imputed rent) minus carrying costs. Property tax is on the Prop 19 partial-exclusion assessed value."
+   },
+   "B_rent_out": {
+    "assessed_value": 11205229,
+    "gross_rent": 97671,
+    "effective_rent": 92788,
+    "carrying_costs": {
+     "property_tax": 124156,
+     "insurance": 4838,
+     "water": 2713,
+     "electricity": 1043,
+     "maintenance": 28035,
+     "total": 160785
+    },
+    "depreciation": 183358,
+    "income_tax": 0,
+    "net_annual_benefit": -67997,
+    "vs_sell": -738510,
+    "note": "Market rent, less 5% vacancy/credit loss, less full-reassessment carrying costs, less income tax on the net (after 27.5-yr depreciation). No Prop 19 exclusion is available because the heir does not occupy it."
+   },
+   "C_sell_and_reinvest": {
+    "selling_costs": 616288,
+    "net_proceeds": 10588941,
+    "capital_gains_tax": 0,
+    "taxable_investment_income": 190601,
+    "tax_on_investment_income": 70713,
+    "gross_return": 741226,
+    "net_annual_benefit": 670513,
+    "vs_sell": 0,
+    "note": "Sale at the date-of-death fair market value costs no capital gains tax because IRC 1014 steps the basis up to that value. Net proceeds invested; only the dividend component is taxed annually - the appreciation compounds tax-deferred (and is itself stepped up at the heir's later death under IRC 1014)."
+   },
+   "break_even": {
+    "portfolio_nominal_return_where_sell_ties_live_in": 0.00283,
+    "market_rent_month_where_live_in_ties_sell": 67411,
+    "note": "Break-even portfolio return solves: imputed rent - carrying costs = net proceeds x (r - dividend yield x tax rate on investment income). If the portfolio can beat this, 'sell and reinvest' wins."
+   },
+   "prop13_lockin": {
+    "untaxed_gap_at_transfer": 2061581,
+    "annual_tax_saving_at_transfer": 22370,
+    "effective_property_tax_rate_on_market_value": 0.00908,
+    "series": [
+     {
+      "year": 2051,
+      "assessed_value": 9326521,
+      "market_value": 11821516,
+      "untaxed_gap": 2494995,
+      "annual_tax_saving_vs_market": 27073
+     },
+     {
+      "year": 2052,
+      "assessed_value": 9513051,
+      "market_value": 12471700,
+      "untaxed_gap": 2958649,
+      "annual_tax_saving_vs_market": 32104
+     },
+     {
+      "year": 2053,
+      "assessed_value": 9703312,
+      "market_value": 13157643,
+      "untaxed_gap": 3454331,
+      "annual_tax_saving_vs_market": 37483
+     },
+     {
+      "year": 2054,
+      "assessed_value": 9897379,
+      "market_value": 13881314,
+      "untaxed_gap": 3983935,
+      "annual_tax_saving_vs_market": 43230
+     },
+     {
+      "year": 2055,
+      "assessed_value": 10095326,
+      "market_value": 14644786,
+      "untaxed_gap": 4549460,
+      "annual_tax_saving_vs_market": 49366
+     }
+    ]
+   }
+  }
+ ],
+ "rental_94122": [
+  {
+   "year": 2026,
+   "growth": 0.04,
+   "gross_rent": 85800,
+   "carrying_costs": {
+    "property_tax": 2495,
+    "insurance": 1500,
+    "water": 4380,
+    "electricity": 600,
+    "maintenance": 18000,
+    "total": 26975
+   },
+   "net_operating_income": 58825,
+   "depreciation": 42545,
+   "income_tax": 6723,
+   "after_tax_cash_flow": 52102,
+   "cap_rate_on_market_value": 0.03268,
+   "cap_rate_on_assessed_value": 0.50479,
+   "assessed_value": 116533,
+   "market_value": 1800000
+  },
+  {
+   "year": 2027,
+   "growth": 0.04,
+   "gross_rent": 87945,
+   "carrying_costs": {
+    "property_tax": 2553,
+    "insurance": 1575,
+    "water": 4490,
+    "electricity": 615,
+    "maintenance": 18450,
+    "total": 27682
+   },
+   "net_operating_income": 60263,
+   "depreciation": 44247,
+   "income_tax": 6614,
+   "after_tax_cash_flow": 53649,
+   "cap_rate_on_market_value": 0.03219,
+   "cap_rate_on_assessed_value": 0.50699,
+   "assessed_value": 118864,
+   "market_value": 1872000
+  },
+  {
+   "year": 2028,
+   "growth": 0.04,
+   "gross_rent": 90144,
+   "carrying_costs": {
+    "property_tax": 2612,
+    "insurance": 1654,
+    "water": 4602,
+    "electricity": 630,
+    "maintenance": 18911,
+    "total": 28409
+   },
+   "net_operating_income": 61735,
+   "depreciation": 46017,
+   "income_tax": 6491,
+   "after_tax_cash_flow": 55243,
+   "cap_rate_on_market_value": 0.03171,
+   "cap_rate_on_assessed_value": 0.50919,
+   "assessed_value": 121241,
+   "market_value": 1946880
+  },
+  {
+   "year": 2029,
+   "growth": 0.04,
+   "gross_rent": 92397,
+   "carrying_costs": {
+    "property_tax": 2672,
+    "insurance": 1736,
+    "water": 4717,
+    "electricity": 646,
+    "maintenance": 19384,
+    "total": 29155
+   },
+   "net_operating_income": 63242,
+   "depreciation": 47858,
+   "income_tax": 6354,
+   "after_tax_cash_flow": 56888,
+   "cap_rate_on_market_value": 0.03123,
+   "cap_rate_on_assessed_value": 0.5114,
+   "assessed_value": 123666,
+   "market_value": 2024755
+  },
+  {
+   "year": 2030,
+   "growth": 0.04,
+   "gross_rent": 94707,
+   "carrying_costs": {
+    "property_tax": 2733,
+    "insurance": 1823,
+    "water": 4835,
+    "electricity": 662,
+    "maintenance": 19869,
+    "total": 29922
+   },
+   "net_operating_income": 64785,
+   "depreciation": 49772,
+   "income_tax": 6200,
+   "after_tax_cash_flow": 58585,
+   "cap_rate_on_market_value": 0.03077,
+   "cap_rate_on_assessed_value": 0.5136,
+   "assessed_value": 126139,
+   "market_value": 2105745
+  },
+  {
+   "year": 2031,
+   "growth": 0.04,
+   "gross_rent": 97075,
+   "carrying_costs": {
+    "property_tax": 2796,
+    "insurance": 1914,
+    "water": 4956,
+    "electricity": 679,
+    "maintenance": 20365,
+    "total": 30711
+   },
+   "net_operating_income": 66364,
+   "depreciation": 51763,
+   "income_tax": 6030,
+   "after_tax_cash_flow": 60334,
+   "cap_rate_on_market_value": 0.0303,
+   "cap_rate_on_assessed_value": 0.5158,
+   "assessed_value": 128662,
+   "market_value": 2189975
+  },
+  {
+   "year": 2032,
+   "growth": 0.04,
+   "gross_rent": 99502,
+   "carrying_costs": {
+    "property_tax": 2861,
+    "insurance": 2010,
+    "water": 5079,
+    "electricity": 696,
+    "maintenance": 20874,
+    "total": 31521
+   },
+   "net_operating_income": 67981,
+   "depreciation": 53834,
+   "income_tax": 5843,
+   "after_tax_cash_flow": 62138,
+   "cap_rate_on_market_value": 0.02985,
+   "cap_rate_on_assessed_value": 0.51801,
+   "assessed_value": 131235,
+   "market_value": 2277574
+  },
+  {
+   "year": 2033,
+   "growth": 0.04,
+   "gross_rent": 101989,
+   "carrying_costs": {
+    "property_tax": 2927,
+    "insurance": 2111,
+    "water": 5206,
+    "electricity": 713,
+    "maintenance": 21396,
+    "total": 32353
+   },
+   "net_operating_income": 69636,
+   "depreciation": 55987,
+   "income_tax": 5637,
+   "after_tax_cash_flow": 63999,
+   "cap_rate_on_market_value": 0.0294,
+   "cap_rate_on_assessed_value": 0.52022,
+   "assessed_value": 133860,
+   "market_value": 2368677
+  },
+  {
+   "year": 2034,
+   "growth": 0.04,
+   "gross_rent": 104539,
+   "carrying_costs": {
+    "property_tax": 2994,
+    "insurance": 2216,
+    "water": 5337,
+    "electricity": 731,
+    "maintenance": 21931,
+    "total": 33209
+   },
+   "net_operating_income": 71330,
+   "depreciation": 58226,
+   "income_tax": 5412,
+   "after_tax_cash_flow": 65918,
+   "cap_rate_on_market_value": 0.02896,
+   "cap_rate_on_assessed_value": 0.52242,
+   "assessed_value": 136537,
+   "market_value": 2463424
+  },
+  {
+   "year": 2035,
+   "growth": 0.04,
+   "gross_rent": 107152,
+   "carrying_costs": {
+    "property_tax": 3063,
+    "insurance": 2327,
+    "water": 5470,
+    "electricity": 749,
+    "maintenance": 22480,
+    "total": 34089
+   },
+   "net_operating_income": 73063,
+   "depreciation": 60555,
+   "income_tax": 5166,
+   "after_tax_cash_flow": 67898,
+   "cap_rate_on_market_value": 0.02852,
+   "cap_rate_on_assessed_value": 0.52462,
+   "assessed_value": 139268,
+   "market_value": 2561961
+  },
+  {
+   "year": 2036,
+   "growth": 0.04,
+   "gross_rent": 109831,
+   "carrying_costs": {
+    "property_tax": 3133,
+    "insurance": 2443,
+    "water": 5607,
+    "electricity": 768,
+    "maintenance": 23042,
+    "total": 34993
+   },
+   "net_operating_income": 74838,
+   "depreciation": 62978,
+   "income_tax": 4898,
+   "after_tax_cash_flow": 69940,
+   "cap_rate_on_market_value": 0.02809,
+   "cap_rate_on_assessed_value": 0.52683,
+   "assessed_value": 142053,
+   "market_value": 2664440
+  },
+  {
+   "year": 2037,
+   "growth": 0.04,
+   "gross_rent": 112577,
+   "carrying_costs": {
+    "property_tax": 3205,
+    "insurance": 2566,
+    "water": 5747,
+    "electricity": 787,
+    "maintenance": 23618,
+    "total": 35922
+   },
+   "net_operating_income": 76655,
+   "depreciation": 65497,
+   "income_tax": 4608,
+   "after_tax_cash_flow": 72047,
+   "cap_rate_on_market_value": 0.02766,
+   "cap_rate_on_assessed_value": 0.52904,
+   "assessed_value": 144894,
+   "market_value": 2771017
+  },
+  {
+   "year": 2038,
+   "growth": 0.04,
+   "gross_rent": 115391,
+   "carrying_costs": {
+    "property_tax": 3279,
+    "insurance": 2694,
+    "water": 5891,
+    "electricity": 807,
+    "maintenance": 24208,
+    "total": 36878
+   },
+   "net_operating_income": 78513,
+   "depreciation": 68117,
+   "income_tax": 4294,
+   "after_tax_cash_flow": 74220,
+   "cap_rate_on_market_value": 0.02724,
+   "cap_rate_on_assessed_value": 0.53124,
+   "assessed_value": 147792,
+   "market_value": 2881858
+  },
+  {
+   "year": 2039,
+   "growth": 0.04,
+   "gross_rent": 118276,
+   "carrying_costs": {
+    "property_tax": 3354,
+    "insurance": 2828,
+    "water": 6038,
+    "electricity": 827,
+    "maintenance": 24813,
+    "total": 37861
+   },
+   "net_operating_income": 80415,
+   "depreciation": 70841,
+   "income_tax": 3954,
+   "after_tax_cash_flow": 76461,
+   "cap_rate_on_market_value": 0.02683,
+   "cap_rate_on_assessed_value": 0.53344,
+   "assessed_value": 150748,
+   "market_value": 2997132
+  },
+  {
+   "year": 2040,
+   "growth": 0.04,
+   "gross_rent": 121233,
+   "carrying_costs": {
+    "property_tax": 3431,
+    "insurance": 2970,
+    "water": 6189,
+    "electricity": 848,
+    "maintenance": 25434,
+    "total": 38871
+   },
+   "net_operating_income": 82362,
+   "depreciation": 73675,
+   "income_tax": 3588,
+   "after_tax_cash_flow": 78774,
+   "cap_rate_on_market_value": 0.02642,
+   "cap_rate_on_assessed_value": 0.53564,
+   "assessed_value": 153763,
+   "market_value": 3117018
+  },
+  {
+   "year": 2041,
+   "growth": 0.04,
+   "gross_rent": 124264,
+   "carrying_costs": {
+    "property_tax": 3510,
+    "insurance": 3118,
+    "water": 6344,
+    "electricity": 869,
+    "maintenance": 26069,
+    "total": 39910
+   },
+   "net_operating_income": 84354,
+   "depreciation": 76622,
+   "income_tax": 3193,
+   "after_tax_cash_flow": 81161,
+   "cap_rate_on_market_value": 0.02602,
+   "cap_rate_on_assessed_value": 0.53784,
+   "assessed_value": 156838,
+   "market_value": 3241698
+  },
+  {
+   "year": 2042,
+   "growth": 0.04,
+   "gross_rent": 127371,
+   "carrying_costs": {
+    "property_tax": 3590,
+    "insurance": 3274,
+    "water": 6502,
+    "electricity": 891,
+    "maintenance": 26721,
+    "total": 40979
+   },
+   "net_operating_income": 86392,
+   "depreciation": 79687,
+   "income_tax": 2769,
+   "after_tax_cash_flow": 83623,
+   "cap_rate_on_market_value": 0.02563,
+   "cap_rate_on_assessed_value": 0.54003,
+   "assessed_value": 159975,
+   "market_value": 3371366
+  },
+  {
+   "year": 2043,
+   "growth": 0.04,
+   "gross_rent": 130555,
+   "carrying_costs": {
+    "property_tax": 3673,
+    "insurance": 3438,
+    "water": 6665,
+    "electricity": 913,
+    "maintenance": 27389,
+    "total": 42078
+   },
+   "net_operating_income": 88477,
+   "depreciation": 82874,
+   "income_tax": 2314,
+   "after_tax_cash_flow": 86163,
+   "cap_rate_on_market_value": 0.02523,
+   "cap_rate_on_assessed_value": 0.54222,
+   "assessed_value": 163174,
+   "market_value": 3506221
+  },
+  {
+   "year": 2044,
+   "growth": 0.04,
+   "gross_rent": 133819,
+   "carrying_costs": {
+    "property_tax": 3757,
+    "insurance": 3610,
+    "water": 6831,
+    "electricity": 936,
+    "maintenance": 28074,
+    "total": 43208
+   },
+   "net_operating_income": 90611,
+   "depreciation": 86189,
+   "income_tax": 1826,
+   "after_tax_cash_flow": 88785,
+   "cap_rate_on_market_value": 0.02485,
+   "cap_rate_on_assessed_value": 0.54441,
+   "assessed_value": 166438,
+   "market_value": 3646470
+  },
+  {
+   "year": 2045,
+   "growth": 0.04,
+   "gross_rent": 137164,
+   "carrying_costs": {
+    "property_tax": 3843,
+    "insurance": 3790,
+    "water": 7002,
+    "electricity": 959,
+    "maintenance": 28776,
+    "total": 44371
+   },
+   "net_operating_income": 92793,
+   "depreciation": 89637,
+   "income_tax": 1304,
+   "after_tax_cash_flow": 91490,
+   "cap_rate_on_market_value": 0.02447,
+   "cap_rate_on_assessed_value": 0.54659,
+   "assessed_value": 169767,
+   "market_value": 3792329
+  },
+  {
+   "year": 2046,
+   "growth": 0.04,
+   "gross_rent": 140593,
+   "carrying_costs": {
+    "property_tax": 3931,
+    "insurance": 3980,
+    "water": 7177,
+    "electricity": 983,
+    "maintenance": 29495,
+    "total": 45567
+   },
+   "net_operating_income": 95026,
+   "depreciation": 93222,
+   "income_tax": 745,
+   "after_tax_cash_flow": 94281,
+   "cap_rate_on_market_value": 0.02409,
+   "cap_rate_on_assessed_value": 0.54877,
+   "assessed_value": 173162,
+   "market_value": 3944022
+  },
+  {
+   "year": 2047,
+   "growth": 0.04,
+   "gross_rent": 144108,
+   "carrying_costs": {
+    "property_tax": 4022,
+    "insurance": 4179,
+    "water": 7357,
+    "electricity": 1008,
+    "maintenance": 30232,
+    "total": 46797
+   },
+   "net_operating_income": 97311,
+   "depreciation": 96951,
+   "income_tax": 149,
+   "after_tax_cash_flow": 97162,
+   "cap_rate_on_market_value": 0.02372,
+   "cap_rate_on_assessed_value": 0.55095,
+   "assessed_value": 176625,
+   "market_value": 4101783
+  },
+  {
+   "year": 2048,
+   "growth": 0.04,
+   "gross_rent": 147711,
+   "carrying_costs": {
+    "property_tax": 4114,
+    "insurance": 4388,
+    "water": 7540,
+    "electricity": 1033,
+    "maintenance": 30988,
+    "total": 48063
+   },
+   "net_operating_income": 99648,
+   "depreciation": 100829,
+   "income_tax": 0,
+   "after_tax_cash_flow": 99648,
+   "cap_rate_on_market_value": 0.02336,
+   "cap_rate_on_assessed_value": 0.55311,
+   "assessed_value": 180158,
+   "market_value": 4265854
+  },
+  {
+   "year": 2049,
+   "growth": 0.04,
+   "gross_rent": 151404,
+   "carrying_costs": {
+    "property_tax": 4208,
+    "insurance": 4607,
+    "water": 7729,
+    "electricity": 1059,
+    "maintenance": 31763,
+    "total": 49366
+   },
+   "net_operating_income": 102038,
+   "depreciation": 104862,
+   "income_tax": 0,
+   "after_tax_cash_flow": 102038,
+   "cap_rate_on_market_value": 0.023,
+   "cap_rate_on_assessed_value": 0.55527,
+   "assessed_value": 183761,
+   "market_value": 4436488
+  },
+  {
+   "year": 2050,
+   "growth": 0.04,
+   "gross_rent": 155189,
+   "carrying_costs": {
+    "property_tax": 4304,
+    "insurance": 4838,
+    "water": 7922,
+    "electricity": 1085,
+    "maintenance": 32557,
+    "total": 50707
+   },
+   "net_operating_income": 104482,
+   "depreciation": 109057,
+   "income_tax": 0,
+   "after_tax_cash_flow": 104482,
+   "cap_rate_on_market_value": 0.02264,
+   "cap_rate_on_assessed_value": 0.55743,
+   "assessed_value": 187436,
+   "market_value": 4613947
+  },
+  {
+   "year": 2051,
+   "growth": 0.04,
+   "gross_rent": 159068,
+   "carrying_costs": {
+    "property_tax": 4403,
+    "insurance": 5080,
+    "water": 8120,
+    "electricity": 1112,
+    "maintenance": 33371,
+    "total": 52086
+   },
+   "net_operating_income": 106982,
+   "depreciation": 113419,
+   "income_tax": 0,
+   "after_tax_cash_flow": 106982,
+   "cap_rate_on_market_value": 0.02229,
+   "cap_rate_on_assessed_value": 0.55958,
+   "assessed_value": 191185,
+   "market_value": 4798505
+  },
+  {
+   "year": 2052,
+   "growth": 0.04,
+   "gross_rent": 163045,
+   "carrying_costs": {
+    "property_tax": 4504,
+    "insurance": 5334,
+    "water": 8323,
+    "electricity": 1140,
+    "maintenance": 34205,
+    "total": 53506
+   },
+   "net_operating_income": 109539,
+   "depreciation": 117956,
+   "income_tax": 0,
+   "after_tax_cash_flow": 109539,
+   "cap_rate_on_market_value": 0.02195,
+   "cap_rate_on_assessed_value": 0.56172,
+   "assessed_value": 195008,
+   "market_value": 4990446
+  },
+  {
+   "year": 2053,
+   "growth": 0.04,
+   "gross_rent": 167121,
+   "carrying_costs": {
+    "property_tax": 4607,
+    "insurance": 5600,
+    "water": 8531,
+    "electricity": 1169,
+    "maintenance": 35060,
+    "total": 54968
+   },
+   "net_operating_income": 112153,
+   "depreciation": 122674,
+   "income_tax": 0,
+   "after_tax_cash_flow": 112153,
+   "cap_rate_on_market_value": 0.02161,
+   "cap_rate_on_assessed_value": 0.56384,
+   "assessed_value": 198909,
+   "market_value": 5190063
+  },
+  {
+   "year": 2054,
+   "growth": 0.04,
+   "gross_rent": 171299,
+   "carrying_costs": {
+    "property_tax": 4712,
+    "insurance": 5880,
+    "water": 8745,
+    "electricity": 1198,
+    "maintenance": 35937,
+    "total": 56472
+   },
+   "net_operating_income": 114827,
+   "depreciation": 127581,
+   "income_tax": 0,
+   "after_tax_cash_flow": 114827,
+   "cap_rate_on_market_value": 0.02127,
+   "cap_rate_on_assessed_value": 0.56597,
+   "assessed_value": 202887,
+   "market_value": 5397666
+  },
+  {
+   "year": 2055,
+   "growth": 0.04,
+   "gross_rent": 175582,
+   "carrying_costs": {
+    "property_tax": 4820,
+    "insurance": 6174,
+    "water": 8963,
+    "electricity": 1228,
+    "maintenance": 36835,
+    "total": 58021
+   },
+   "net_operating_income": 117561,
+   "depreciation": 132684,
+   "income_tax": 0,
+   "after_tax_cash_flow": 117561,
+   "cap_rate_on_market_value": 0.02094,
+   "cap_rate_on_assessed_value": 0.56808,
+   "assessed_value": 206945,
+   "market_value": 5613573
+  }
+ ],
+ "estate_headroom": [
+  {
+   "year": 2026,
+   "exclusion_per_person": 15000000,
+   "exclusion_married_with_portability": 30000000,
+   "provenance": "official"
+  },
+  {
+   "year": 2028,
+   "exclusion_per_person": 15759375,
+   "exclusion_married_with_portability": 31518750,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2030,
+   "exclusion_per_person": 16557193,
+   "exclusion_married_with_portability": 33114387,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2032,
+   "exclusion_per_person": 17395401,
+   "exclusion_married_with_portability": 34790803,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2034,
+   "exclusion_per_person": 18276043,
+   "exclusion_married_with_portability": 36552087,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2036,
+   "exclusion_per_person": 19201268,
+   "exclusion_married_with_portability": 38402536,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2038,
+   "exclusion_per_person": 20173332,
+   "exclusion_married_with_portability": 40346665,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2040,
+   "exclusion_per_person": 21194607,
+   "exclusion_married_with_portability": 42389215,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2042,
+   "exclusion_per_person": 22267584,
+   "exclusion_married_with_portability": 44535169,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2044,
+   "exclusion_per_person": 23394881,
+   "exclusion_married_with_portability": 46789762,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2046,
+   "exclusion_per_person": 24579247,
+   "exclusion_married_with_portability": 49158493,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2048,
+   "exclusion_per_person": 25823571,
+   "exclusion_married_with_portability": 51647142,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2050,
+   "exclusion_per_person": 27130889,
+   "exclusion_married_with_portability": 54261778,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2052,
+   "exclusion_per_person": 28504391,
+   "exclusion_married_with_portability": 57008781,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2054,
+   "exclusion_per_person": 29947425,
+   "exclusion_married_with_portability": 59894851,
+   "provenance": "assumption"
+  },
+  {
+   "year": 2056,
+   "exclusion_per_person": 31463514,
+   "exclusion_married_with_portability": 62927027,
+   "provenance": "assumption"
+  }
+ ],
+ "sell_now_vs_hold": {
+  "rate_stack": [
+   {
+    "component": "Federal long-term capital gains",
+    "rate": 0.2,
+    "src": "S-IRS-TOPIC409",
+    "note": "Top of the 0/15/20% ladder."
+   },
+   {
+    "component": "Net Investment Income Tax",
+    "rate": 0.038,
+    "src": "S-IRS-NIIT",
+    "note": "3.8% above $200,000 single / $250,000 MFJ. Not indexed."
+   },
+   {
+    "component": "California (capital gain taxed as ordinary income)",
+    "rate": 0.133,
+    "src": "S-CA-RTC-17043",
+    "note": "12.3% top bracket plus the 1% tax on taxable income over $1,000,000."
+   }
+  ],
+  "combined_rate": 0.371,
+  "illustrative_gains": [
+   {
+    "gain_on_lifetime_sale": 500000,
+    "tax_if_sold_during_life": 185500,
+    "tax_if_inherited_and_sold_promptly": 0,
+    "advantage_of_holding_until_death": 185500
+   },
+   {
+    "gain_on_lifetime_sale": 1000000,
+    "tax_if_sold_during_life": 371000,
+    "tax_if_inherited_and_sold_promptly": 0,
+    "advantage_of_holding_until_death": 371000
+   },
+   {
+    "gain_on_lifetime_sale": 1500000,
+    "tax_if_sold_during_life": 556500,
+    "tax_if_inherited_and_sold_promptly": 0,
+    "advantage_of_holding_until_death": 556500
+   },
+   {
+    "gain_on_lifetime_sale": 2000000,
+    "tax_if_sold_during_life": 742000,
+    "tax_if_inherited_and_sold_promptly": 0,
+    "advantage_of_holding_until_death": 742000
+   },
+   {
+    "gain_on_lifetime_sale": 2500000,
+    "tax_if_sold_during_life": 927500,
+    "tax_if_inherited_and_sold_promptly": 0,
+    "advantage_of_holding_until_death": 927500
+   }
+  ],
+  "note": "Assumes the gain exceeds the section 121 exclusion ($250,000 single / $500,000 MFJ) and that no suspended passive losses remain. Depreciation recapture (up to 25% federal) would apply additionally to the portion of the gain attributable to depreciation if the property was rented."
+ },
+ "flags": [
+  {
+   "id": "FLAG-01",
+   "severity": "high",
+   "title": "2026 property tax is blank for the Cupertino parcel",
+   "detail": "The supplied 95014 table shows '--' for 2026 property taxes while giving a 2026 assessment of $550,537. The bill has most likely simply not been published yet. The model projects 2026 tax from the parcel's fitted bill formula rather than inventing a number.",
+   "action": "Replace with the actual 2026-27 Santa Clara County bill when it arrives (mailed before November 1).",
+   "source": "S-SCC-ASSESSOR"
+  },
+  {
+   "id": "FLAG-02",
+   "severity": "medium",
+   "title": "The 94122 table has no 2026 row and one anomalous year (2021: -5.9%)",
+   "detail": "The 2026 assessment is derived as 2025 x 1.02 = $116,533. Separately, 2021 property taxes fell 5.9% while the assessment rose 1%, and 2018 taxes rose 18.4% on a 2% assessment increase. Neither is consistent with a pure ad valorem bill, which indicates one-time credits/refunds or new voter-approved charges in those years.",
+   "action": "Pull the actual SF bill detail (block/lot) and reconcile the direct-charge lines before relying on the fitted flat component.",
+   "source": "S-SF-ASSESSOR"
+  },
+  {
+   "id": "FLAG-03",
+   "severity": "high",
+   "title": "Cupertino parcel's implied tax rate (~1.33%) exceeds the county's published 'typical' rate (1.1488%)",
+   "detail": "Dividing the supplied 2025 tax ($7,207) by the supplied 2025 assessment ($539,743) gives 1.335%. Santa Clara County's own workbook example shows a typical Tax Rate Area at 1.1488%. The gap is explained by parcel-specific voter-approved bonds and by flat (non-ad-valorem) parcel charges, which inflate any tax/assessment ratio.",
+   "action": "Confirm the parcel's Tax Rate Area and its direct charges in the Santa Clara County Property Tax Rate Book before using the fitted rate for decisions.",
+   "source": "S-SCC-ASSESSOR-BOOKLET"
+  },
+  {
+   "id": "FLAG-04",
+   "severity": "high",
+   "title": "San Francisco parcel's implied tax rate (~2.14%) is far above the official FY2025-26 secured rate (1.18268325%)",
+   "detail": "The supplied 2025 figure ($2,439 on a $114,248 assessment) implies 2.135%, roughly 1.8x the official secured rate. This is the classic signature of flat per-parcel charges (school parcel tax, City College parcel tax, stormwater, Rent Board fee and similar) on a parcel with a very low Prop 13 assessed value. It does NOT mean the ad valorem rate is 2.14%.",
+   "action": "Use the official 1.18268325% for anything driven by assessed value, and add the flat charges separately. Obtain the actual bill to size the flat charges.",
+   "source": "S-SF-TAXRATE"
+  },
+  {
+   "id": "FLAG-05",
+   "severity": "critical",
+   "title": "Whether the Cupertino house is the transferor's principal residence is unknown and decides everything",
+   "detail": "Proposition 19 (R&TC 63.2) restricts the parent-child reassessment exclusion to the transferor's principal residence (or a family farm). If the Cupertino house is a rental or second home at the date of transfer, NO exclusion is available at any value, and the assessed value resets to full market value on day one. This single fact moves the annual tax bill by tens of thousands of dollars.",
+   "action": "Confirm occupancy status of the 95014 property at the planned transfer date, and whether the transfer is parent-to-child or grandparent-to-grandchild (the latter requires the middle generation to be deceased).",
+   "source": "S-CA-RTC-632"
+  },
+  {
+   "id": "FLAG-06",
+   "severity": "critical",
+   "title": "The heir can claim the Prop 19 exclusion for only ONE property",
+   "detail": "The exclusion requires the transferee to occupy the home as a principal residence within one year and keep occupying it. The household currently occupies a unit at 94122. Moving to 95014 to claim the exclusion makes the SF unit available to rent, but it also means the exclusion is lost the moment they stop occupying Cupertino - at which point the assessed value is set as of the lien date following the move-out.",
+   "action": "Treat the occupancy requirement as a binding, multi-decade constraint, not a formality. Model the 'move out later' cliff explicitly.",
+   "source": "S-CA-RTC-632"
+  },
+  {
+   "id": "FLAG-07",
+   "severity": "medium",
+   "title": "Home insurance premiums cannot be verified from an official source",
+   "detail": "Neither the California Department of Insurance nor the FAIR Plan publishes a ZIP-level average premium for a specific dwelling. Available figures come from commercial rate-shopping sites and disagree widely ($864-$1,189/yr for 95014 in one survey versus a $1,571 statewide average reported elsewhere).",
+   "action": "Obtain live quotes for the actual dwelling (replacement cost, roof, wildfire score) before relying on the $1,500 assumption.",
+   "source": "S-CDI"
+  },
+  {
+   "id": "FLAG-08",
+   "severity": "medium",
+   "title": "Market rent for the Cupertino house is an assumption, not a verified figure",
+   "detail": "Listing aggregators report a Cupertino median rent around $3,800-$4,128/month across all bedroom counts and property types, which is apartment-weighted and is not a rent for a single-family house valued at $3.1M. The model uses $4,500/month as a placeholder.",
+   "action": "Obtain a broker opinion of rent or comparable single-family rental data for 95014.",
+   "source": "U-ZILLOW-CUPERTINO-RENT"
+  },
+  {
+   "id": "FLAG-09",
+   "severity": "medium",
+   "title": "The Prop 19 exclusion cap is officially known only through February 15, 2027",
+   "detail": "The $1,044,586 figure applies to transfers between February 16, 2025 and February 15, 2027 (BOE Letter to Assessors 2025/009). For a 2040-2050 transfer the cap will have been re-set roughly eight to twelve more times by the FHFA California House Price Index. The model grows it at an ASSUMED 3%/yr.",
+   "action": "Re-run the model with the actual cap in force at the time.",
+   "source": "S-BOE-LTA25009"
+  },
+  {
+   "id": "FLAG-10",
+   "severity": "low",
+   "title": "Water provider for 95014 depends on the exact address",
+   "detail": "The City of Cupertino is served by three separate water systems: California Water Service (Bear Gulch district) in the northeast, San Jose Water Company in the southeast, and the City's own system in the west, which is operated by San Jose Water Company under a lease running to 2036. Rates differ by system.",
+   "action": "Identify the provider for the parcel and pull the current tariff.",
+   "source": "S-CUPERTINO-WATER"
+  },
+  {
+   "id": "FLAG-11",
+   "severity": "medium",
+   "title": "Solar export value depends on which NEM tariff the system is on",
+   "detail": "Systems interconnected before April 15, 2023 sit on NEM 2.0 and are grandfathered for 20 years from interconnection; exports are credited at roughly retail. Systems interconnected later are on NEM 3.0 (net billing), where exports earn only a few cents per kWh. The supplied $10-$20/month net credit is consistent with NEM 2.0, but the interconnection date must be confirmed - and NEM 2.0 grandfathering is lost if the system is materially modified.",
+   "action": "Confirm the interconnection date and tariff from the PG&E bill.",
+   "source": "S-CPUC-NEM"
+  },
+  {
+   "id": "FLAG-12",
+   "severity": "medium",
+   "title": "Rent-control status of the 94122 units is not established",
+   "detail": "SF's 1.6% local cap applies to units with a certificate of occupancy on or before June 13, 1979. Single-family homes and condos are exempt under Costa-Hawkins for tenancies beginning on or after January 1, 1996. If the units fall outside the local ordinance, the AB 1482 statewide cap (8.8% for 8/1/2026-7/31/2027) governs instead - a fivefold difference in permitted rent growth.",
+   "action": "Confirm the certificate-of-occupancy date and tenancy start dates for all three units.",
+   "source": "S-SF-RENTINCREASE"
+  },
+  {
+   "id": "FLAG-13",
+   "severity": "low",
+   "title": "Estate size is unknown, so whether the federal estate tax applies cannot be determined",
+   "detail": "The request states the inheritance includes 'a considerable amount of money' that 'could be over' the exempt amount. The federal basic exclusion is $15,000,000 per person for 2026 ($30,000,000 for a married couple with a timely portability election), made permanent by OBBBA and indexed for inflation from 2027. California and its local governments impose no estate or inheritance tax at all. No estate tax is owed unless the gross estate plus adjusted taxable gifts exceeds the exclusion for the year of death.",
+   "action": "Size the gross estate (real property at date-of-death FMV plus all other assets, plus adjusted taxable gifts) against the exclusion for the actual year of death. Note that the $15M is per person, and that portability requires a timely Form 706.",
+   "source": "S-IRS-ESTATETAX"
+  },
+  {
+   "id": "FLAG-14",
+   "severity": "low",
+   "title": "California Proposition 43 (Nov 3, 2026) does not change the Prop 13 rate or the 2% cap",
+   "detail": "Prop 43 adds a two-thirds voter-approval requirement for local special taxes proposed under the local initiative power, starting January 1, 2027, and bars additional ad valorem property taxes imposed by initiative. It does not amend Prop 13's 1% rate, the 2% assessment cap, or the Prop 19 transfer rules. The broader 'Save Prop 13' initiative (which would have capped transfer taxes) was withdrawn in June 2026.",
+   "action": "No action needed for the 2040-2050 decision; monitor future sessions.",
+   "source": "S-CA-SOS-BALLOT"
+  },
+  {
+   "id": "FLAG-15",
+   "severity": "low",
+   "title": "Whether a 3-unit building counts as a 'family home' for Prop 19 is not settled here",
+   "detail": "R&TC 63.2(a)(1) refers to real property that is the principal residence of the transferor. Where the transferor occupies one unit of a three-unit building and rents the others, the scope of the exclusion for the rented portion is a facts-and-circumstances question that should be put to the county assessor or counsel.",
+   "action": "Get written guidance from the SF Assessor-Recorder (94122) and Santa Clara County Assessor (95014) before finalising a transfer plan.",
+   "source": "S-CA-RTC-632"
+  },
+  {
+   "id": "FLAG-16",
+   "severity": "medium",
+   "title": "Land value percentages used for depreciation are assumptions",
+   "detail": "Depreciation under IRC 168 applies to buildings only, not land. The model assumes 55% land for 95014 and 35% for 94122. County assessor records show land and improvement values separately and should be used instead.",
+   "action": "Take the land/improvement split from the county assessment roll.",
+   "source": "S-SCC-ASSESSOR"
+  }
+ ]
+}
