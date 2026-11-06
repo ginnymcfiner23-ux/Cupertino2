@@ -19,21 +19,22 @@ This session ID: `arena-2988121a`
 
 | Task ID | Description | Status | Owner | Files touched | Sources verified | Notes |
 |---|---|---|---|---|---|---|
-| T001 | Create coordination board (this file) | in progress | arena-2988121a | COORDINATION.md | — | Initial claim |
-| T002 | Executive summary + anonymization placeholders | unclaimed | — | docs/executive-summary.md | TBD | Anonymize all personal info |
-| T003 | Step-by-step trust inheritance process (CA) | unclaimed | — | docs/inheritance-process.md | TBD | CA probate, trustee duties, title transfer |
-| T004 | Property tax & assessment research (Prop 13, 58, 19; county data) | unclaimed | — | docs/property-tax.md | TBD | Santa Clara County + SF Assessor |
-| T005 | Ownership cost projections (water, electricity, insurance, maintenance) | unclaimed | — | docs/ownership-costs.md | TBD | Cupertino 95014 + SF 94122 |
-| T006 | Rent vs. live vs. sell financial analysis | unclaimed | — | docs/rent-vs-live-vs-sell.md | TBD | Projections with inflation/tax factors |
-| T007 | Inheritance / estate tax thresholds (federal, state, local) | unclaimed | — | docs/inheritance-tax.md | TBD | Federal exemption, CA has no estate/inheritance tax |
-| T008 | Pending law changes affecting inheritance/property tax | unclaimed | — | docs/law-changes.md | TBD | TCJA sunset, CA proposals |
-| T009 | Site build: landing page + dashboard subpages, tables with sources | unclaimed | — | index.html, pages/*, assets/* | TBD | GitHub Pages static site |
-| T010 | Line-by-line verification + Flagged for Review page | unclaimed | — | pages/flagged-for-review.html | TBD | Every table row sourced or flagged |
-| T011 | GitHub Pages deployment + broken-link check | unclaimed | — | site settings, GH Pages | TBD | Do not merge a broken deploy |
-| T012 | Pull request + merge to main + record results | unclaimed | — | PR on GitHub, COORDINATION.md | TBD | PR from arena/2988121a-cupertino2 to main |
+| T001 | Create coordination board (this file) | done | arena-2988121a | COORDINATION.md | — | Claimed + pushed 2026-11-06 |
+| T002 | Executive summary + anonymization placeholders | in progress | arena-2988121a | pages/executive-summary.html | IRS, BOE, CA RTC, county assessors | In draft |
+| T003 | Step-by-step trust inheritance process (CA) | in progress | arena-2988121a | pages/inheritance-process.html | CA Probate Code, BOE, IRS | In draft |
+| T004 | Property tax & assessment research (Prop 13, 58, 19; county data) | in progress | arena-2988121a | pages/property-tax.html | boe.ca.gov, sccassessor booklet, sf.gov | In draft |
+| T005 | Ownership cost projections (water, electricity, insurance, maintenance) | in progress | arena-2988121a | pages/ownership-costs.html | sjwater.com tariffs, sfpuc.gov, CDI | In draft |
+| T006 | Rent vs. live vs. sell financial analysis | in progress | arena-2988121a | pages/decision-analysis.html | Projections (assumptions stated) | In draft |
+| T007 | Inheritance / estate tax thresholds (federal, state, local) | in progress | arena-2988121a | pages/inheritance-tax.html | irs.gov i706, rp-25-32, RTC 13301 | In draft |
+| T008 | Pending law changes affecting inheritance/property tax | in progress | arena-2988121a | pages/law-changes.html | Public Law 119-21, BOE LTA | In draft |
+| T009 | Site build: landing page + dashboard subpages, tables with sources | unclaimed | — | index.html, pages/*, assets/style.css | — | Not started |
+| T010 | Line-by-line verification + Flagged for Review page | unclaimed | — | pages/flagged-for-review.html | — | Not started |
+| T011 | GitHub Pages deployment + broken-link check | unclaimed | — | repo settings (gh pages API) | — | Not started |
+| T012 | Pull request + merge to main + record results | unclaimed | — | PR on GitHub, COORDINATION.md | — | Not started |
 
 ## Completed & verified log
-(None yet)
+- T001 done: COORDINATION.md created and pushed to origin/arena/2988121a-cupertino2 (commit 86de27f).
 
 ## Handoffs / irregularities
-(None yet)
+- Repo contains only README.md; all site content must be created from scratch.
+- User-provided property tax history tables (Cupertino 95014, SF 94122) and estimated market values ($3,100,000 / $1,800,000, Nov 2026) are NOT verified against county assessor records — no parcel addresses were provided, so parcel-level lookup is not possible. These rows will be flagged "unverified — user-provided" on the site per the verification rule.
