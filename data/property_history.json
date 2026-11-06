@@ -1,0 +1,11 @@
+{
+  "note": "Owner-provided values. None could be checked against an official assessor record in this session (no parcel identifier is published). Rows are flagged 'user-provided — unverified'. Official lookup: Santa Clara County Assessor (Property A) and SF Assessor-Recorder (Property B). Only the rows retained in session records are included; the full multi-year tables must be re-supplied (flagged).",
+  "rows": [
+    {"property":"A","city":"Cupertino, CA","year":2025,"metric":"Assessed value (AV)","value":539743,"unit":"USD","status":"user-provided — unverified","sources":["SCC-ASSESSOR"],"notes":""},
+    {"property":"A","city":"Cupertino, CA","year":2025,"metric":"Property tax (total billed)","value":7207,"unit":"USD","status":"user-provided — unverified","sources":["SCC-ASSESSOR"],"notes":""},
+    {"property":"A","city":"Cupertino, CA","year":2026,"metric":"Assessed value (AV)","value":550537,"unit":"USD","status":"user-provided — unverified","sources":["SCC-ASSESSOR","BOE-LTA-2009-036"],"notes":"Change from 2025 is +2.00%, consistent with the 2% Prop 13 cap (computed check, not an official figure)."},
+    {"property":"A","city":"Cupertino, CA","year":2026,"metric":"Property tax (total billed)","value":null,"unit":"USD","status":"blank — not provided","sources":["SCC-ASSESSOR"],"notes":"Left blank; not supplied."},
+    {"property":"B","city":"San Francisco, CA","year":2025,"metric":"Assessed value (AV)","value":114248,"unit":"USD","status":"user-provided — unverified","sources":["SF-ASSESSOR"],"notes":""},
+    {"property":"B","city":"San Francisco, CA","year":2025,"metric":"Property tax (total billed)","value":2439,"unit":"USD","status":"user-provided — unverified","sources":["SF-TREASURER-SECURED"],"notes":"Implies ~2.13% of AV, above the official FY2026-27 secured rate (1.18162182%); the difference (~$1,089) is treated as non-ad-valorem charges (flagged)."}
+  ]
+}

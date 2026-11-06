@@ -1,0 +1,113 @@
+{
+  "assumptions": {
+    "appreciation": 0.03,
+    "inflation": 0.02,
+    "inflation_stress": 0.037,
+    "portfolio_return": 0.06,
+    "prop13_growth": 0.02,
+    "cup_maint_rate": 0.005,
+    "sf_maint_rate": 0.01,
+    "sale_commission": 0.05,
+    "rent_growth": 0.016,
+    "insurance_growth": 0.03,
+    "electric_growth": 0.03,
+    "water_growth": 0.02,
+    "estate_index": 0.02
+  },
+  "constants_note": "Official constants are cited in data/facts.json; user inputs in scripts/model.py header.",
+  "estate_exclusion_by_year": {
+    "2026": 15000000,
+    "2027": 15300000.0,
+    "2028": 15606000.0,
+    "2029": 15918120.000000002,
+    "2030": 16236482.4,
+    "2031": 16561212.048,
+    "2032": 16892436.288960002,
+    "2033": 17230285.0147392,
+    "2034": 17574890.715033986,
+    "2035": 17926388.529334664,
+    "2036": 18284916.29992136,
+    "2037": 18650614.625919785,
+    "2038": 19023626.91843818,
+    "2039": 19404099.456806947,
+    "2040": 19792181.445943087,
+    "2041": 20188025.074861947,
+    "2042": 20591785.576359186,
+    "2043": 21003621.287886374,
+    "2044": 21423693.713644102,
+    "2045": 21852167.58791698,
+    "2046": 22289210.939675324,
+    "2047": 22734995.158468828,
+    "2048": 23189695.061638206,
+    "2049": 23653488.96287097,
+    "2050": 24126558.74212839,
+    "2051": 24609089.91697096,
+    "2052": 25101271.71531038,
+    "2053": 25603297.149616588,
+    "2054": 26115363.09260892,
+    "2055": 26637670.3544611,
+    "2056": 27170423.761550322,
+    "2057": 27713832.23678133,
+    "2058": 28268108.881516952,
+    "2059": 28833471.059147295,
+    "2060": 29410140.48033024
+  },
+  "sf_fixed_charges_derived": 1089.0207030863999,
+  "cup_elec_net_cost_mo": 9.133495833333335,
+  "decisions": {
+    "2040": {
+      "inherit_year": 2040,
+      "cup_mv_at_inheritance": 4689028.147050847,
+      "cup_ntv_prop19": 3337744.771371638,
+      "cup_ntv_full": 4689028.147050847,
+      "cup_live_nw_h": 5096080.2298795665,
+      "cup_live_no_prop19_nw_h": 4800656.744677687,
+      "cup_sell_nw_h": 7968231.4245803,
+      "sf_keep_nw_h": 4216158.563098478,
+      "sf_sell_nw_h": 4626715.020724045,
+      "breakeven_imputed_rent_cup_yr_at_inheritance": 175418.8332443316,
+      "estate_exclusion_in_year": 19792181.445943087,
+      "best": {
+        "cupertino": "Sell at inheritance",
+        "sf": "Sell at inheritance",
+        "combined_nw": 12594946.445304345
+      }
+    },
+    "2045": {
+      "inherit_year": 2045,
+      "cup_mv_at_inheritance": 5435868.764539015,
+      "cup_ntv_prop19": 3943942.7297683056,
+      "cup_ntv_full": 5435868.764539015,
+      "cup_live_nw_h": 5893236.892870889,
+      "cup_live_no_prop19_nw_h": 5567065.494045055,
+      "cup_sell_nw_h": 9237364.108538497,
+      "sf_keep_nw_h": 4762097.229256252,
+      "sf_sell_nw_h": 5363630.772699772,
+      "breakeven_imputed_rent_cup_yr_at_inheritance": 204245.13008764177,
+      "estate_exclusion_in_year": 21852167.58791698,
+      "best": {
+        "cupertino": "Sell at inheritance",
+        "sf": "Sell at inheritance",
+        "combined_nw": 14600994.88123827
+      }
+    },
+    "2050": {
+      "inherit_year": 2050,
+      "cup_mv_at_inheritance": 6301661.730027253,
+      "cup_ntv_prop19": 4654454.835242617,
+      "cup_ntv_full": 6301661.730027253,
+      "cup_live_nw_h": 6815849.025417635,
+      "cup_live_no_prop19_nw_h": 6455729.445421141,
+      "cup_sell_nw_h": 10708636.725898014,
+      "sf_keep_nw_h": 5384756.271281292,
+      "sf_sell_nw_h": 6217918.098908524,
+      "breakeven_imputed_rent_cup_yr_at_inheritance": 237754.9892728766,
+      "estate_exclusion_in_year": 24126558.74212839,
+      "best": {
+        "cupertino": "Sell at inheritance",
+        "sf": "Sell at inheritance",
+        "combined_nw": 16926554.824806537
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Dashboard · Inheritance decision dashboard</title>
+<link rel='stylesheet' href='assets/style.css'>
+</head>
+<body>
+<header class='top'>
+  <div class='brand'>Inheritance decision dashboard <span class='sub'>Two properties · anonymized</span></div>
+  <nav><a href='index.html' class='active'>Dashboard</a><a href='property-tax.html' class=''>Property tax</a><a href='ownership-costs.html' class=''>Ownership costs</a><a href='projections.html' class=''>Projections</a><a href='decision.html' class=''>Live / rent / sell</a><a href='tax-thresholds.html' class=''>Tax &amp; thresholds</a><a href='inheritance-process.html' class=''>Inheritance steps</a><a href='law-changes.html' class=''>Law changes</a><a href='sources.html' class=''>Sources</a><a href='flagged.html' class=''>Flagged for Review</a></nav>
+</header>
+<main>
+<div class='banner'>Research only, not legal or tax advice. Property A = Cupertino, CA. Property B = San Francisco, CA. No names, addresses, or ZIP codes are published. Data as of 2026-11-06. <a href='flagged.html'>29 items flagged for review</a>.</div>
+
+<h1>Executive summary</h1>
+<p class='lede'>This dashboard compares three choices for two properties inherited through a trust around 2040–2050: live in, rent, or sell. Figures are projections built from owner-provided inputs and official rules. Anything not confirmed on an official source is flagged.</p>
+
+<div class='tiles'>
+  <div class='tile'><div class='k'>Property A value, Nov 2026 (owner est.)</div><div class='v'>$3,100,000</div><div class='s'>Source: owner estimate · flagged</div></div>
+  <div class='tile'><div class='k'>Property B value, Nov 2026 (owner est.)</div><div class='v'>$1,800,000</div><div class='s'>Source: owner estimate · flagged</div></div>
+  <div class='tile'><div class='k'>Prop 19 value cap (to Feb 15, 2027)</div><div class='v'>$1,044,586</div><div class='s'>BOE LTA 2025/009</div></div>
+  <div class='tile'><div class='k'>Federal estate exclusion, 2026 deaths</div><div class='v'>$15,000,000</div><div class='s'>IRS · per person</div></div>
+  <div class='tile'><div class='k'>SF secured tax rate, FY2026-27</div><div class='v'>1.18162182%</div><div class='s'>SF Treasurer</div></div>
+  <div class='tile'><div class='k'>Flagged for review</div><div class='v'>29</div><div class='s'>See Flagged page</div></div>
+</div>
+
+<div class='cards'>
+  <div class='card'>
+    <h3>Recommendation (base case)</h3>
+    <p><strong>Property A (Cupertino):</strong> Sell at inheritance is the higher-value option in the base case
+    (inheritance 2045, 10-year horizon). Selling beats living there in 10 of 10 sensitivity cases.
+    Living there becomes worthwhile only if the heir would otherwise pay rent above about $204,245 per year (year-of-inheritance dollars).</p>
+    <p><strong>Property B (San Francisco):</strong> Sell at inheritance in the base case.
+    Keeping wins in 3 of 10 sensitivity cases (appreciation 1%, return 4%; appreciation 3%, return 4%; appreciation 5%, return 4%). Full reassessment on transfer is assumed, which is the main cost of keeping it.</p>
+    <p class='note'>These results depend on assumptions that are not sourced (appreciation, return, maintenance, selling cost). Change them and test the sensitivity table on the Projections page before acting.</p>
+  </div>
+  <div class='card'>
+    <h3>Key tax facts</h3>
+    <ul>
+      <li>Transfers by death, including distributions from a trust, are covered by Prop 19 (BOE LTA 2026/026).</li>
+      <li>Prop 19 excludes the family home only when the heir makes it their principal residence. Rental property is not eligible (BOE).</li>
+      <li>On a sale soon after death, the basis is generally the value at death, so little gain is expected (IRS Pub 551; confirm).</li>
+      <li>No documentary transfer tax applies to transfers by reason of death (RTC §11930).</li>
+      <li>Federal estate exclusion: $15M per person for 2026 deaths (IRS).</li>
+    </ul>
+  </div>
+  <div class='card'>
+    <h3>What to do next</h3>
+    <ul>
+      <li>Re-supply the full multi-year assessment history (only some years are retained; see Flagged).</li>
+      <li>Verify parcel-level values on the county assessor portals (links on Property tax page).</li>
+      <li>Confirm occupancy plans for Property A and mixed-use treatment for Property B with the assessors.</li>
+      <li>Get an estate attorney or CPA to review the trust documents and the inheritance steps.</li>
+    </ul>
+  </div>
+</div>
+<h2>Projection snapshot (base case, inheritance 2045)</h2>
+<div class='tablewrap'><table><thead><tr><th>Measure</th><th>2026</th><th>2045</th><th>Source (official)</th></tr></thead><tbody>
+<tr><td>Property A market value</td><td>$3,100,000</td><td>$5,435,869</td><td class='src'><a href='https://asr.santaclaracounty.gov/home' rel='noopener' title='Office of the Assessor — Property Search, Assessment Look-Up'>SCC-ASSESSOR</a></td></tr>
+<tr><td>Property A tax, status quo (owner)</td><td>$7,351</td><td>$10,709</td><td class='src'><a href='https://asr.santaclaracounty.gov/home' rel='noopener' title='Office of the Assessor — Property Search, Assessment Look-Up'>SCC-ASSESSOR</a> · <a href='https://boe.ca.gov/proptaxes/pdf/lta09036.pdf' rel='noopener' title='Letter to Assessors 2009/036 (Article XIII A, §2(b) 2% inflation cap explained)'>BOE-LTA-2009-036</a></td></tr>
+<tr><td>Property A tax after inheritance (Prop 19 move-in)</td><td>blank</td><td>$52,662</td><td class='src'><a href='https://www.boe.ca.gov/proptaxes/pdf/lta26026.pdf' rel='noopener' title='Proposition 19 Intergenerational Transfer Exclusion FAQ (LTA 2026/026, Aug 3, 2026)'>BOE-LTA-2026-026</a></td></tr>
+<tr><td>Property B market value</td><td>$1,800,000</td><td>$3,156,311</td><td class='src'><a href='https://www.sf.gov/departments--assessor-recorder' rel='noopener' title='Assessor-Recorder — Property value, change in ownership, Prop 19'>SF-ASSESSOR</a></td></tr>
+<tr><td>Property B tax after reassessment</td><td>blank</td><td>$38,882</td><td class='src'><a href='https://sftreasurer.org/property/secured-property-taxes' rel='noopener' title='Secured Property Taxes'>SF-TREASURER-SECURED</a></td></tr>
+</tbody></table></div>
+<p><a href='projections.html'>Full year-by-year table, 2026–2050 →</a></p>
+
+</main>
+<footer>Sources are listed per row. Blank = not provided or not confirmed on an official source. Flagged items do not block publication. Repo: <a href='https://github.com/ginnymcfiner23-ux/Cupertino2'>ginnymcfiner23-ux/Cupertino2</a>.</footer>
+</body>
+</html>
