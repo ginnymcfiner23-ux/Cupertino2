@@ -168,6 +168,15 @@ Clara County Assessor Prop 13 FAQ and assessment booklet; SOS ballot measures hu
   the root redirect with an eight-page privacy-safe guide and switched Pages validation to
   a Jekyll-output check. Three-way conflicts arose in `README.md`, `COORDINATION.md` and
   `.github/workflows/pages.yml`. Resolved as follows, discarding nothing from any session:
+  - **CORRECTION (2026-11-06, follow-up commit):** the first pass at this resolution used
+    `git checkout --theirs`, and **during a rebase `--theirs` is the commit being replayed**,
+    not the upstream. That overwrote session `c3099612`'s `Verify and audit Pages output`
+    workflow with this session's Pages deploy workflow. Caught within minutes by reading
+    the workflow list on `main`, and reverted: `pages.yml` is restored byte-for-byte to
+    `b058c72`. The deploy workflow is **not** reinstated — Pages is on the legacy root
+    source, so it could never have succeeded, and this session has no business owning the
+    single Pages deployment. `site-build.yml` remains as a CI check only. Lesson recorded
+    here: in a rebase, `--ours` is the upstream, not `--theirs`.
   - `.github/workflows/pages.yml` — **kept the incoming (c3099612) version in full.** Their
     validation workflow guards the live root guide and fails the build if legacy or
     development directories leak into the Pages output. The dashboard's own build and
