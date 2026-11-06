@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision Analysis &mdash; Live, Rent, or Sell?</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="site-brand" href="../index.html">Cupertino<span class="amp">2</span></a>
+    <nav class="main-nav">
+      <a href="executive-summary.html">Executive Summary</a>
+      <a href="inheritance-process.html">Inheritance Process</a>
+      <a href="property-tax.html">Property Tax</a>
+      <a href="ownership-costs.html">Ownership Costs</a>
+      <a href="decision-analysis.html" class="active">Decision Analysis</a>
+      <a href="inheritance-tax.html">Inheritance Tax</a>
+      <a href="law-changes.html">Law Changes</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page">
+  <h1>Decision Analysis: Live in It, Rent It, or Sell It?</h1>
+
+  <div class="callout callout-warn">
+    <strong>Everything below is an illustrative planning analysis, not advice.</strong> All projection figures rely on assumptions stated in the Assumptions box; none are verified future values. Where an input is unknown (maintenance, landlord insurance), it is left blank rather than inferred. The legal rules cited (Prop 13, Prop 19, IRC &sect;1014) are linked to official sources.
+  </div>
+
+  <h2>Assumptions (stated &mdash; not verified)</h2>
+  <table class="data">
+    <thead><tr><th style="width:30%">Assumption</th><th style="width:40%">Value used</th><th class="source-cell" style="width:30%">Status / source</th></tr></thead>
+    <tbody>
+      <tr><td>Inheritance year</td><td class="right">2045 (midpoint of the 2040&ndash;2050 window)</td><td class="source-cell">Planning assumption</td></tr>
+      <tr><td>Cupertino market value appreciation</td><td class="right">4.0%/year compounded</td><td class="source-cell">Assumption &mdash; <span class="badge badge-unverified">UNVERIFIED</span></td></tr>
+      <tr><td>San Francisco market value appreciation</td><td class="right">4.0%/year compounded</td><td class="source-cell">Assumption &mdash; <span class="badge badge-unverified">UNVERIFIED</span></td></tr>
+      <tr><td>Assessed-value growth while parents own (Prop 13 cap)</td><td class="right">2.0%/year</td><td class="source-cell">Prop 13 limit &mdash; <a href="https://www.boe.ca.gov/proptaxes/pdf/pub29.pdf" target="_blank" rel="noopener">BOE Pub 29</a></td></tr>
+      <tr><td>Combined property-tax rate &mdash; Cupertino</td><td class="right">1.15% of assessed value</td><td class="source-cell">Illustrative; SCC booklet example shows 1.1488% <span class="badge badge-unverified">illustrative</span></td></tr>
+      <tr><td>Combined property-tax rate &mdash; San Francisco</td><td class="right">1.1763% of assessed value (FY 2024&ndash;25)</td><td class="source-cell">Reported by secondary source citing SF Controller <span class="badge badge-unverified">UNVERIFIED vs. official</span></td></tr>
+      <tr><td>Prop 19 value cap</td><td class="right">$1,044,586 above factored base year value</td><td class="source-cell">BOE LTA 2025/009 for transfers 2/16/2025&ndash;2/15/2027; adjusts biennially &mdash; actual 2045 cap will differ</td></tr>
+      <tr><td>Cupertino market value at inheritance</td><td class="right">$3,100,000 &times; 1.04<sup>19</sup> &asymp; $6,531,700</td><td class="source-cell">Owner-provided base value <span class="badge badge-unverified">UNVERIFIED</span> + assumption</td></tr>
+      <tr><td>Cupertino assessed value at inheritance (parents still own)</td><td class="right">$550,537 &times; 1.02<sup>19</sup> &asymp; $802,062</td><td class="source-cell">Owner-provided base <span class="badge badge-unverified">UNVERIFIED</span> + Prop 13 math</td></tr>
+      <tr><td>SF gross rental income (2 units)</td><td class="right">$7,150/month = $85,800/year</td><td class="source-cell">Owner-provided <span class="badge badge-unverified">UNVERIFIED</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Side-by-side comparison of the three options (at inheritance, ~2045)</h2>
+  <table class="data">
+    <thead><tr><th style="width:18%">Option</th><th style="width:22%">Est. annual property tax (2045)</th><th style="width:20%">Est. annual other costs</th><th style="width:20%">Income</th><th class="source-cell" style="width:20%">Key rule source</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>A. Sell the Cupertino home</strong> and reinvest proceeds (stocks, savings, etc.)</td>
+        <td class="right">$0 (no longer owned)</td>
+        <td class="right">$0 for this property</td>
+        <td class="right">Investment income on proceeds (amount depends on reinvestment choice; not projected)</td>
+        <td class="source-cell">IRC &sect;1014 step-up in basis &mdash; <a href="https://www.irs.gov/pub/irs-pdf/p559.pdf" target="_blank" rel="noopener">IRS Pub 559</a>; sale near date-of-death value &rarr; little/no capital gain</td>
+      </tr>
+      <tr>
+        <td><strong>B. Move into the Cupertino home</strong> (primary residence within 1 year; file BOE-19-P + homeowner's exemption)</td>
+        <td class="right">&asymp;$63,100/yr (illustrative)</td>
+        <td class="right">Insurance ~$1,571/yr statewide avg (CDI); water $1,200&ndash;$1,800/yr (owner est.); electricity ~$0 with solar (owner est.); maintenance blank</td>
+        <td class="right">None (owner-occupied). SF home must be sold or it loses primary-residence status (if kept as rental, SF is fully reassessed too &asymp;$44,600/yr est. tax).</td>
+        <td class="source-cell">Prop 19 partial exclusion &mdash; <a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">BOE prop19 page</a> · IRC &sect;121 later sale exclusion &mdash; <a href="https://www.irs.gov/pub/irs-pdf/p523.pdf" target="_blank" rel="noopener">IRS Pub 523</a></td>
+      </tr>
+      <tr>
+        <td><strong>C. Rent out the Cupertino home</strong> (keep SF home as primary residence)</td>
+        <td class="right">&asymp;$75,100/yr (illustrative; full reassessment &mdash; no Prop 19 exclusion for non-primary-residence property)</td>
+        <td class="right">Landlord insurance blank; maintenance blank; water/electricity passed to tenants or paid by owner &mdash; not provided</td>
+        <td class="right">Cupertino rental market rent not provided; cannot compare to SF's $85,800/yr gross (2 units)</td>
+        <td class="source-cell">Prop 19 &mdash; other property fully reassessed <a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">BOE prop19 page</a> · <a href="https://www.boe.ca.gov/proptaxes/pdf/lta25009.pdf" target="_blank" rel="noopener">BOE LTA 2025/009</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="proj-note">Tax figures are <strong>illustrative projections</strong>: market value $6,531,700 &times; rate, minus the $1,044,586 cap for option B (new assessed &asymp; $5,487,114 &times; 1.15%). The real 2045 Prop 19 cap, tax rates, appreciation, and costs will differ. These numbers are directional only.</p>
+
+  <h2>What the numbers say</h2>
+  <ul>
+    <li><strong>Option C (rent it out) is the most expensive way to hold the Cupertino home.</strong> Because the heir already lives in the San Francisco home, the Cupertino home cannot be the heir's primary residence, so Prop 19 gives no exclusion: it is reassessed to full market value. Under the illustrative assumptions, annual property tax rises from roughly $7,000/year today to roughly $75,000/year by 2045 &mdash; about as much as the entire gross rent from the San Francisco property's two units ($85,800/year), before insurance, maintenance, water, vacancy, and capital expenses. No Cupertino rental income figure was provided, so the cash flow cannot be completed.</li>
+    <li><strong>Option B (move in) cuts the tax vs. renting out but still raises it sharply.</strong> Moving in within 1 year of transfer and filing BOE-19-P preserves the parent's assessed value up to the $1,044,586 cap. Illustrative 2045 tax: ~$63,100/year &mdash; still roughly 9&times; today's bill &mdash; and the household can have only one primary residence, so the San Francisco home would have to be sold or accepted as a reassessed rental.</li>
+    <li><strong>Option A (sell and reinvest) avoids the reassessment trap entirely.</strong> Inherited property receives a step-up in basis to its date-of-death market value (IRC &sect;1014). Selling shortly after inheritance generally produces little or no capital-gains tax, and there is no further property tax, insurance, water, or maintenance obligation on that home. Proceeds can be reinvested in stocks, savings, etc.</li>
+    <li><strong>Federal estate tax likely does not apply.</strong> The 2026 basic exclusion is $15,000,000 per person ($30,000,000 per couple with portability), indexed after 2026, with no scheduled sunset (Public Law 119-21). California has no estate or inheritance tax (Rev. &amp; Tax. Code &sect;13301).</li>
+  </ul>
+
+  <h2>Recommended direction (illustrative, not advice)</h2>
+  <div class="callout callout-info">
+    <strong>On current law and current numbers, the profit-maximizing, lowest-cost plan is:</strong> <strong>sell the Cupertino home at inheritance, reinvest the after-tax proceeds, and keep the San Francisco home as the primary residence with its rental income.</strong><br><br>
+    Move into the Cupertino home only if its lifestyle value clearly outweighs an estimated tens of thousands of dollars per year in added property tax (and the cost of giving up the San Francisco primary residence). Renting out the Cupertino home while keeping San Francisco as the primary residence appears uneconomic under current assumptions because full reassessment makes the property tax almost as large as the San Francisco property's entire gross rental income.
+  </div>
+
+  <h2>Open items before a final decision</h2>
+  <ul>
+    <li>Verify both parcels' assessed values with the Santa Clara County Assessor and San Francisco Assessor-Recorder (no addresses were provided).</li>
+    <li>Obtain real quotes: Cupertino homeowners insurance, San Francisco landlord insurance, both properties' maintenance budgets.</li>
+    <li>Confirm Cupertino rental market rent (the analysis lacks any Cupertino rental figure).</li>
+    <li>Confirm the Prop 19 value cap in effect at the actual transfer date (BOE adjusts it every two years; next adjustment February 2027).</li>
+    <li>Engage a California estate attorney and CPA; trust administration has legal deadlines (60-day beneficiary notice, BOE-19-P filing within 3 years or before sale).</li>
+  </ul>
+
+  <div class="source-list">
+    <h3>Sources</h3>
+    <ul>
+      <li><a href="https://www.boe.ca.gov/prop19/" target="_blank" rel="noopener">CA BOE &mdash; Proposition 19 (parent-child exclusion, primary-residence requirement, BOE-19-P, value cap)</a></li>
+      <li><a href="https://www.boe.ca.gov/proptaxes/pdf/lta25009.pdf" target="_blank" rel="noopener">BOE LTA 2025/009 ($1,044,586 cap, transfers 2/16/2025&ndash;2/15/2027)</a></li>
+      <li><a href="https://www.boe.ca.gov/proptaxes/pdf/pub29.pdf" target="_blank" rel="noopener">CA BOE Publication 29 (Prop 13: 1% rate, 2% annual cap, reassessment on change of ownership)</a></li>
+      <li><a href="https://www.irs.gov/pub/irs-pdf/p559.pdf" target="_blank" rel="noopener">IRS Publication 559 (step-up in basis, IRC &sect;1014; estate tax forms)</a></li>
+      <li><a href="https://www.irs.gov/pub/irs-pdf/p523.pdf" target="_blank" rel="noopener">IRS Publication 523 (Sale of Your Home, IRC &sect;121 exclusion)</a></li>
+      <li><a href="https://www.irs.gov/instructions/i706" target="_blank" rel="noopener">IRS Form 706 instructions (2026 exclusion $15,000,000)</a> · <a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=13301" target="_blank" rel="noopener">Cal. Rev. &amp; Tax. Code &sect;13301 (no CA estate/inheritance tax)</a></li>
+      <li>Projection inputs: owner-provided values and stated assumptions <span class="badge badge-unverified">UNVERIFIED</span>.</li>
+    </ul>
+  </div>
+
+  <div class="privacy">
+    <strong>Maintained on:</strong> GitHub Pages &mdash; repo ginnymcfiner23-ux/Cupertino2. &nbsp;|&nbsp; Task board: <a href="../COORDINATION.md">COORDINATION.md</a>. Internal use only.
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="disclaimer">Not legal, tax, or financial advice. Projections are illustrative and based on stated assumptions; unverified inputs are flagged. Consult an estate attorney and CPA before acting.</div>
+    &copy; 2026 Cupertino2 project.
+  </div>
+</footer>
+</body>
+</html>
