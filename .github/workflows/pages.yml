@@ -1,0 +1,47 @@
+name: Verify and audit Pages output
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Validate pages, links, privacy, and row-level citations
+        run: python3 scripts/check_site.py
+      - name: Check calculator JavaScript syntax
+        run: node --check assets/calculator.js
+      - name: Build with the same Jekyll engine used by legacy Pages
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Confirm the Pages output contains only the public guide
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f _site/index.html
+          test -f _site/assets/site.css
+          test -f _site/assets/calculator.js
+          for path in data docs pages scripts .github COORDINATION.md README.md assets/style.css; do
+            if test -e "_site/$path"; then
+              echo "Unexpected legacy or development content in Pages output: $path" >&2
+              exit 1
+            fi
+          done
+          if find _site -type f \( -name '*.json' -o -name '*.csv' \) -print -quit | grep -q .; then
+            echo "Structured data files must not be present in the public Pages output." >&2
+            exit 1
+          fi
