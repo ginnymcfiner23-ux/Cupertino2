@@ -1,0 +1,274 @@
+{
+  "note": "Items that could not be confirmed from an official source, conflict between sources, or are assumptions. Flagged items do not block publication. Sources link to official pages where the check should be done.",
+  "items": [
+    {
+      "id": "X01",
+      "type": "Incomplete data",
+      "item": "Owner-provided assessment history is incomplete in the retained records. Only Property A 2025\u20132026 and Property B 2025 rows are included. The multi-year tables (Property A 2014\u20132026; Property B 2016\u20132025) must be re-supplied.",
+      "action": "Re-supply the full tables; check each year against the assessor's roll.",
+      "sources": [
+        "SCC-ASSESSOR",
+        "SF-ASSESSOR"
+      ]
+    },
+    {
+      "id": "X02",
+      "type": "Unverified",
+      "item": "Owner-provided assessed values and tax amounts (all rows) cannot be checked against official assessor records because no parcel identifier is published.",
+      "action": "Verify on the county assessor portal using the owner's own parcel records.",
+      "sources": [
+        "SCC-ASSESSOR",
+        "SF-ASSESSOR"
+      ]
+    },
+    {
+      "id": "X03",
+      "type": "Blank value",
+      "item": "Property A 2026 property tax bill was not provided and is left blank.",
+      "action": "Enter from the 2026-27 tax bill.",
+      "sources": [
+        "SCC-ASSESSOR"
+      ]
+    },
+    {
+      "id": "X04",
+      "type": "Reconciliation",
+      "item": "Property B 2025 tax of $2,439 on AV of $114,248 implies 2.135%, but the official FY2026-27 SF secured rate is 1.18162182%. The ~$1,089/yr gap is treated as non-ad-valorem charges (assumed fixed). Verify on the bill.",
+      "action": "Compare the bill's line items with the Treasurer's rate.",
+      "sources": [
+        "SF-TREASURER-SECURED"
+      ]
+    },
+    {
+      "id": "X05",
+      "type": "Conflicting source",
+      "item": "Secondary sites cite 1.18268325% as the SF rate; the official SF Treasurer page lists 1.18162182% for FY2026-27. The official figure is used.",
+      "action": "None; official figure used.",
+      "sources": [
+        "SF-TREASURER-SECURED"
+      ]
+    },
+    {
+      "id": "X06",
+      "type": "Unverified",
+      "item": "Property A effective rate (1.3352%) is derived from the owner-provided 2025 bill and AV. No official composite rate for this parcel was verified; secondary figures conflict (about 1.18%, 1.25%, and 0.72% county-only). None of the secondary figures is used.",
+      "action": "Use the Santa Clara County tax bill's composite rate to verify.",
+      "sources": [
+        "SCC-ASSESSOR"
+      ]
+    },
+    {
+      "id": "X07",
+      "type": "Conflicting source",
+      "item": "Some secondary blogs say a Prop 19 repeal measure is on the Nov 3, 2026 ballot. The official SOS list of qualified measures does not include one.",
+      "action": "Recheck the SOS list after certification.",
+      "sources": [
+        "SOS-QUALIFIED-MEASURES"
+      ]
+    },
+    {
+      "id": "X08",
+      "type": "Unofficial result",
+      "item": "Prop 43 (two-thirds vote for voter-initiated local special taxes) was trailing in preliminary returns (45.2% yes / 54.8% no at 11 p.m. Nov 3). Official certification is pending; this is not a final result.",
+      "action": "Check official certified results.",
+      "sources": [
+        "NEWS-CALMATTERS-PROP43",
+        "NEWS-DAILYBULLETIN-PROP43",
+        "SOS-QUALIFIED-MEASURES"
+      ]
+    },
+    {
+      "id": "X09",
+      "type": "Eligibility condition",
+      "item": "Property A's Prop 19 treatment assumes it is the parent's principal residence and that the heir makes it their principal residence and claims the homeowners' exemption within the BOE windows. If not, full reassessment applies (modeled as an alternative: value shown in the projections).",
+      "action": "Confirm occupancy and the exemption before the transfer.",
+      "sources": [
+        "BOE-LTA-2026-026",
+        "BOE-PROP19-PAGE"
+      ]
+    },
+    {
+      "id": "X10",
+      "type": "Eligibility condition",
+      "item": "Property B has two rental units. Rental property is not eligible for the parent-child family-home exclusion. Treatment of the owner-occupied third unit and any partial exclusion is unknown. The model applies full reassessment (conservative).",
+      "action": "Ask the SF Assessor to confirm mixed-use treatment.",
+      "sources": [
+        "BOE-PROP19-PAGE",
+        "SF-ASSESSOR"
+      ]
+    },
+    {
+      "id": "X11",
+      "type": "Conflicting source",
+      "item": "Owner reports Property A electricity at about $0 net, with a $10\u201320/mo solar credit. PG&E's Base Services Charge (a fixed daily charge) applies to almost all residential customers. The model applies the highest tier (conservative) net of the credit. The per-day tier amounts were not confirmed on the fetched advice-letter pages.",
+      "action": "Compare the monthly bill against the fixed charge line.",
+      "sources": [
+        "PGE-BSC-AL-7825E"
+      ]
+    },
+    {
+      "id": "X12",
+      "type": "Reconciliation",
+      "item": "Property A water of $100\u2013150/mo implies about 4\u20139 ccf/mo on a 5/8-inch meter under San Jose Water's Schedule No. 1. Meter size, provider, and usage need confirming.",
+      "action": "Check the meter size and provider on the bill.",
+      "sources": [
+        "SJW-AL-629A"
+      ]
+    },
+    {
+      "id": "X13",
+      "type": "Reconciliation",
+      "item": "Property B water of $330\u2013400/mo (three units) cannot be reconciled with the SFPUC W-1B service and unit charges alone. Sewer and stormwater charges were not reviewed in full.",
+      "action": "Compare with the full SFPUC bill.",
+      "sources": [
+        "SFPUC-RATES-2026-27"
+      ]
+    },
+    {
+      "id": "X14",
+      "type": "Unverified",
+      "item": "Insurance figures ($1,500/yr each) are owner estimates. No official per-home premium data was found. A secondary report of a 29.1% average FAIR Plan increase is press-reported and not confirmed on a CDI page.",
+      "action": "Obtain quotes; check CDI rate information.",
+      "sources": [
+        "CDI-HOME"
+      ]
+    },
+    {
+      "id": "X15",
+      "type": "Unverified",
+      "item": "County and city documentary transfer taxes: the statutory base ($1.10 per $1,000) is verified, but the adopted Santa Clara County rate and any Cupertino or San Francisco city transfer taxes are not. City taxes are excluded from the model.",
+      "action": "Confirm adopted rates with the county and city.",
+      "sources": [
+        "RTC-11911"
+      ]
+    },
+    {
+      "id": "X16",
+      "type": "Unverified",
+      "item": "Top federal estate tax rate (commonly cited as 40%) is not confirmed on the IRS pages reviewed. Estate tax exposure is left blank.",
+      "action": "Confirm on the IRS Form 706 instructions.",
+      "sources": [
+        "IRS-ESTATE-TAX"
+      ]
+    },
+    {
+      "id": "X17",
+      "type": "Unverified",
+      "item": "California income tax brackets were not confirmed (FTB rate page not retrieved). Capital-gain tax on a sale at date-of-death value is modeled as near zero because of the basis step-up.",
+      "action": "Confirm 2026 rate schedule on FTB.",
+      "sources": [
+        "FTB-FORMS"
+      ]
+    },
+    {
+      "id": "X18",
+      "type": "Unverified",
+      "item": "California estate or inheritance tax: none is assumed; no official California page confirming this was retrieved this session.",
+      "action": "Confirm with the FTB or a California attorney.",
+      "sources": [
+        "FTB-FORMS"
+      ]
+    },
+    {
+      "id": "X19",
+      "type": "Unverified",
+      "item": "Net investment income tax thresholds are not confirmed on an official page this session.",
+      "action": "Confirm on IRS Form 8960 instructions.",
+      "sources": [
+        "IRS-PUB-551"
+      ]
+    },
+    {
+      "id": "X20",
+      "type": "Unverified",
+      "item": "U.S. CPI 3.7% (September 2026) is a secondary report. It is used only for the stress case.",
+      "action": "Check the BLS release.",
+      "sources": [
+        "BLS-CPI"
+      ]
+    },
+    {
+      "id": "X21",
+      "type": "Unverified",
+      "item": "Property B rent of $7,150/mo (two units) is owner-provided and not checked against leases or the Rent Board. Rent Board coverage of each unit is not confirmed. Income tax on rent is not modeled.",
+      "action": "Check leases and Rent Board coverage; add rental income tax with a tax professional.",
+      "sources": [
+        "SF-RENT-BOARD"
+      ]
+    },
+    {
+      "id": "X22",
+      "type": "Blank value",
+      "item": "Property A rental income was not provided. The Property A rental option is left blank.",
+      "action": "Provide a market rent estimate.",
+      "sources": [
+        "SCC-ASSESSOR"
+      ]
+    },
+    {
+      "id": "X23",
+      "type": "Assumption",
+      "item": "Appreciation (3%), portfolio return (6%), maintenance (0.5% Property A, 1.0% Property B), selling commission (5%), and rent growth beyond the current cap (1.6%) are scenario assumptions with no official source. Results are sensitive to them (see the sensitivity table).",
+      "action": "Replace with your own estimates.",
+      "sources": [
+        "SCC-ASSESSOR",
+        "FED-PCE-TARGET"
+      ]
+    },
+    {
+      "id": "X24",
+      "type": "Estimate",
+      "item": "Property values of $3.1M (A) and $1.8M (B) as of Nov 2026 are owner estimates, not appraisals.",
+      "action": "Obtain appraisals or broker opinions.",
+      "sources": [
+        "SCC-ASSESSOR",
+        "SF-ASSESSOR"
+      ]
+    },
+    {
+      "id": "X25",
+      "type": "Omitted",
+      "item": "The value of the owner-occupied third unit in Property B (imputed rent) is not modeled, and neither are income taxes on rent or portfolio income. This biases the Property B keep option both ways.",
+      "action": "Add imputed rent and tax assumptions.",
+      "sources": [
+        "IRS-PUB-527"
+      ]
+    },
+    {
+      "id": "X26",
+      "type": "Assumption",
+      "item": "The Prop 19 $1 million amount is projected to grow with inflation after February 2027. The official amount changes only at each two-year adjustment.",
+      "action": "Update when the BOE publishes the Feb 2027 amount.",
+      "sources": [
+        "BOE-LTA-2025-009"
+      ]
+    },
+    {
+      "id": "X27",
+      "type": "Unverified",
+      "item": "Federal estate exclusion indexing after 2026 (2% per year) is an assumption. Official amounts for later years are not published yet.",
+      "action": "Update when the IRS publishes indexed amounts.",
+      "sources": [
+        "IRS-2026-INFLATION"
+      ]
+    },
+    {
+      "id": "X28",
+      "type": "Unverified",
+      "item": "Pending federal estate-tax repeal (H.R.1301) has no action recorded beyond referral. It is not law and is not modeled.",
+      "action": "Track on congress.gov.",
+      "sources": [
+        "CONGRESS-HR1301"
+      ]
+    },
+    {
+      "id": "X29",
+      "type": "Unverified",
+      "item": "Rent Board fee amounts and Housing Inventory requirements were not confirmed on the official Rent Board fee page this session.",
+      "action": "Check the Rent Board fee page.",
+      "sources": [
+        "SF-RENT-BOARD"
+      ]
+    }
+  ]
+}
