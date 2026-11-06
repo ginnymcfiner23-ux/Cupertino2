@@ -1,6 +1,6 @@
 # COORDINATION.md — Cupertino2 shared task board (integrated)
 
-Repo: `ginnymcfiner23-ux/Cupertino2` · Target: `main` (GitHub Pages from root `/`; root `index.html` redirects to `docs/index.html`; root `.nojekyll` present)
+Repo: `ginnymcfiner23-ux/Cupertino2` · Target: `main` (GitHub Pages currently uses the legacy root source; this session replaces the root redirect with the privacy-safe guide and stages only curated files for Actions deployment; legacy research directories remain in the repository but are excluded from the new artifact)
 Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, `scripts/`; live dashboard) and `arena-2988121a` (hand-authored pages under `pages/*`, `assets/style.css`; root `index.html` content preserved in branch history). File scopes non-overlapping except this board; neither session's work discarded.
 
 ## Protocol
@@ -78,6 +78,8 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 - 2026-11-06 · arena-2988121a · Pages build was errored on legacy Jekyll (no detailed error exposed by API); added root `_config.yml` (`title: Cupertino2`) and pushed to `main`; build status became `built`; live site verified via fetch of https://ginnymcfiner23-ux.github.io/Cupertino2/ (serves root `index.html` → `docs/index.html` dashboard).
 
 - 2026-11-06 · c3099612 · Rebased onto the updated `origin/main`; resolved the `COORDINATION.md` add/add conflict by retaining the established integrated board and adding this session's scope/task. No prior session records or files were discarded. The new Pages workflow stages only this session's curated root HTML, `.nojekyll`, and `assets/`; it does not include prior `docs/`, `data/`, `pages/`, scripts, or the coordination board in the deployment artifact.
+
+- 2026-11-06 · c3099612 · Applying the site commit also conflicted in `README.md` and root `index.html`: kept the integrated board, replaced the stale location-revealing README with the privacy-safe guide summary, and replaced the legacy redirect to `docs/index.html` with the new Home A/Home B landing page. Existing `docs/`, `data/`, and `pages/` files were retained; the new workflow excludes those directories from the public Pages artifact.
 
 ## Completion log
 
