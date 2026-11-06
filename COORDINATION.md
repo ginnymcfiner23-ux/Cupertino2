@@ -1,7 +1,7 @@
 # COORDINATION.md — Cupertino2 shared task board (integrated)
 
-Repo: `ginnymcfiner23-ux/Cupertino2` · Target: `main` (GitHub Pages from root `/`; root `index.html` redirects to `docs/index.html`)
-Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, `scripts/`; live dashboard) and `arena-2988121a` (hand-authored pages under `pages/*`, `assets/style.css`; root `index.html` content preserved in branch history). File scopes are non-overlapping except this board; neither session's work was discarded.
+Repo: `ginnymcfiner23-ux/Cupertino2` · Target: `main` (GitHub Pages from root `/`; root `index.html` redirects to `docs/index.html`; root `.nojekyll` present)
+Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, `scripts/`; live dashboard) and `arena-2988121a` (hand-authored pages under `pages/*`, `assets/style.css`; root `index.html` content preserved in branch history). File scopes non-overlapping except this board; neither session's work discarded.
 
 ## Protocol
 - Claim a task here (Owner column = session ID), commit, and push **before** starting it. Never start a task another session has claimed.
@@ -16,7 +16,7 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 
 | Session ID | Branch | File scope | Status |
 |---|---|---|---|
-| arena-570be64c | arena/570be64c-cupertino2 (merged to main via PR #1 and PR #3) | `COORDINATION.md`, `README.md`, `data/*`, `docs/*`, `scripts/*`, root `index.html` redirect | Merged to `main`; live dashboard at `docs/index.html` |
+| arena-570be64c | arena/570be64c-cupertino2 (merged to main via PR #1, #3, #4) | `COORDINATION.md`, `README.md`, `data/*`, `docs/*`, `scripts/*`, root `index.html` redirect, root `.nojekyll` | Merged to `main`; live dashboard at `docs/index.html` |
 | arena-2988121a | arena/2988121a-cupertino2 | `pages/*`, `assets/style.css`; root `index.html` content in commit `d480257`/`86e9139` | Merging to `main` via PR #2 |
 
 ## Unified task board
@@ -45,7 +45,7 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 | T090b | Site build: landing page + subpages (this session) | done | arena-2988121a | `index.html`, `pages/*`, `assets/style.css` | Every table row sourced or flagged | HTML validated; internal links checked |
 | T100 | Flagged for Review page | done | arena-570be64c | `docs/flagged.html`, `data/flagged.json` | — | 29 flagged items |
 | T100b | Flagged for Review page (this session) | done | arena-2988121a | `pages/flagged-for-review.html` | Source link on every table row | 14 flagged items listed |
-| T110 | Integration: re-verification, PR, merge, GitHub Pages | in progress | arena-2988121a | repo-wide | — | PR #2 open; Pages live via root redirect to docs/ |
+| T110 | Integration: re-verification, PR, merge, GitHub Pages | done | arena-2988121a | repo-wide | — | PR #2 merged into main; Pages live via root redirect to docs/ |
 
 ## Verification performed (line by line)
 
@@ -68,12 +68,12 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 ## Merge & conflict log
 
 - 2026-11-06 · arena-2988121a · First rebase onto `origin/main` (6f990e7): resolved `COORDINATION.md` add/add conflict by integrating both boards; no work discarded.
-- 2026-11-06 · arena-570be64c (parallel session) · Merged PR #3 (`arena/570be64c-cupertino2` → `main`) and committed root `index.html` redirect to `docs/index.html` (Pages source is root `/`, not changeable by integration token).
-- 2026-11-06 · arena-2988121a · Second rebase onto new `origin/main` (4983448): resolved `index.html` add/add conflict by keeping the established root redirect (their entry point to the live docs/ dashboard); my landing-page content remains in branch history (`d480257`, `86e9139`) and `pages/*` is preserved in the repo. Resolved `COORDINATION.md` content conflict by updating the integrated board above.
+- 2026-11-06 · arena-570be64c (parallel session) · Merged PR #3 (`arena/570be64c-cupertino2` → `main`); committed root `index.html` redirect to `docs/index.html` (Pages source is root `/`, not changeable by integration token); PR #4 merged; added root `.nojekyll` after legacy Jekyll build failure on main; logged build failure and fix.
+- 2026-11-06 · arena-2988121a · Second rebase onto `origin/main` (4983448): kept the established root redirect (`index.html` theirs); `pages/*` preserved in repo; landing-page content remains in branch history (`d480257`, `86e9139`).
+- 2026-11-06 · arena-2988121a · Third rebase onto `origin/main` (30273fb): resolved `COORDINATION.md` content conflict (their PR #4 / `.nojekyll` log entries merged into this board); no work discarded.
 
 ## Completion log
 
-- 2026-11-06 · arena-570be64c · T010–T100 complete; PR #1 merged (https://github.com/ginnymcfiner23-ux/Cupertino2/pull/1); PR #3 merged; root redirect committed; live dashboard at `docs/index.html` via GitHub Pages root source.
-- 2026-11-06 · arena-2988121a · T001–T010 complete; site authored; PR #2 opened (`arena/2988121a-cupertino2` → `main`): https://github.com/ginnymcfiner23-ux/Cupertino2/pull/2 ; PR #2 merged into `main`; GitHub Pages live (root `/` redirect → `docs/index.html`); deploy verified with no broken links.
-- (Final results: PR #2 link and merge result recorded above; Pages URL = https://ginnymcfiner23-ux.github.io/Cupertino2/ → redirects to docs/index.html.)
-
+- 2026-11-06 · arena-570be64c · T010–T100 complete; PR #1 merged (https://github.com/ginnymcfiner23-ux/Cupertino2/pull/1); PR #3 and PR #4 merged; root redirect + `.nojekyll` committed; live dashboard at `docs/index.html` via GitHub Pages root source.
+- 2026-11-06 · arena-2988121a · T001–T010 complete; site authored (`pages/*`, `assets/style.css`); PR #2 opened (`arena/2988121a-cupertino2` → `main`): https://github.com/ginnymcfiner23-ux/Cupertino2/pull/2 ; PR #2 merged into `main`; GitHub Pages live (root `/` → `docs/index.html`); deploy verified.
+- Final results: PR #2 merged into `main`; Pages URL = https://ginnymcfiner23-ux.github.io/Cupertino2/ (redirects to `docs/index.html`).
