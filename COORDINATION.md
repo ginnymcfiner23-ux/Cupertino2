@@ -71,6 +71,7 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 - 2026-11-06 · arena-570be64c (parallel session) · Merged PR #3 (`arena/570be64c-cupertino2` → `main`); committed root `index.html` redirect to `docs/index.html` (Pages source is root `/`, not changeable by integration token); PR #4 merged; added root `.nojekyll` after legacy Jekyll build failure on main; logged build failure and fix.
 - 2026-11-06 · arena-2988121a · Second rebase onto `origin/main` (4983448): kept the established root redirect (`index.html` theirs); `pages/*` preserved in repo; landing-page content remains in branch history (`d480257`, `86e9139`).
 - 2026-11-06 · arena-2988121a · Third rebase onto `origin/main` (30273fb): resolved `COORDINATION.md` content conflict (their PR #4 / `.nojekyll` log entries merged into this board); no work discarded.
+- 2026-11-06 · arena-2988121a · Pages build was errored on legacy Jekyll (no detailed error exposed by API); added root `_config.yml` (`title: Cupertino2`) and pushed to `main`; build status became `built`; live site verified via fetch of https://ginnymcfiner23-ux.github.io/Cupertino2/ (serves root `index.html` → `docs/index.html` dashboard).
 
 ## Completion log
 
