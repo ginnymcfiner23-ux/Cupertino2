@@ -1,0 +1,82 @@
+{
+  "note": "Open evidence items for private review. This public register contains no property-specific financial values or identifying details.",
+  "items": [
+    {
+      "id": "X01",
+      "type": "Ownership",
+      "item": "Recorded title, trust funding, estate route, and beneficiary relationship are not verified.",
+      "action": "Review the private deed and estate documents with qualified counsel.",
+      "sources": ["SCC-PROBATE-TRUSTS", "BOE-PROP19"]
+    },
+    {
+      "id": "X02",
+      "type": "Property tax",
+      "item": "No current parcel-specific assessed value, tax-rate area, annual bill, or supplemental bill has been matched to official records.",
+      "action": "Compare the owner’s private bill with the official assessor and tax-collector records.",
+      "sources": ["SCC-ASSESSOR", "SCC-DTAC", "SF-ASSESSOR", "SF-TREASURER"]
+    },
+    {
+      "id": "X03",
+      "type": "Data reconciliation",
+      "item": "Historical assessment and tax figures in planning materials have not been matched to the same official bill, parcel, and fiscal year. This is a verification flag, not a finding of tax error.",
+      "action": "Reconcile privately using the bill line items and current official parcel records.",
+      "sources": ["SCC-DTAC", "SCC-ASSESSOR", "SF-TREASURER", "SF-ASSESSOR"]
+    },
+    {
+      "id": "X04",
+      "type": "Prop 19 eligibility",
+      "item": "Family relationship, transferor principal-residence status, recipient occupancy, exemption filing, continued use, and any sale date are unknown.",
+      "action": "Confirm eligibility and deadlines promptly after the actual transfer.",
+      "sources": ["BOE-PROP19", "BOE-PROP19-LTA"]
+    },
+    {
+      "id": "X05",
+      "type": "Basis and value",
+      "item": "Date-of-death market value, inherited tax basis, improvements, depreciation, and ownership facts are not verified.",
+      "action": "Obtain a supportable valuation and review tax records privately.",
+      "sources": ["IRS-PUB-551", "IRS-PUB-559"]
+    },
+    {
+      "id": "X06",
+      "type": "Rental law",
+      "item": "San Francisco unit coverage, leases, current tenants, legal rent, owner occupancy, and any move-in eligibility are not verified.",
+      "action": "Review unit history, lease documents, and current Rent Board rules before estimating income or vacancy.",
+      "sources": ["SF-RENT-BOARD", "SF-RENT-LAWS", "SF-OWNER-MOVE-IN"]
+    },
+    {
+      "id": "X07",
+      "type": "Utilities",
+      "item": "Water provider, tariff area, meter, consumption, electricity rate plan, and account allocation are unknown.",
+      "action": "Use actual account bills; do not substitute a published tariff for a property bill.",
+      "sources": ["CALWATER-DISTRICT", "CALWATER-LAS-TARIFF", "SFPUC-RATES", "PGE-RATES"]
+    },
+    {
+      "id": "X08",
+      "type": "Solar",
+      "item": "System ownership, interconnection date, applicable tariff, generation, storage, and bill credits are unknown.",
+      "action": "Review system records and the current utility agreement.",
+      "sources": ["CPUC-CUSTOMER-GENERATION", "PGE-RATES"]
+    },
+    {
+      "id": "X09",
+      "type": "Insurance and maintenance",
+      "item": "No property-specific insurance quote, inspection, repair history, or contractor estimate is verified.",
+      "action": "Obtain current quotes and inspections; verify contractor licensing.",
+      "sources": ["CDI-INSURANCE-TOOL", "CDI-RESIDENTIAL-GUIDE", "CSLB-LICENSE-CHECK"]
+    },
+    {
+      "id": "X10",
+      "type": "Future assumptions",
+      "item": "Future market values, tax thresholds, rates, tariffs, rent rules, and maintenance costs are unknown; no 2040-2050 projection is included.",
+      "action": "Recheck law and use explicit, user-approved assumptions only when a future decision is due.",
+      "sources": ["BOE-PROP19-NOTICE", "IRS-ESTATE-TAX"]
+    },
+    {
+      "id": "X11",
+      "type": "Pending legislation",
+      "item": "Pending legislation can change; the current dashboard excludes any pending proposal from its law baseline.",
+      "action": "Recheck status and effective date when relevant.",
+      "sources": ["SB974-STATUS", "SB288-STATUS", "AB736-STATUS"]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "as_of": "2026-11-06",
+  "note": "Public legal and published-rate facts only. This file contains no property-specific estimates or scenario inputs.",
+  "rows": [
+    {
+      "id": "F-EST-2026",
+      "category": "federal",
+      "label": "Federal estate-tax filing threshold for deaths in 2026",
+      "value": "$15,000,000",
+      "status": "verified — year-specific",
+      "sources": ["IRS-ESTATE-TAX"],
+      "notes": "Not a forecast for a later inheritance."
+    },
+    {
+      "id": "F-CA-ESTATE",
+      "category": "state",
+      "label": "California estate-tax return requirement",
+      "value": "No return required for deaths on or after 2005-01-01",
+      "status": "verified",
+      "sources": ["CA-STATE-CONTROLLER"],
+      "notes": "Does not eliminate federal tax or income/property-tax obligations."
+    },
+    {
+      "id": "F-PROP13",
+      "category": "state",
+      "label": "California base property-tax levy and annual assessment factor",
+      "value": "Generally 1% of taxable assessed value plus voter-approved debt; annual inflation factor capped at 2%",
+      "status": "verified — general rule",
+      "sources": ["BOE-PUB-800-10"],
+      "notes": "Value declines, new construction, ownership changes, local charges, and parcel facts require separate review."
+    },
+    {
+      "id": "F-P19-CAP",
+      "category": "state",
+      "label": "Prop 19 adjusted family-home value cap for qualifying transfers",
+      "value": "$1,044,586 for transfers from 2025-02-16 through 2027-02-15",
+      "status": "verified — dated",
+      "sources": ["BOE-PROP19-LTA", "BOE-PROP19-NOTICE"],
+      "notes": "Do not project this allowance to a later transfer date."
+    },
+    {
+      "id": "F-SF-RATE-2026-27",
+      "category": "local",
+      "label": "San Francisco secured property-tax rate, FY 2026-27",
+      "value": "1.18162182%",
+      "status": "verified — current schedule",
+      "sources": ["SF-TREASURER"],
+      "notes": "Not an individual bill; parcel assessment and direct charges vary."
+    },
+    {
+      "id": "F-SF-RENT-2026-27",
+      "category": "local",
+      "label": "San Francisco allowable annual rent increase for applicable covered units",
+      "value": "1.6% from 2026-03-01 through 2027-02-28",
+      "status": "verified — date and coverage limited",
+      "sources": ["SF-RENT-BOARD"],
+      "notes": "Unit coverage and future annual rates must be checked."
+    },
+    {
+      "id": "F-SCC-DTT",
+      "category": "local",
+      "label": "Santa Clara County documentary transfer tax",
+      "value": "$0.55 per $500 or fraction of taxable consideration",
+      "status": "verified — County schedule",
+      "sources": ["SCC-CLERK-RECORDER"],
+      "notes": "Check whether a city transfer tax also applies to the actual transfer."
+    },
+    {
+      "id": "F-SF-DTT",
+      "category": "local",
+      "label": "San Francisco documentary transfer tax",
+      "value": "Tiered schedule from $2.50 to $30 per $500 or fraction",
+      "status": "verified — current schedule",
+      "sources": ["SF-TRANSFER-TAX"],
+      "notes": "Recheck the schedule and taxable consideration at the actual sale date."
+    },
+    {
+      "id": "F-CALWATER-LAS",
+      "category": "utility",
+      "label": "Cal Water Los Altos tariff residential service charge",
+      "value": "$48.86 per month for a 5/8 x 3/4-inch meter; effective 2026-10-01",
+      "status": "verified — tariff-specific",
+      "sources": ["CALWATER-LAS-TARIFF"],
+      "notes": "Only applies if the service address, tariff area, customer class, and meter match."
+    },
+    {
+      "id": "F-SFPUC-RATES",
+      "category": "utility",
+      "label": "San Francisco water and sewer tariff schedule",
+      "value": "FY 2026-27 rates effective 2026-07-01",
+      "status": "verified — tariff reference",
+      "sources": ["SFPUC-RATES"],
+      "notes": "A customer bill depends on meter, class, usage, and parcel characteristics."
+    },
+    {
+      "id": "F-SOLAR-NBT",
+      "category": "utility",
+      "label": "California customer-generation tariff for new interconnections",
+      "value": "Net Billing Tariff generally applies to new applications from 2023-04-15 in the covered IOU territories",
+      "status": "verified — program overview",
+      "sources": ["CPUC-CUSTOMER-GENERATION"],
+      "notes": "Existing system tariff and credits depend on its records and agreement."
+    }
+  ]
+}

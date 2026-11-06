@@ -1,0 +1,45 @@
+{
+  "note": "Property-specific assessment, tax, and market-value history is intentionally not retained in the public repository. Verify privately against the official parcel bill and assessor record.",
+  "rows": [
+    {
+      "property": "Property A",
+      "year": null,
+      "metric": "Assessed value",
+      "value": null,
+      "unit": "USD",
+      "status": "blank — not published",
+      "sources": ["SCC-ASSESSOR"],
+      "notes": "Use the owner’s private records and the official parcel bill."
+    },
+    {
+      "property": "Property A",
+      "year": null,
+      "metric": "Property tax bill",
+      "value": null,
+      "unit": "USD",
+      "status": "blank — not published",
+      "sources": ["SCC-DTAC"],
+      "notes": "The current parcel and fiscal year have not been independently verified."
+    },
+    {
+      "property": "Property B",
+      "year": null,
+      "metric": "Assessed value",
+      "value": null,
+      "unit": "USD",
+      "status": "blank — not published",
+      "sources": ["SF-ASSESSOR"],
+      "notes": "Use the owner’s private records and the official parcel bill."
+    },
+    {
+      "property": "Property B",
+      "year": null,
+      "metric": "Property tax bill",
+      "value": null,
+      "unit": "USD",
+      "status": "blank — not published",
+      "sources": ["SF-TREASURER"],
+      "notes": "The current parcel and fiscal year have not been independently verified."
+    }
+  ]
+}

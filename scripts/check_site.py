@@ -6,11 +6,12 @@ from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlparse
+import json
 import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = sorted(ROOT.glob("*.html"))
+PAGES = sorted([*ROOT.glob("*.html"), *ROOT.glob("docs/*.html"), *ROOT.glob("pages/*.html")])
 ALLOWED_EXTERNAL_HOSTS = {
     "www.boe.ca.gov", "boe.ca.gov", "www.irs.gov", "irs.gov",
     "www.sco.ca.gov", "sco.ca.gov", "leginfo.legislature.ca.gov",
@@ -165,11 +166,70 @@ def main() -> int:
     # Exact postal codes are not part of this public site. The decimal form avoids
     # misclassifying statutory references such as Probate Code §16061.7.
     postal_re = re.compile(r"\b\d{5}(?:-\d{4})?\b(?!\.\d)")
-    public_files = [*PAGES, ROOT / "assets" / "site.css"]
+    public_files = [
+        *PAGES,
+        ROOT / "README.md",
+        ROOT / "COORDINATION.md",
+        *sorted((ROOT / "data").glob("*.json")),
+        *sorted((ROOT / "data").glob("*.csv")),
+        *sorted((ROOT / "scripts").glob("*.py")),
+    ]
     for path in public_files:
         content = path.read_text(encoding="utf-8")
         if postal_re.search(content):
             errors.append(f"{path.relative_to(ROOT)}: possible exact postal code in public content")
+
+    # Keep structured data useful for public facts while refusing private inputs or projections.
+    data_dir = ROOT / "data"
+    sources_path = data_dir / "sources.json"
+    source_ids: set[str] = set()
+    try:
+        source_records = json.loads(sources_path.read_text(encoding="utf-8")).get("sources", [])
+        source_ids = {record.get("id", "") for record in source_records}
+        if len(source_ids) != len(source_records):
+            errors.append("data/sources.json: duplicate or blank source IDs")
+        for record in source_records:
+            url = record.get("url", "")
+            parsed_url = urlparse(url)
+            if parsed_url.scheme != "https" or (parsed_url.hostname or "").lower() not in ALLOWED_EXTERNAL_HOSTS:
+                errors.append(f"data/sources.json: unapproved source URL {url}")
+    except (OSError, json.JSONDecodeError, AttributeError) as exc:
+        errors.append(f"data/sources.json: cannot read source registry ({exc})")
+
+    for name in ("facts.json", "flagged.json", "property_history.json"):
+        path = data_dir / name
+        try:
+            document = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            errors.append(f"data/{name}: invalid JSON ({exc})")
+            continue
+        rows = document.get("rows", document.get("items", []))
+        if not isinstance(rows, list):
+            errors.append(f"data/{name}: expected a list of rows/items")
+            continue
+        for row in rows:
+            missing = set(row.get("sources", [])) - source_ids
+            if missing:
+                errors.append(f"data/{name}: unknown source IDs {sorted(missing)}")
+            if name == "property_history.json" and row.get("value") not in (None, ""):
+                errors.append("data/property_history.json: property-specific values must remain blank")
+
+    decision_path = data_dir / "decision.json"
+    try:
+        decision = json.loads(decision_path.read_text(encoding="utf-8"))
+        if decision.get("decisions") or decision.get("assumptions"):
+            errors.append("data/decision.json: private scenario inputs and outputs must not be stored")
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"data/decision.json: invalid JSON ({exc})")
+
+    for name in ("projections_base.csv", "sensitivity.csv"):
+        path = data_dir / name
+        try:
+            rows = [line for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+            if len(rows) > 1:
+                errors.append(f"data/{name}: projection data rows must not be stored publicly")
+        except OSError as exc:
+            errors.append(f"data/{name}: cannot read file ({exc})")
 
     if errors:
         print("\nAUDIT FAILED")
