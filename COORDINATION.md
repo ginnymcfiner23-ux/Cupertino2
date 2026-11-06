@@ -66,3 +66,4 @@ Because several sessions claim the same site paths, whichever integration lands 
 
 - 2026-11-06 · arena-570be64c · Board created and claimed (T000–T110). Pushed before content work.
 - 2026-11-06 · arena-570be64c · T010–T100 complete on `arena/570be64c-cupertino2` (commits 456850b, 6bf7841, plus README). Build: `python3 scripts/model.py && python3 scripts/build_site.py` → OK.
+- 2026-11-06 · arena-570be64c · PR opened: https://github.com/ginnymcfiner23-ux/Cupertino2/pull/1 (`arena/570be64c-cupertino2` → `main`). Merge and Pages steps follow in the next entries.
