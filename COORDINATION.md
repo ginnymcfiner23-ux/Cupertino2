@@ -202,3 +202,58 @@ Clara County Assessor Prop 13 FAQ and assessment booklet; SOS ballot measures hu
   either view names a person, address, parcel, account or trust. Flagged so the user can
   choose.
 
+## Session b58dfdcf — PR, merge and deployment record
+
+| PR | Title | Merged | Merge commit | Result |
+|---|---|---|---|---|
+| [#9](https://github.com/ginnymcfiner23-ux/Cupertino2/pull/9) | Analytics dashboard: inherit/sell/rent model + Pages site under `site/` | 2026-11-06T13:48:28Z | `1fb9f75` | Merged to `main`. 2 commits, 79 files. |
+| [#10](https://github.com/ginnymcfiner23-ux/Cupertino2/pull/10) | Restore `c3099612`'s Pages verification workflow (rebase `--theirs` mistake in PR #9) | 2026-11-06T13:50:43Z | (follow-up on `main`) | Merged to `main`. `pages.yml` restored byte-for-byte to `b058c72`. |
+| [#11](https://github.com/ginnymcfiner23-ux/Cupertino2/pull/11) | Link the guide to the dashboard; record deployment | pending | — | Additive: one nav entry and one footer link on `index.html`. |
+
+**Deployment confirmed live (checked 2026-11-06, with cache-busting query strings):**
+
+| URL | Serves |
+|---|---|
+| `https://ginnymcfiner23-ux.github.io/Cupertino2/` | `Overview \| Property Transition Guide` — session `c3099612`'s guide (unmodified) |
+| `https://ginnymcfiner23-ux.github.io/Cupertino2/decision.html`, `/process.html`, `/outlook.html` | Guide pages, intact |
+| `https://ginnymcfiner23-ux.github.io/Cupertino2/site/` | `Executive Summary · Cupertino2` — this session's dashboard |
+| `https://ginnymcfiner23-ux.github.io/Cupertino2/site/assets/style.css` | Dashboard stylesheet |
+
+Pages is on the **legacy `main`-branch root source** (`build_type: legacy`, confirmed via
+the Pages API), and `site/` is deliberately not excluded in `_config.yml`, so the dashboard
+publishes under `/site/` with no Actions-based deployment at all.
+
+**Incident and recovery.** The Pages deploy workflow that briefly reached `main` in PR #9
+(run 42228482134, 13:48:31) succeeded and published this session's `site/` **at the Pages
+root**, momentarily replacing the guide's front page. Two things limited the damage: the
+legacy Jekyll build for the same push ran immediately afterwards (13:50:45) and
+republished the root from `main`, and PR #10 removed the deploy workflow before it could
+run again. Verified after recovery: the guide's `index.html`, `decision.html`,
+`process.html` and `outlook.html` all serve their own content, not the dashboard's. The
+only lasting effect is that the five filenames shared between the two views (`index.html`,
+`costs.html`, `taxes.html`, `process.html`, `sources.html`) now serve the **guide's**
+version at the root and the **dashboard's** version under `/site/`, which is the intended
+arrangement. Nothing in `git` was ever overwritten — the deploy only writes the Pages
+artifact.
+
+**A caution for whoever reads this next:** GitHub Pages CDN caching is aggressive. Two
+fetches of `/` returned dashboard content for several minutes *after* the legacy build had
+already restored the guide. Always re-check with a `?cb=<timestamp>` query string before
+concluding that a page is wrong.
+
+**Checks at the final commit:** `scripts/check_site.py` → 8 guide pages clean, no visible
+ZIP codes, no external assets. `tools/pii_scan.py site/` → clean. `tools/verify.py` →
+424 table rows, 0 without a source link, 0 broken internal links, 0 unregistered external
+links, 0 unresolved values.
+
+**Open items for a later session** (none blocks the deploy):
+- Confirm whether the Cupertino house is the transferor's principal residence (FLAG-05) —
+  the single most consequential open fact.
+- Confirm the certificate-of-occupancy date for the 94122 units (FLAG-12) — a fivefold
+  difference in allowable rent growth.
+- Get live insurance quotes and the solar interconnection date (FLAG-07, FLAG-11).
+- Work through `data/urls.txt`; `VERIFICATION.md` §3 lists the priority order.
+- Decide whether the two views should stay separate. The guide withholds ZIP codes,
+  values, rents and bills entirely; the dashboard publishes them with provenance labels.
+  Both omit personal identifiers. This is the user's call, not a session's.
+
