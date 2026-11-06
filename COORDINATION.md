@@ -70,6 +70,27 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 - Projection assumptions (4%/year appreciation, inheritance 2045, tax rates held constant, Prop 19 cap held at $1,044,586) are assumptions, not verified facts.
 - Prop 19 repeal claims in secondary sources conflict with the official ballot list; Prop 43 result preliminary.
 
+### Session b58dfdcf flag register (FLAG-01 … FLAG-16, each with a source link)
+
+| ID | Severity | Issue | Source |
+|---|---|---|---|
+| FLAG-01 | high | 2026 property tax blank for the 95014 parcel | SCC Assessor |
+| FLAG-02 | medium | 94122 has no 2026 row; 2021 shows -5.9% while assessment rose 1%; 2018 shows +18.4% | SF Assessor-Recorder |
+| FLAG-03 | high | 95014 naive tax/assessment ratio 1.335% vs county "typical" 1.1488% — explained by flat parcel charges | SCC assessment booklet |
+| FLAG-04 | high | 94122 naive ratio 2.135% vs official secured rate 1.1816% — same explanation, larger effect | SF Treasurer |
+| FLAG-05 | **critical** | Whether the 95014 house is the transferor's principal residence is unknown and decides whether any Prop 19 exclusion exists at all | R&TC § 63.2 |
+| FLAG-06 | **critical** | The heir can claim the Prop 19 exclusion for only one property | R&TC § 63.2 |
+| FLAG-07 | high | Insurance premiums not verifiable from any official source | CDI |
+| FLAG-08 | medium | Market rent for 95014 is an assumption; aggregator medians are apartment-weighted | secondary |
+| FLAG-09 | medium | Prop 19 cap officially known only to 15 Feb 2027 | BOE LTA 2025/009 |
+| FLAG-10 | medium | Water provider for 95014 depends on the exact address (three systems serve the city) | City of Cupertino |
+| FLAG-11 | medium | Solar export value depends on which NEM tariff applies; grandfathering end date assumed | CPUC |
+| FLAG-12 | medium | Rent-control status of the 94122 units is not established — 1.6% vs 8.8%, a fivefold difference | SF.gov / CA AG |
+| FLAG-13 | medium | Estate size unknown, so whether federal estate tax applies cannot be determined | IRS |
+| FLAG-14 | low | Prop 43 (Nov 2026) does not change the Prop 13 rate or the 2% cap | SOS |
+| FLAG-15 | medium | Whether a 3-unit building counts as a "family home" for Prop 19 is unsettled | R&TC § 63.2 |
+| FLAG-16 | low | Land-value percentages used for depreciation are assumptions | SCC Assessor |
+
 ## Merge & conflict log
 
 - 2026-11-06 · arena-2988121a · First rebase onto `origin/main` (6f990e7): resolved `COORDINATION.md` add/add conflict by integrating both boards; no work discarded.
@@ -118,6 +139,27 @@ Clara County Assessor Prop 13 FAQ and assessment booklet; SOS ballot measures hu
   cited only for the rate structure (0/15/20% and the 25% depreciation slice); 2026
   thresholds come from Rev. Proc. 2025-32.
 
+
+### Session b58dfdcf flag register (FLAG-01 … FLAG-16, each with a source link)
+
+| ID | Severity | Issue | Source |
+|---|---|---|---|
+| FLAG-01 | high | 2026 property tax blank for the 95014 parcel | SCC Assessor |
+| FLAG-02 | medium | 94122 has no 2026 row; 2021 shows -5.9% while assessment rose 1%; 2018 shows +18.4% | SF Assessor-Recorder |
+| FLAG-03 | high | 95014 naive tax/assessment ratio 1.335% vs county "typical" 1.1488% — explained by flat parcel charges | SCC assessment booklet |
+| FLAG-04 | high | 94122 naive ratio 2.135% vs official secured rate 1.1816% — same explanation, larger effect | SF Treasurer |
+| FLAG-05 | **critical** | Whether the 95014 house is the transferor's principal residence is unknown and decides whether any Prop 19 exclusion exists at all | R&TC § 63.2 |
+| FLAG-06 | **critical** | The heir can claim the Prop 19 exclusion for only one property | R&TC § 63.2 |
+| FLAG-07 | high | Insurance premiums not verifiable from any official source | CDI |
+| FLAG-08 | medium | Market rent for 95014 is an assumption; aggregator medians are apartment-weighted | secondary |
+| FLAG-09 | medium | Prop 19 cap officially known only to 15 Feb 2027 | BOE LTA 2025/009 |
+| FLAG-10 | medium | Water provider for 95014 depends on the exact address (three systems serve the city) | City of Cupertino |
+| FLAG-11 | medium | Solar export value depends on which NEM tariff applies; grandfathering end date assumed | CPUC |
+| FLAG-12 | medium | Rent-control status of the 94122 units is not established — 1.6% vs 8.8%, a fivefold difference | SF.gov / CA AG |
+| FLAG-13 | medium | Estate size unknown, so whether federal estate tax applies cannot be determined | IRS |
+| FLAG-14 | low | Prop 43 (Nov 2026) does not change the Prop 13 rate or the 2% cap | SOS |
+| FLAG-15 | medium | Whether a 3-unit building counts as a "family home" for Prop 19 is unsettled | R&TC § 63.2 |
+| FLAG-16 | low | Land-value percentages used for depreciation are assumptions | SCC Assessor |
 
 ## Merge & conflict log
 
