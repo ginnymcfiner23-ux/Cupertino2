@@ -1,1 +1,23 @@
-title: Cupertino2
+title: Property Transition Guide
+
+# GitHub Pages is currently configured for its legacy root source. Publish only
+# this guide; keep earlier research and development files out of the site output.
+exclude:
+  - .github
+  - .git
+  - .gitignore
+  - .jekyll-cache
+  - .sass-cache
+  - .nojekyll
+  - _site
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - COORDINATION.md
+  - README.md
+  - data
+  - docs
+  - pages
+  - scripts
+  - assets/style.css

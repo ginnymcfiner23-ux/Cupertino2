@@ -1,6 +1,6 @@
 # COORDINATION.md — Cupertino2 shared task board (integrated)
 
-Repo: `ginnymcfiner23-ux/Cupertino2` · Target: `main` (GitHub Pages currently uses the legacy root source; this session replaces the root redirect with the privacy-safe guide and stages only curated files for Actions deployment; legacy research directories remain in the repository but are excluded from the new artifact)
+Repo: `ginnymcfiner23-ux/Cupertino2` · Target: `main` (GitHub Pages remains on the legacy root source; this session replaces the root redirect with the privacy-safe guide, uses `_config.yml` to exclude legacy research/development directories, and validates the Jekyll output in Actions)
 Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, `scripts/`; live dashboard) and `arena-2988121a` (hand-authored pages under `pages/*`, `assets/style.css`; root `index.html` content preserved in branch history). File scopes non-overlapping except this board; neither session's work discarded.
 
 ## Protocol
@@ -17,7 +17,7 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 | Session ID | Branch | File scope | Status |
 |---|---|---|---|
 | arena-570be64c | arena/570be64c-cupertino2 (merged to main via PR #1, #3, #4) | `COORDINATION.md`, `README.md`, `data/*`, `docs/*`, `scripts/*`, root `index.html` redirect, root `.nojekyll` | Merged to `main`; live dashboard at `docs/index.html` |
-| arena-2988121a | arena/2988121a-cupertino2 | `pages/*`, `assets/style.css`; root `index.html` content in commit `d480257`/`86e9139` | Merging to `main` via PR #2 |
+| arena-2988121a | arena/2988121a-cupertino2 | `pages/*`, `assets/style.css`; root `index.html` content in commit `d480257`/`86e9139` | Merged to `main` via PR #2 |
 | c3099612 | arena/c3099612-cupertino2 | `index.html`, `decision.html`, `costs.html`, `taxes.html`, `process.html`, `outlook.html`, `review.html`, `sources.html`, `assets/site.css`, `assets/calculator.js`, `scripts/check_site.py`, `.github/workflows/pages.yml`, `README.md`, `.nojekyll` | In progress; rebase/PR/deploy pending |
 
 ## Unified task board
@@ -47,7 +47,7 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 | T100 | Flagged for Review page | done | arena-570be64c | `docs/flagged.html`, `data/flagged.json` | — | 29 flagged items |
 | T100b | Flagged for Review page (this session) | done | arena-2988121a | `pages/flagged-for-review.html` | Source link on every table row | 14 flagged items listed |
 | T110 | Integration: re-verification, PR, merge, GitHub Pages | done | arena-2988121a | repo-wide | — | PR #2 merged into main; Pages live via root redirect to docs/ |
-| T120 | Privacy-safe, source-verified Home A/Home B decision guide and Pages deployment | in progress | c3099612 | root HTML, `assets/`, `scripts/check_site.py`, Pages workflow | IRS, BOE, California Legislature, state/county agencies, official utility/insurance/rent sources | User-provided property figures omitted; forecast horizon blank; Actions artifact will contain only curated pages/assets. |
+| T120 | Privacy-safe, source-verified Home A/Home B decision guide and Pages deployment | in progress | c3099612 | root HTML, `_config.yml`, `assets/`, `scripts/check_site.py`, Pages verification workflow | IRS, BOE, California Legislature, state/county agencies, official utility/insurance/rent sources | User-provided property figures omitted; forecast horizon blank; legacy Jekyll output is tested to exclude prior data/docs and repository-development files. |
 
 ## Verification performed (line by line)
 
@@ -57,7 +57,7 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 
 **Session arena-2988121a:** IRS Form 706 instructions (07/2026; 2026 exclusion $15,000,000; 40% top rate; 9-month filing), IRS Rev. Proc. 2025-32, IRS Newsroom (OBBBA/Pub. L. 119-21), IRS Form 709 instructions (2026 draft; $19,000 annual gift exclusion), IRS Pub 559, BOE Proposition 19 page, BOE Pub 801, BOE LTA 2025/009 ($1,044,586 cap for transfers 2/16/2025–2/15/2027), BOE Publication 29 (Prop 13), CA RTC §13301 via leginfo.legislature.ca.gov (no CA estate/inheritance/gift tax), Santa Clara County Assessor booklet ($7,000 homeowner's exemption; 1.1488% example rate; supplemental assessments), SF.gov exemptions, SJWC Schedule 1-C tariff (AL 629A), SFPUC Rate Schedules FY 2026–27, PG&E solar/NEM page.
 
-**Session c3099612 (active):** Current IRS estate/gift-tax FAQs and 2026–27 releases; IRS Publications 523/525/527/551/559; Form 706 instructions; BOE Prop 19 LTA 2026/026, indexed allowance, Publication 29, Pub. 800-9 and sample BOE-502-D; California RTC §§480 and 11930; SB 974 bill status; State Controller; California Courts; Santa Clara Assessor 2025 annual report/current downloads listing; local recorder/rent/utility/solar/insurance sources; SEC and CSLB. Eight-page guide and browser-only worksheet pass local checks. Santa Clara's current form attachment itself was inaccessible, so exact attachment/destination remains a live-form check.
+**Session c3099612 (active):** Current IRS estate/gift-tax FAQs and 2026–27 releases; IRS Publications 523/525/527/551/559; Form 706 instructions; BOE Prop 19 LTA 2026/026, indexed allowance, Publication 29, Pub. 800-9 and sample BOE-502-D; California RTC §§480 and 11930; SB 974 bill status; State Controller; California Courts; Santa Clara Assessor 2025 annual report/current downloads listing; local recorder/rent/utility/solar/insurance sources; SEC and CSLB. Eight-page guide and browser-only worksheet pass local checks. Santa Clara's current form attachment itself was inaccessible, so exact attachment/destination remains a live-form check. Pages build-type configuration via the API returned HTTP 403; the PR now tests the legacy Jekyll output against an explicit exclusion list.
 
 ## Irregularities (summary; full lists on each Flagged for Review page)
 
@@ -77,9 +77,10 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 - 2026-11-06 · arena-2988121a · Third rebase onto `origin/main` (30273fb): resolved `COORDINATION.md` content conflict (their PR #4 / `.nojekyll` log entries merged into this board); no work discarded.
 - 2026-11-06 · arena-2988121a · Pages build was errored on legacy Jekyll (no detailed error exposed by API); added root `_config.yml` (`title: Cupertino2`) and pushed to `main`; build status became `built`; live site verified via fetch of https://ginnymcfiner23-ux.github.io/Cupertino2/ (serves root `index.html` → `docs/index.html` dashboard).
 
-- 2026-11-06 · c3099612 · Rebased onto the updated `origin/main`; resolved the `COORDINATION.md` add/add conflict by retaining the established integrated board and adding this session's scope/task. No prior session records or files were discarded. The new Pages workflow stages only this session's curated root HTML, `.nojekyll`, and `assets/`; it does not include prior `docs/`, `data/`, `pages/`, scripts, or the coordination board in the deployment artifact.
+- 2026-11-06 · c3099612 · Rebased onto the updated `origin/main`; resolved the `COORDINATION.md` add/add conflict by retaining the established integrated board and adding this session's scope/task. No prior session records or files were discarded. The Pages workflow uses the current legacy root source, removes `.nojekyll` so Jekyll can apply `_config.yml` exclusions, and builds the same output in CI to verify that `docs/`, `data/`, `pages/`, scripts, and coordination files are not published.
 
-- 2026-11-06 · c3099612 · Applying the site commit also conflicted in `README.md` and root `index.html`: kept the integrated board, replaced the stale location-revealing README with the privacy-safe guide summary, and replaced the legacy redirect to `docs/index.html` with the new Home A/Home B landing page. Existing `docs/`, `data/`, and `pages/` files were retained; the new workflow excludes those directories from the public Pages artifact.
+- 2026-11-06 · c3099612 · Applying the site commit also conflicted in `README.md` and root `index.html`: kept the integrated board, replaced the stale location-revealing README with the privacy-safe guide summary, and replaced the legacy redirect to `docs/index.html` with the new Home A/Home B landing page. Existing `docs/`, `data/`, and `pages/` files were retained in the repository but excluded from the legacy Jekyll output by `_config.yml` and checked in CI.
+- 2026-11-06 · c3099612 · A direct Pages API request to change `build_type` from `legacy` to `workflow` returned HTTP 403 (`Resource not accessible by integration`). To avoid claiming an Actions deploy or publishing the old directories, the workflow was changed to validate the legacy Jekyll output and `_config.yml` explicitly excludes non-site content; the root `.nojekyll` was removed so those exclusions can run. Deployment remains pending a successful post-merge Pages build and output check.
 
 ## Completion log
 
