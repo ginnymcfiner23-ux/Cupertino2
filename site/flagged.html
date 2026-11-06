@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review &middot; Cupertino2</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="dot"></span>
+    <div>
+      <div class="bt">Cupertino2</div>
+      <div class="bs">Property inheritance decision support &middot; ZIP 95014 &amp; 94122</div>
+    </div>
+  </div>
+  <div class="topmeta">
+    <span class="pill">Valuation date November 2026</span>
+    <a class="pill warnpill" href="flagged.html">16 flagged items</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="side"><a href="index.html">Executive Summary</a>
+<a href="prop19.html">Proposition 19</a>
+<a href="property.html">Properties &amp; Tax</a>
+<a href="projections.html">Projections</a>
+<a href="scenarios.html">Scenarios</a>
+<a href="taxes.html">Taxes on Transfer</a>
+<a href="costs.html">Carrying Costs</a>
+<a href="rental.html">The 94122 Rental</a>
+<a href="process.html">Transfer Process</a>
+<a href="legislation.html">Law &amp; Changes</a>
+<a href="assumptions.html">Assumptions</a>
+<a href="sources.html">Sources</a>
+<a class="active" href="flagged.html">Flagged for Review</a></nav>
+  <main>
+    <h1>Flagged for Review</h1>
+    <p class="lede">Unverified values, data irregularities and open questions &mdash; with the source link for each.</p>
+    <div class="kpis">
+<div class="kpi bad"><div class="kpi-v">2</div><div class="kpi-l">critical severity</div><div class="kpi-s"></div></div>
+<div class="kpi bad"><div class="kpi-v">3</div><div class="kpi-l">high severity</div><div class="kpi-s"></div></div>
+<div class="kpi warn"><div class="kpi-v">7</div><div class="kpi-l">medium severity</div><div class="kpi-s"></div></div>
+<div class="kpi ok"><div class="kpi-v">4</div><div class="kpi-l">low severity</div><div class="kpi-s"></div></div>
+</div>
+<p>Items that could not be verified against an official source, or where
+the supplied data is internally inconsistent. None of these blocks the recommendation;
+each one narrows the range of error around it.</p>
+<div class="tablewrap">
+<table class="data ">
+<thead><tr>
+<th class="tl">ID</th>
+<th class="tl">Severity</th>
+<th class="tl">Issue</th>
+<th class="tl">Detail</th>
+<th class="tl">What to do</th>
+<th class="tl">Source</th>
+</tr></thead><tbody>
+<tr>
+<td class="tl">FLAG-05</td>
+<td class="tl"><span class="badge bad">critical</span></td>
+<td class="tl"><strong>Whether the Cupertino house is the transferor's principal residence is unknown and decides everything</strong></td>
+<td class="tl">Proposition 19 (R&amp;TC 63.2) restricts the parent-child reassessment exclusion to the transferor's principal residence (or a family farm). If the Cupertino house is a rental or second home at the date of transfer, NO exclusion is available at any value, and the assessed value resets to full market value on day one. This single fact moves the annual tax bill by tens of thousands of dollars.</td>
+<td class="tl">Confirm occupancy status of the 95014 property at the planned transfer date, and whether the transfer is parent-to-child or grandparent-to-grandchild (the latter requires the middle generation to be deceased).</td>
+<td class="tl nowrap"><a class="src src-official" href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=63.2.&amp;lawCode=RTC" target="_blank" rel="noopener" title="California Revenue and Taxation Code section 63.2 (parent-child / grandparent-grandchild reassessment exclusion)">California Legislative Information</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-06</td>
+<td class="tl"><span class="badge bad">critical</span></td>
+<td class="tl"><strong>The heir can claim the Prop 19 exclusion for only ONE property</strong></td>
+<td class="tl">The exclusion requires the transferee to occupy the home as a principal residence within one year and keep occupying it. The household currently occupies a unit at 94122. Moving to 95014 to claim the exclusion makes the SF unit available to rent, but it also means the exclusion is lost the moment they stop occupying Cupertino - at which point the assessed value is set as of the lien date following the move-out.</td>
+<td class="tl">Treat the occupancy requirement as a binding, multi-decade constraint, not a formality. Model the 'move out later' cliff explicitly.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=63.2.&amp;lawCode=RTC" target="_blank" rel="noopener" title="California Revenue and Taxation Code section 63.2 (parent-child / grandparent-grandchild reassessment exclusion)">California Legislative Information</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-01</td>
+<td class="tl"><span class="badge bad">high</span></td>
+<td class="tl"><strong>2026 property tax is blank for the Cupertino parcel</strong></td>
+<td class="tl">The supplied 95014 table shows '--' for 2026 property taxes while giving a 2026 assessment of $550,537. The bill has most likely simply not been published yet. The model projects 2026 tax from the parcel's fitted bill formula rather than inventing a number.</td>
+<td class="tl">Replace with the actual 2026-27 Santa Clara County bill when it arrives (mailed before November 1).</td>
+<td class="tl nowrap"><a class="src src-official" href="https://asr.santaclaracounty.gov/" target="_blank" rel="noopener" title="Santa Clara County Office of the Assessor">County of Santa Clara</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-03</td>
+<td class="tl"><span class="badge bad">high</span></td>
+<td class="tl"><strong>Cupertino parcel's implied tax rate (~1.33%) exceeds the county's published 'typical' rate (1.1488%)</strong></td>
+<td class="tl">Dividing the supplied 2025 tax ($7,207) by the supplied 2025 assessment ($539,743) gives 1.335%. Santa Clara County's own workbook example shows a typical Tax Rate Area at 1.1488%. The gap is explained by parcel-specific voter-approved bonds and by flat (non-ad-valorem) parcel charges, which inflate any tax/assessment ratio.</td>
+<td class="tl">Confirm the parcel's Tax Rate Area and its direct charges in the Santa Clara County Property Tax Rate Book before using the fitted rate for decisions.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://files.santaclaracounty.gov/exjcpb1521/2024-10/2024_assessment_information_booklet.pdf" target="_blank" rel="noopener" title="Santa Clara County Assessor - Assessment Information for the Santa Clara County Property Owner (Prop. 13; typical Tax Rate Area = 1.1488%)">County of Santa Clara, Office of the Assessor</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-04</td>
+<td class="tl"><span class="badge bad">high</span></td>
+<td class="tl"><strong>San Francisco parcel's implied tax rate (~2.14%) is far above the official FY2025-26 secured rate (1.18268325%)</strong></td>
+<td class="tl">The supplied 2025 figure ($2,439 on a $114,248 assessment) implies 2.135%, roughly 1.8x the official secured rate. This is the classic signature of flat per-parcel charges (school parcel tax, City College parcel tax, stormwater, Rent Board fee and similar) on a parcel with a very low Prop 13 assessed value. It does NOT mean the ad valorem rate is 2.14%.</td>
+<td class="tl">Use the official 1.18268325% for anything driven by assessed value, and add the flat charges separately. Obtain the actual bill to size the flat charges.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://sftreasurer.org/property/secured-property-taxes" target="_blank" rel="noopener" title="SF Treasurer &amp; Tax Collector - Secured Property Taxes (secured property tax rate for Fiscal Year 2026-27 is 1.18162182%)">City and County of San Francisco</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-02</td>
+<td class="tl"><span class="badge warn">medium</span></td>
+<td class="tl"><strong>The 94122 table has no 2026 row and one anomalous year (2021: -5.9%)</strong></td>
+<td class="tl">The 2026 assessment is derived as 2025 x 1.02 = $116,533. Separately, 2021 property taxes fell 5.9% while the assessment rose 1%, and 2018 taxes rose 18.4% on a 2% assessment increase. Neither is consistent with a pure ad valorem bill, which indicates one-time credits/refunds or new voter-approved charges in those years.</td>
+<td class="tl">Pull the actual SF bill detail (block/lot) and reconcile the direct-charge lines before relying on the fitted flat component.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.sf.gov/departments--assessor-recorder" target="_blank" rel="noopener" title="San Francisco Office of the Assessor-Recorder">City and County of San Francisco</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-07</td>
+<td class="tl"><span class="badge warn">medium</span></td>
+<td class="tl"><strong>Home insurance premiums cannot be verified from an official source</strong></td>
+<td class="tl">Neither the California Department of Insurance nor the FAIR Plan publishes a ZIP-level average premium for a specific dwelling. Available figures come from commercial rate-shopping sites and disagree widely ($864-$1,189/yr for 95014 in one survey versus a $1,571 statewide average reported elsewhere).</td>
+<td class="tl">Obtain live quotes for the actual dwelling (replacement cost, roof, wildfire score) before relying on the $1,500 assumption.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.insurance.ca.gov/" target="_blank" rel="noopener" title="California Department of Insurance">State of California</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-08</td>
+<td class="tl"><span class="badge warn">medium</span></td>
+<td class="tl"><strong>Market rent for the Cupertino house is an assumption, not a verified figure</strong></td>
+<td class="tl">Listing aggregators report a Cupertino median rent around $3,800-$4,128/month across all bedroom counts and property types, which is apartment-weighted and is not a rent for a single-family house valued at $3.1M. The model uses $4,500/month as a placeholder.</td>
+<td class="tl">Obtain a broker opinion of rent or comparable single-family rental data for 95014.</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="https://www.zillow.com/rental-manager/market-trends/cupertino-ca/" target="_blank" rel="noopener" title="Zillow rental market trends - Cupertino, CA (median rent, all bedroom counts and property types)">Zillow (listing aggregator)</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-09</td>
+<td class="tl"><span class="badge warn">medium</span></td>
+<td class="tl"><strong>The Prop 19 exclusion cap is officially known only through February 15, 2027</strong></td>
+<td class="tl">The $1,044,586 figure applies to transfers between February 16, 2025 and February 15, 2027 (BOE Letter to Assessors 2025/009). For a 2040-2050 transfer the cap will have been re-set roughly eight to twelve more times by the FHFA California House Price Index. The model grows it at an ASSUMED 3%/yr.</td>
+<td class="tl">Re-run the model with the actual cap in force at the time.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.boe.ca.gov/proptaxes/pdf/lta25009.pdf" target="_blank" rel="noopener" title="BOE Letter to Assessors No. 2025/009 - Intergenerational Transfer Exclusion, Adjustment of the $1 Million Amount ($1,044,586)">CA State Board of Equalization</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-11</td>
+<td class="tl"><span class="badge warn">medium</span></td>
+<td class="tl"><strong>Solar export value depends on which NEM tariff the system is on</strong></td>
+<td class="tl">Systems interconnected before April 15, 2023 sit on NEM 2.0 and are grandfathered for 20 years from interconnection; exports are credited at roughly retail. Systems interconnected later are on NEM 3.0 (net billing), where exports earn only a few cents per kWh. The supplied $10-$20/month net credit is consistent with NEM 2.0, but the interconnection date must be confirmed - and NEM 2.0 grandfathering is lost if the system is materially modified.</td>
+<td class="tl">Confirm the interconnection date and tariff from the PG&amp;E bill.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/demand-side-management/net-energy-metering" target="_blank" rel="noopener" title="CPUC - Net Energy Metering / Net Billing Tariff (NEM 2.0 vs NEM 3.0) proceedings">California Public Utilities Commission</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-12</td>
+<td class="tl"><span class="badge warn">medium</span></td>
+<td class="tl"><strong>Rent-control status of the 94122 units is not established</strong></td>
+<td class="tl">SF's 1.6% local cap applies to units with a certificate of occupancy on or before June 13, 1979. Single-family homes and condos are exempt under Costa-Hawkins for tenancies beginning on or after January 1, 1996. If the units fall outside the local ordinance, the AB 1482 statewide cap (8.8% for 8/1/2026-7/31/2027) governs instead - a fivefold difference in permitted rent growth.</td>
+<td class="tl">Confirm the certificate-of-occupancy date and tenancy start dates for all three units.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.sf.gov/learn-about-rent-increases-san-francisco" target="_blank" rel="noopener" title="SF.gov - Learn about rent increases in San Francisco (1.6% allowed, March 1 2026 - February 28 2027)">City and County of San Francisco</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-16</td>
+<td class="tl"><span class="badge warn">medium</span></td>
+<td class="tl"><strong>Land value percentages used for depreciation are assumptions</strong></td>
+<td class="tl">Depreciation under IRC 168 applies to buildings only, not land. The model assumes 55% land for 95014 and 35% for 94122. County assessor records show land and improvement values separately and should be used instead.</td>
+<td class="tl">Take the land/improvement split from the county assessment roll.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://asr.santaclaracounty.gov/" target="_blank" rel="noopener" title="Santa Clara County Office of the Assessor">County of Santa Clara</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-10</td>
+<td class="tl"><span class="badge ok">low</span></td>
+<td class="tl"><strong>Water provider for 95014 depends on the exact address</strong></td>
+<td class="tl">The City of Cupertino is served by three separate water systems: California Water Service (Bear Gulch district) in the northeast, San Jose Water Company in the southeast, and the City's own system in the west, which is operated by San Jose Water Company under a lease running to 2036. Rates differ by system.</td>
+<td class="tl">Identify the provider for the parcel and pull the current tariff.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.cupertino.gov/Residents/Utilities/Water" target="_blank" rel="noopener" title="City of Cupertino - Water (three separate water systems serve the city: California Water Service, San Jose Water Company, and the City system operated by San Jose Water Company)">City of Cupertino</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-13</td>
+<td class="tl"><span class="badge ok">low</span></td>
+<td class="tl"><strong>Estate size is unknown, so whether the federal estate tax applies cannot be determined</strong></td>
+<td class="tl">The request states the inheritance includes 'a considerable amount of money' that 'could be over' the exempt amount. The federal basic exclusion is $15,000,000 per person for 2026 ($30,000,000 for a married couple with a timely portability election), made permanent by OBBBA and indexed for inflation from 2027. California and its local governments impose no estate or inheritance tax at all. No estate tax is owed unless the gross estate plus adjusted taxable gifts exceeds the exclusion for the year of death.</td>
+<td class="tl">Size the gross estate (real property at date-of-death FMV plus all other assets, plus adjusted taxable gifts) against the exclusion for the actual year of death. Note that the $15M is per person, and that portability requires a timely Form 706.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax" target="_blank" rel="noopener" title="IRS - Estate tax (filing threshold by year of death; 2026 = $15,000,000; portability)">Internal Revenue Service</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-14</td>
+<td class="tl"><span class="badge ok">low</span></td>
+<td class="tl"><strong>California Proposition 43 (Nov 3, 2026) does not change the Prop 13 rate or the 2% cap</strong></td>
+<td class="tl">Prop 43 adds a two-thirds voter-approval requirement for local special taxes proposed under the local initiative power, starting January 1, 2027, and bars additional ad valorem property taxes imposed by initiative. It does not amend Prop 13's 1% rate, the 2% assessment cap, or the Prop 19 transfer rules. The broader 'Save Prop 13' initiative (which would have capped transfer taxes) was withdrawn in June 2026.</td>
+<td class="tl">No action needed for the 2040-2050 decision; monitor future sessions.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://www.sos.ca.gov/elections/ballot-measures" target="_blank" rel="noopener" title="California Secretary of State - Ballot Measures (qualified statewide measures)">California Secretary of State</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">FLAG-15</td>
+<td class="tl"><span class="badge ok">low</span></td>
+<td class="tl"><strong>Whether a 3-unit building counts as a 'family home' for Prop 19 is not settled here</strong></td>
+<td class="tl">R&amp;TC 63.2(a)(1) refers to real property that is the principal residence of the transferor. Where the transferor occupies one unit of a three-unit building and rents the others, the scope of the exclusion for the rented portion is a facts-and-circumstances question that should be put to the county assessor or counsel.</td>
+<td class="tl">Get written guidance from the SF Assessor-Recorder (94122) and Santa Clara County Assessor (95014) before finalising a transfer plan.</td>
+<td class="tl nowrap"><a class="src src-official" href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=63.2.&amp;lawCode=RTC" target="_blank" rel="noopener" title="California Revenue and Taxation Code section 63.2 (parent-child / grandparent-grandchild reassessment exclusion)">California Legislative Information</a><span class="badge ok">official</span></td>
+</tr>
+</tbody></table></div>
+<div class="callout warn">
+<h3>Values deliberately left blank</h3>
+<p>Per the verification rule, no value has been inferred where an official source could not
+be found. Specifically:</p>
+<ul>
+<li><strong>Rent for the third unit at 94122.</strong> The supplied $7,150/month covers two
+units. Rather than divide by two, the model is constructed so that this figure cancels out
+of every comparison between the options. It is not needed.</li>
+<li><strong>Cost basis of either property.</strong> Not supplied. It is not needed for the
+inheritance analysis, because IRC &sect;&nbsp;1014 resets the basis at death. It
+<em>would</em> be needed to price a lifetime sale precisely, which is why the sell-now
+comparison is presented as a marginal tax rate rather than a dollar figure.</li>
+<li><strong>Parcel-specific tax rate.</strong> Not published per parcel. The model derives
+it from the supplied bill history and discloses the derivation.</li>
+<li><strong>Insurance premium.</strong> No official filing publishes a ZIP-level average.
+Flagged rather than filled in.</li>
+</ul></div>
+    <footer class="foot">
+      <p><strong>Not tax, legal or investment advice.</strong> This is a research and
+      modelling workspace. Every figure links to the source it came from. Values that
+      could not be confirmed against an official government source are marked
+      <span class="badge bad">unverified</span> or <span class="badge bad">assumption</span>
+      and are listed on the <a href="flagged.html">Flagged for Review</a> page.</p>
+      <p>No personal information appears anywhere on this site. Properties are
+      referenced by ZIP code only.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

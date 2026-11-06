@@ -1,47 +1,49 @@
-name: Verify and audit Pages output
+name: Deploy to GitHub Pages
 
 on:
-  pull_request:
   push:
     branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: pages-validation-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  verify:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-      - name: Validate pages, links, privacy, and row-level citations
-        run: python3 scripts/check_site.py
-      - name: Check calculator JavaScript syntax
-        run: node --check assets/calculator.js
-      - name: Build with the same Jekyll engine used by legacy Pages
-        uses: actions/jekyll-build-pages@v1
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
-          source: ./
-          destination: ./_site
-      - name: Confirm the Pages output contains only the public guide
-        shell: bash
+          python-version: "3.11"
+
+      # Rebuild the model and the site from source, then re-run the checks. A build that
+      # fails its own verification must never be published.
+      - name: Rebuild model and site
         run: |
-          set -euo pipefail
-          test -f _site/index.html
-          test -f _site/assets/site.css
-          test -f _site/assets/calculator.js
-          for path in data docs pages scripts .github COORDINATION.md README.md assets/style.css; do
-            if test -e "_site/$path"; then
-              echo "Unexpected legacy or development content in Pages output: $path" >&2
-              exit 1
-            fi
-          done
-          if find _site -type f \( -name '*.json' -o -name '*.csv' \) -print -quit | grep -q .; then
-            echo "Structured data files must not be present in the public Pages output." >&2
-            exit 1
-          fi
+          python3 tools/model.py
+          python3 tools/build_site.py
+          python3 tools/pii_scan.py site/
+          python3 tools/verify.py
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assumptions &middot; Cupertino2</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="dot"></span>
+    <div>
+      <div class="bt">Cupertino2</div>
+      <div class="bs">Property inheritance decision support &middot; ZIP 95014 &amp; 94122</div>
+    </div>
+  </div>
+  <div class="topmeta">
+    <span class="pill">Valuation date November 2026</span>
+    <a class="pill warnpill" href="flagged.html">16 flagged items</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="side"><a href="index.html">Executive Summary</a>
+<a href="prop19.html">Proposition 19</a>
+<a href="property.html">Properties &amp; Tax</a>
+<a href="projections.html">Projections</a>
+<a href="scenarios.html">Scenarios</a>
+<a href="taxes.html">Taxes on Transfer</a>
+<a href="costs.html">Carrying Costs</a>
+<a href="rental.html">The 94122 Rental</a>
+<a href="process.html">Transfer Process</a>
+<a href="legislation.html">Law &amp; Changes</a>
+<a class="active" href="assumptions.html">Assumptions</a>
+<a href="sources.html">Sources</a>
+<a href="flagged.html">Flagged for Review</a></nav>
+  <main>
+    <h1>Assumptions</h1>
+    <p class="lede">Every number in the model that is not traceable to an official source, in one place.</p>
+    <p>Every number below is a <strong>planning assumption</strong>. None of
+them is sourced from an official publication, and none should be treated as a fact. Change
+them and re-run <code>tools/model.py</code>.</p>
+<div class="tablewrap">
+<table class="data ">
+<thead><tr>
+<th class="tl">Group</th>
+<th class="tl">Assumption</th>
+<th class="tr">Value</th>
+<th class="tl">As of</th>
+<th class="tl">Basis</th>
+<th class="tl">Source</th>
+</tr></thead><tbody>
+<tr>
+<td class="tl">Valuation</td>
+<td class="tl">Market value, 95014</td>
+<td class="tr">$3,100,000</td>
+<td class="tl">Nov 2026</td>
+<td class="tl">requester estimate</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Valuation</td>
+<td class="tl">Market value, 94122</td>
+<td class="tr">$1,800,000</td>
+<td class="tl">Nov 2026</td>
+<td class="tl">requester estimate</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Growth</td>
+<td class="tl">House appreciation, base</td>
+<td class="tr">4.0%</td>
+<td class="tl">per year, nominal</td>
+<td class="tl">planning assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Growth</td>
+<td class="tl">House appreciation, low / high</td>
+<td class="tr">2.5% / 5.5%</td>
+<td class="tl">per year, nominal</td>
+<td class="tl">planning assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Growth</td>
+<td class="tl">Prop 13 assessment growth</td>
+<td class="tr">2.0%</td>
+<td class="tl">per year</td>
+<td class="tl">official for the 2026-27 roll (BOE LTA 2026/002)</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">Growth</td>
+<td class="tl">General inflation (CPI)</td>
+<td class="tr">2.5%</td>
+<td class="tl">per year</td>
+<td class="tl">planning assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Growth</td>
+<td class="tl">Prop 19 cap growth</td>
+<td class="tr">3.0%</td>
+<td class="tl">per year</td>
+<td class="tl">assumption &mdash; tracks the FHFA California HPI</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Growth</td>
+<td class="tl">Insurance inflation</td>
+<td class="tr">5.0%</td>
+<td class="tl">per year</td>
+<td class="tl">assumption &mdash; California premiums have been rising faster than CPI</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">95014 insurance</td>
+<td class="tr">$1,500/yr</td>
+<td class="tl">2026</td>
+<td class="tl">requester estimate; unverified</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">94122 insurance</td>
+<td class="tr">$1,500/yr</td>
+<td class="tl">2026</td>
+<td class="tl">requester estimate; unverified</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">95014 water</td>
+<td class="tr">$125/mo</td>
+<td class="tl">2026</td>
+<td class="tl">midpoint of the supplied $100&ndash;$150</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">94122 water, all three units</td>
+<td class="tr">$365/mo</td>
+<td class="tl">2026</td>
+<td class="tl">midpoint of the supplied $330&ndash;$400</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">95014 electricity</td>
+<td class="tr">-$15/mo</td>
+<td class="tl">2026</td>
+<td class="tl">midpoint of the supplied $10&ndash;$20 net credit</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">NEM grandfathering ends</td>
+<td class="tr">2035</td>
+<td class="tl">&mdash;</td>
+<td class="tl">assumption &mdash; NEM 1.0/2.0 runs 20 years from interconnection</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">95014 electricity after grandfathering</td>
+<td class="tr">$60/mo</td>
+<td class="tl">from 2035</td>
+<td class="tl">assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">94122 electricity</td>
+<td class="tr">$50/mo</td>
+<td class="tl">2026</td>
+<td class="tl">midpoint of the supplied $30&ndash;$70</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">95014 maintenance</td>
+<td class="tr">0.5% of the 2026 value</td>
+<td class="tl">$15,500 /yr</td>
+<td class="tl">planning assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Costs</td>
+<td class="tl">94122 maintenance</td>
+<td class="tr">1.0% of the 2026 value</td>
+<td class="tl">$18,000 /yr</td>
+<td class="tl">planning assumption &mdash; older three-unit building</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Income</td>
+<td class="tl">94122 rent, two units</td>
+<td class="tr">$7,150/mo</td>
+<td class="tl">2026</td>
+<td class="tl">supplied; no rent assumed for the owner-occupied unit</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+<tr>
+<td class="tl">Income</td>
+<td class="tl">95014 market rent</td>
+<td class="tr">$4,500/mo</td>
+<td class="tl">2026</td>
+<td class="tl">assumption &mdash; aggregator median rents run $3,800&ndash;$4,128 but are apartment-weighted</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Income</td>
+<td class="tl">Vacancy and credit loss</td>
+<td class="tr">5%</td>
+<td class="tl">&mdash;</td>
+<td class="tl">planning assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Sale</td>
+<td class="tl">Selling costs</td>
+<td class="tr">5.5%</td>
+<td class="tl">of sale price</td>
+<td class="tl">assumption &mdash; commission plus closing</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Sale</td>
+<td class="tl">Portfolio nominal return</td>
+<td class="tr">7.0%</td>
+<td class="tl">per year</td>
+<td class="tl">planning assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Sale</td>
+<td class="tl">Portfolio income yield</td>
+<td class="tr">1.8%</td>
+<td class="tl">per year</td>
+<td class="tl">planning assumption &mdash; only this slice is taxed annually</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Sale</td>
+<td class="tl">Tax on investment income</td>
+<td class="tr">37.1%</td>
+<td class="tl">&mdash;</td>
+<td class="tl">20% federal + 3.8% NIIT + 13.3% California</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">derived</span></td>
+</tr>
+<tr>
+<td class="tl">Tax</td>
+<td class="tl">Federal ordinary marginal rate</td>
+<td class="tr">32.0%</td>
+<td class="tl">&mdash;</td>
+<td class="tl">planning assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Tax</td>
+<td class="tl">California marginal rate</td>
+<td class="tr">9.3%</td>
+<td class="tl">&mdash;</td>
+<td class="tl">planning assumption</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Tax</td>
+<td class="tl">Depreciation period</td>
+<td class="tr">27.5 years</td>
+<td class="tl">&mdash;</td>
+<td class="tl">residential rental property</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">Tax</td>
+<td class="tl">Land share, 95014</td>
+<td class="tr">55%</td>
+<td class="tl">&mdash;</td>
+<td class="tl">assumption &mdash; land is not depreciable; use the county roll</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Tax</td>
+<td class="tl">Land share, 94122</td>
+<td class="tr">35%</td>
+<td class="tl">&mdash;</td>
+<td class="tl">assumption &mdash; land is not depreciable; use the county roll</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge bad">assumption</span></td>
+</tr>
+<tr>
+<td class="tl">Model</td>
+<td class="tl">Homeowners' exemption</td>
+<td class="tr">$7,000</td>
+<td class="tl">&mdash;</td>
+<td class="tl">official &mdash; reduces assessed value</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge ok">official</span></td>
+</tr>
+<tr>
+<td class="tl">Model</td>
+<td class="tl">Transfer years modelled</td>
+<td class="tr">2040, 2045, 2050</td>
+<td class="tl">&mdash;</td>
+<td class="tl">from the stated 2040&ndash;2050 plan</td>
+<td class="tl nowrap"><a class="src src-unofficial" href="flagged.html">unverified &ndash; no official source</a><span class="badge warn">supplied</span></td>
+</tr>
+</tbody></table></div>
+<div class="callout warn">
+<h3>Which assumptions matter most</h3>
+<ol>
+<li><strong>Portfolio return (7%).</strong> This is the single most influential
+assumption in the whole model, because it sets the opportunity cost of the equity. The
+sensitivity is displayed on the <a href="scenarios.html">Scenarios</a> page: the break-even
+is around 0.68%, so the conclusion survives almost any reasonable value.</li>
+<li><strong>Whether the house is the transferor's principal residence.</strong> Not really
+an assumption &mdash; an unknown fact that must be established. See FLAG-05.</li>
+<li><strong>Maintenance and insurance.</strong> Together these are the difference between
+the house roughly paying for itself and it bleeding cash. They are also the least reliable
+numbers in the model.</li>
+<li><strong>Market rent.</strong> Affects both A and B equally, so it does not change their
+ranking, but it does change their distance from C.</li>
+</ol>
+<p class="sig">The two market values are also requester estimates. Confirm with an
+appraisal.</p></div>
+    <footer class="foot">
+      <p><strong>Not tax, legal or investment advice.</strong> This is a research and
+      modelling workspace. Every figure links to the source it came from. Values that
+      could not be confirmed against an official government source are marked
+      <span class="badge bad">unverified</span> or <span class="badge bad">assumption</span>
+      and are listed on the <a href="flagged.html">Flagged for Review</a> page.</p>
+      <p>No personal information appears anywhere on this site. Properties are
+      referenced by ZIP code only.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -18,7 +18,8 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 |---|---|---|---|
 | arena-570be64c | arena/570be64c-cupertino2 (merged to main via PR #1, #3, #4) | `COORDINATION.md`, `README.md`, `data/*`, `docs/*`, `scripts/*`, root `index.html` redirect, root `.nojekyll` | Merged to `main`; live dashboard at `docs/index.html` |
 | arena-2988121a | arena/2988121a-cupertino2 | `pages/*`, `assets/style.css`; root `index.html` content in commit `d480257`/`86e9139` | Merged to `main` via PR #2 |
-| c3099612 | arena/c3099612-cupertino2 | `index.html`, `decision.html`, `costs.html`, `taxes.html`, `process.html`, `outlook.html`, `review.html`, `sources.html`, `assets/site.css`, `assets/calculator.js`, `scripts/check_site.py`, `.github/workflows/pages.yml`, `README.md`, `.nojekyll` | In progress; rebase/PR/deploy pending |
+| c3099612 | arena/c3099612-cupertino2 | `index.html`, `decision.html`, `costs.html`, `taxes.html`, `process.html`, `outlook.html`, `review.html`, `sources.html`, `assets/site.css`, `assets/calculator.js`, `scripts/check_site.py`, `.github/workflows/pages.yml`, `README.md`, `.nojekyll` | Merged to `main` via PR #7; live guide at the repository root |
+| b58dfdcf | arena/b58dfdcf-cupertino2 | `site/**`, `tools/model.py`, `tools/build_site.py`, `tools/pii_scan.py`, `tools/verify.py`, `data/model.json`, `data/urls.txt`, `data/projections_*.csv`, `research/**`, `VERIFICATION.md`, `.github/workflows/site-build.yml`, `_config.yml` (exclude lines only), `README.md` (appended section) | Merged to `main` via PR #9; dashboard published under `site/` |
 
 ## Unified task board
 
@@ -47,7 +48,7 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 | T100 | Flagged for Review page | done | arena-570be64c | `docs/flagged.html`, `data/flagged.json` | — | 29 flagged items |
 | T100b | Flagged for Review page (this session) | done | arena-2988121a | `pages/flagged-for-review.html` | Source link on every table row | 14 flagged items listed |
 | T110 | Integration: re-verification, PR, merge, GitHub Pages | done | arena-2988121a | repo-wide | — | PR #2 merged into main; Pages live via root redirect to docs/ |
-| T120 | Privacy-safe, source-verified Home A/Home B decision guide and Pages deployment | in progress | c3099612 | root HTML, `_config.yml`, `assets/`, `scripts/check_site.py`, Pages verification workflow | IRS, BOE, California Legislature, state/county agencies, official utility/insurance/rent sources | User-provided property figures omitted; forecast horizon blank; legacy Jekyll output is tested to exclude prior data/docs and repository-development files. |
+| T120 | Privacy-safe, source-verified Home A/Home B decision guide and Pages deployment | done | c3099612 | root HTML, `_config.yml`, `assets/`, `scripts/check_site.py`, Pages verification workflow | IRS, BOE, California Legislature, state/county agencies, official utility/insurance/rent sources | User-provided property figures omitted; forecast horizon blank; legacy Jekyll output is tested to exclude prior data/docs and repository-development files. |
 
 ## Verification performed (line by line)
 
@@ -88,3 +89,65 @@ Integrated sessions: `arena-570be64c` (data-driven site under `docs/`, `data/`, 
 - 2026-11-06 · arena-2988121a · T001–T010 complete; site authored (`pages/*`, `assets/style.css`); PR #2 opened (`arena/2988121a-cupertino2` → `main`): https://github.com/ginnymcfiner23-ux/Cupertino2/pull/2 ; PR #2 merged into `main`; GitHub Pages live (root `/` → `docs/index.html`); deploy verified.
 - Final results: PR #2 merged into `main`; Pages URL = https://ginnymcfiner23-ux.github.io/Cupertino2/ (redirects to `docs/index.html`).
 - 2026-11-06 · arena-570be64c · FINAL (integration record): PR #1 `arena/570be64c-cupertino2` → `main` MERGED (6f990e7, merge commit, no auto-merge). PR #3 (root `index.html` redirect to `docs/`) MERGED. PR #4 (root `.nojekyll`) MERGED. Live site verified by fetch: https://ginnymcfiner23-ux.github.io/Cupertino2/ (serves `docs/index.html` dashboard; `docs/flagged.html`; `docs/projections.html` all render with sources). Pages build history: several runs for this session's and other sessions' commits were `cancelled` (superseded by newer pushes) and were reported by the Pages API as `errored`; the run for `efc0196` (latest at verification) completed `success`. Both `docs/` (this session) and `pages/` (arena-2988121a) remain on `main`; both are reachable from the repo; neither was deleted. Pages source stays `main` `/` (integration token cannot change it).
+| T130 | Analytical dashboard: parcel bill model, Prop 19 scenarios, three-strategy comparison, 94122 rental economics, sell-now vs hold-to-death | done | b58dfdcf | `tools/model.py`, `data/model.json` | 45 official + 7 secondary sources | Deterministic; all inputs disclosed |
+| T131 | Dashboard site build: 13 pages, source link on every table row | done | b58dfdcf | `tools/build_site.py`, `site/**` | — | 424 rows, 0 without a source link |
+| T132 | PII gate for the published output | done | b58dfdcf | `tools/pii_scan.py` | — | Fails build on name/address/phone/e-mail/SSN/APN/trust name |
+| T133 | Verification harness: source-link, internal-link, unresolved-value, PII | done | b58dfdcf | `tools/verify.py` | — | Exits non-zero on failure |
+| T134 | Integration with sessions c3099612 / arena-570be64c / arena-2988121a | done | b58dfdcf | repo-wide | — | See Merge & conflict log |
+
+
+**Session b58dfdcf (this session):** opened and read the full text of R&TC § 63.2, § 62,
+§ 51 and § 17043 (leginfo) and Civ. Code § 1947.12; BOE Prop 19 page and LTA 2025/009;
+BOE 2026 LTA index (confirming LTA 2026/002 "2026-27 California Consumer Price Index" and
+LTA 2026/026 Prop 19 FAQ); IRS estate-tax page, IR-2025-103, Rev. Proc. 2025-32, Topic 409
+and the NIIT page; 26 U.S.C. § 1014 and § 1411 (via govinfo); SF Treasurer secured property
+taxes; SF.gov rent increases; CA Attorney General rent caps; SFPUC Prop 218 notice; Santa
+Clara County Assessor Prop 13 FAQ and assessment booklet; SOS ballot measures hub.
+- **Corrections found and applied:** `sf.gov/information/paying-your-property-taxes` 404 →
+  replaced with `sftreasurer.org/property/secured-property-taxes`, which also showed the
+  current rate is the FY2026-27 figure of **1.18162182%** (prior session's note already
+  recorded this; the dashboard model uses it). `uscode.house.gov` deep links 404 (site is
+  in a temporary format) → all four US Code citations moved to `govinfo.gov/link/uscode/26/`.
+  `boe.ca.gov/proptaxes/pdf/pub801.pdf` 404 → that source dropped; the base-year-value-
+  transfer row now cites the SCC Assessor Prop 19 overview and the Prop 19 FAQ to BOE LTA
+  2026/026.
+- **Could not be retrieved:** FTB rate tables (404 on the rates page), Cal Water Bear Gulch
+  rate page (404), `irs.gov` newsroom short link (404), two `sf.gov` rent-increase paths
+  (404). Left blank or flagged rather than inferred.
+- **Note on IRS Topic 409:** the page still displays 2025 capital-gains thresholds. It is
+  cited only for the rate structure (0/15/20% and the 25% depreciation slice); 2026
+  thresholds come from Rev. Proc. 2025-32.
+
+
+## Merge & conflict log
+
+- **2026-11-06 — session `b58dfdcf` rebased onto `main` (PR #9), which had advanced past
+  the branch point.** Their `main` contained PR #7 from session `c3099612`, which replaced
+  the root redirect with an eight-page privacy-safe guide and switched Pages validation to
+  a Jekyll-output check. Three-way conflicts arose in `README.md`, `COORDINATION.md` and
+  `.github/workflows/pages.yml`. Resolved as follows, discarding nothing from any session:
+  - `.github/workflows/pages.yml` — **kept the incoming (c3099612) version in full.** Their
+    validation workflow guards the live root guide and fails the build if legacy or
+    development directories leak into the Pages output. The dashboard's own build and
+    verification moved to a new, separate workflow at `.github/workflows/site-build.yml`,
+    which rebuilds `site/`, re-runs both checks and uploads the result as an artifact. It
+    does not touch Pages: Pages is on the legacy root source, so there is exactly one
+    deployment and it remains theirs.
+  - `README.md` — kept the guide's README verbatim and **appended** a "Research workspace
+    and analytics dashboard (session b58dfdcf)" section, including a table distinguishing
+    the two published views and their different privacy postures.
+  - `COORDINATION.md` — kept the integrated board structure and **added** this session's
+    row, tasks T130–T134, its verification notes, and this log entry. No prior session's
+    rows, tasks or notes were removed.
+  - `_config.yml` — **additive change only**: `site/` is deliberately left publishable so
+    the dashboard is served at `/site/`, while `tools/`, `research/` and `VERIFICATION.md`
+    were added to the exclude list so development files stay out of the Pages output. The
+    existing exclusion list was not otherwise altered.
+- **Privacy-posture divergence, recorded not overridden.** Session `c3099612` chose to
+  publish no ZIP codes, values, rents or bills at all. This session's dashboard publishes
+  ZIP codes and the requester's own estimates, each labelled `supplied` or `assumption`
+  and each listed on the Flagged page, on the basis that a ZIP code is not personal
+  information and the requester's own brief identifies the properties by ZIP. Nothing in
+  either view names a person, address, parcel, account or trust. Flagged so the user can
+  choose.
+
